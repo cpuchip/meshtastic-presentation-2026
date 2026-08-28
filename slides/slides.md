@@ -11,7 +11,7 @@ not slide text.
 
 # Off-Grid Communication with Meshtastic
 
-**Max Brixey · Michael Puchol** — Ozarks Homesteading Expo 2026
+**Max Brixey · Michael Stufflebeam** — Ozarks Homesteading Expo 2026
 
 (mesh logo + a node photo on a fence post)
 
