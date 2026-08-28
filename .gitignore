@@ -1,0 +1,6 @@
+# Reference clones — re-clone per README, never committed
+/reference/
+
+# OS noise
+Thumbs.db
+.DS_Store
