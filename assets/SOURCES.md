@@ -20,6 +20,26 @@ presentation with attribution.
 | lilygo-t-deck.webp | static/img/hardware/LILYGO-T-DECK.webp |
 | lilygo-t-echo.webp | static/img/hardware/t-echo-lilygo.webp |
 | lilygo-t-beam.webp | static/img/hardware/t-beam-meshtastic.webp |
+| station-g2.webp | static/img/hardware/station-series/station-g2-front.webp |
+| rak-wismesh-pocket.webp | static/img/hardware/rak/pocket-v2.webp |
+| rak-wismesh-repeater.webp | static/img/hardware/rak/wismesh-repeater.webp |
+| rak-wismesh-tap.webp | static/img/hardware/rak/wismesh-tap.webp |
+| elecrow-thinknode-m1.webp | static/img/hardware/elecrow/Thinknode-m1_for_Meshtastic.webp |
+| muzi-r1-neo.webp | static/img/hardware/muzi/muziworks-r1-neo.webp |
+| nano-g2-ultra.webp | static/img/hardware/nano_g2_ultra.webp |
+| canary-one.webp | static/img/hardware/canary-one/perspective.webp |
+| heltec-meshpocket.webp | static/img/hardware/heltec/meshpocket.webp |
+
+## Diagrams (`diagrams/`)
+
+Original SVGs drawn for this talk (ours, no external source). Theme-aware:
+lines and text use `currentColor` so they inherit the slide theme; accents are
+LCARS orange #FF9C00, blue #47A3FF, green #3FB950, red #E5534B — all chosen to
+read on both dark and light backgrounds.
+
+- `how-it-works.svg` — phone ⇄ node (Bluetooth) ⇄ node (LoRa, miles) ⇄ phone
+- `mesh-hops.svg` — blocked direct path vs. two hops through a hilltop node
+- `height-wins.svg` — desk / window / 35-ft pole / hilltop range comparison
 
 ## Event
 

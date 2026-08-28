@@ -1,0 +1,57 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+  <!-- title -->
+  <text x="480" y="55" text-anchor="middle" font-size="32" fill="currentColor" font-weight="bold">Height beats power. Every time.</text>
+
+  <!-- ground -->
+  <line x1="30" y1="440" x2="930" y2="440" stroke="currentColor" stroke-width="4" opacity="0.5"/>
+
+  <!-- Column 1: desk -->
+  <g stroke="currentColor" stroke-width="4" fill="none">
+    <line x1="120" y1="440" x2="120" y2="410"/>
+  </g>
+  <circle cx="120" cy="404" r="5" fill="currentColor"/>
+  <path d="M 100 390 Q 120 372 140 390" stroke="#FF9C00" stroke-width="3" fill="none" opacity="0.9"/>
+  <text x="120" y="475" text-anchor="middle" font-size="24" fill="currentColor">on the desk</text>
+  <text x="120" y="505" text-anchor="middle" font-size="21" fill="currentColor" opacity="0.65">the backyard</text>
+
+  <!-- Column 2: window -->
+  <g stroke="currentColor" stroke-width="4" fill="none">
+    <line x1="330" y1="440" x2="330" y2="360"/>
+  </g>
+  <circle cx="330" cy="354" r="5" fill="currentColor"/>
+  <g stroke="#FF9C00" fill="none" opacity="0.9">
+    <path d="M 305 340 Q 330 318 355 340" stroke-width="3"/>
+    <path d="M 288 325 Q 330 288 372 325" stroke-width="3"/>
+  </g>
+  <text x="330" y="475" text-anchor="middle" font-size="24" fill="currentColor">in a window</text>
+  <text x="330" y="505" text-anchor="middle" font-size="21" fill="currentColor" opacity="0.65">the neighborhood</text>
+
+  <!-- Column 3: 35-ft pole -->
+  <g stroke="currentColor" stroke-width="4" fill="none">
+    <line x1="560" y1="440" x2="560" y2="250"/>
+    <line x1="545" y1="440" x2="575" y2="440"/>
+  </g>
+  <circle cx="560" cy="244" r="6" fill="#FF9C00"/>
+  <g stroke="#FF9C00" fill="none" opacity="0.9">
+    <path d="M 532 228 Q 560 202 588 228" stroke-width="3.5"/>
+    <path d="M 512 210 Q 560 168 608 210" stroke-width="3.5"/>
+    <path d="M 492 192 Q 560 134 628 192" stroke-width="3.5"/>
+  </g>
+  <text x="560" y="475" text-anchor="middle" font-size="24" fill="currentColor">35-ft pole</text>
+  <text x="560" y="505" text-anchor="middle" font-size="21" fill="currentColor" opacity="0.65">miles</text>
+
+  <!-- Column 4: hilltop -->
+  <path d="M 700 440 Q 810 300 920 440" stroke="currentColor" stroke-width="4" fill="none" opacity="0.6"/>
+  <g stroke="currentColor" stroke-width="4" fill="none">
+    <line x1="810" y1="368" x2="810" y2="290"/>
+  </g>
+  <circle cx="810" cy="283" r="7" fill="#FF9C00"/>
+  <g stroke="#FF9C00" fill="none" opacity="0.9">
+    <path d="M 778 265 Q 810 236 842 265" stroke-width="4"/>
+    <path d="M 754 244 Q 810 194 866 244" stroke-width="4"/>
+    <path d="M 730 222 Q 810 152 890 222" stroke-width="4"/>
+    <path d="M 706 200 Q 810 110 914 200" stroke-width="4"/>
+  </g>
+  <text x="810" y="475" text-anchor="middle" font-size="24" fill="currentColor">hilltop repeater</text>
+  <text x="810" y="505" text-anchor="middle" font-size="21" fill="currentColor" opacity="0.65">the county</text>
+</svg>
