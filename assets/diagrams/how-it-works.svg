@@ -4,7 +4,7 @@
     <rect x="70" y="190" width="100" height="180" rx="16"/>
     <line x1="100" y1="345" x2="140" y2="345"/>
   </g>
-  <rect x="86" y="210" width="68" height="110" rx="4" fill="#FF9C00" opacity="0.25"/>
+  <rect x="86" y="210" width="68" height="110" rx="4" fill="var(--sd-accent, #FF9C00)" opacity="0.25"/>
   <text x="120" y="410" text-anchor="middle" font-size="26" fill="currentColor">Your phone</text>
 
   <!-- Node A -->
@@ -13,7 +13,7 @@
     <line x1="345" y1="240" x2="345" y2="150"/>
     <circle cx="345" cy="145" r="6" fill="currentColor"/>
   </g>
-  <rect x="316" y="262" width="58" height="40" rx="3" fill="#FF9C00" opacity="0.35"/>
+  <rect x="316" y="262" width="58" height="40" rx="3" fill="var(--sd-accent, #FF9C00)" opacity="0.35"/>
   <text x="345" y="410" text-anchor="middle" font-size="26" fill="currentColor">Radio node</text>
 
   <!-- Node B -->
@@ -22,7 +22,7 @@
     <line x1="615" y1="240" x2="615" y2="150"/>
     <circle cx="615" cy="145" r="6" fill="currentColor"/>
   </g>
-  <rect x="586" y="262" width="58" height="40" rx="3" fill="#FF9C00" opacity="0.35"/>
+  <rect x="586" y="262" width="58" height="40" rx="3" fill="var(--sd-accent, #FF9C00)" opacity="0.35"/>
   <text x="615" y="410" text-anchor="middle" font-size="26" fill="currentColor">Radio node</text>
 
   <!-- Phone B -->
@@ -30,24 +30,24 @@
     <rect x="790" y="190" width="100" height="180" rx="16"/>
     <line x1="820" y1="345" x2="860" y2="345"/>
   </g>
-  <rect x="806" y="210" width="68" height="110" rx="4" fill="#FF9C00" opacity="0.25"/>
+  <rect x="806" y="210" width="68" height="110" rx="4" fill="var(--sd-accent, #FF9C00)" opacity="0.25"/>
   <text x="840" y="410" text-anchor="middle" font-size="26" fill="currentColor">Their phone</text>
 
   <!-- Bluetooth links (short, dashed, blue) -->
-  <g stroke="#47A3FF" stroke-width="5" fill="none" stroke-dasharray="10 8" stroke-linecap="round">
+  <g stroke="var(--sd-blue, #47A3FF)" stroke-width="5" fill="none" stroke-dasharray="10 8" stroke-linecap="round">
     <path d="M 175 275 Q 235 250 295 275"/>
     <path d="M 665 275 Q 725 250 785 275"/>
   </g>
-  <text x="235" y="235" text-anchor="middle" font-size="22" fill="#47A3FF" font-weight="bold">Bluetooth</text>
-  <text x="725" y="235" text-anchor="middle" font-size="22" fill="#47A3FF" font-weight="bold">Bluetooth</text>
+  <text x="235" y="235" text-anchor="middle" font-size="22" fill="var(--sd-blue, #47A3FF)" font-weight="bold">Bluetooth</text>
+  <text x="725" y="235" text-anchor="middle" font-size="22" fill="var(--sd-blue, #47A3FF)" font-weight="bold">Bluetooth</text>
 
   <!-- LoRa link (long, bold, orange) -->
-  <path d="M 350 140 Q 480 40 610 140" stroke="#FF9C00" stroke-width="8" fill="none" stroke-linecap="round"/>
-  <g stroke="#FF9C00" stroke-width="4" fill="none" opacity="0.6">
+  <path d="M 350 140 Q 480 40 610 140" stroke="var(--sd-accent, #FF9C00)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <g stroke="var(--sd-accent, #FF9C00)" stroke-width="4" fill="none" opacity="0.6">
     <path d="M 365 120 Q 380 105 380 85"/>
     <path d="M 595 120 Q 580 105 580 85"/>
   </g>
-  <text x="480" y="70" text-anchor="middle" font-size="30" fill="#FF9C00" font-weight="bold">LoRa &#183; miles &#183; no towers</text>
+  <text x="480" y="70" text-anchor="middle" font-size="30" fill="var(--sd-accent, #FF9C00)" font-weight="bold">LoRa &#183; miles &#183; no towers</text>
 
   <!-- Bottom caption -->
   <text x="480" y="490" text-anchor="middle" font-size="28" fill="currentColor">The phone is the keyboard. The radio does the long haul.</text>

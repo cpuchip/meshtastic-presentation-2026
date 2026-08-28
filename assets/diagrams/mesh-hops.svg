@@ -8,7 +8,7 @@
     <rect x="80" y="400" width="110" height="70"/>
     <path d="M 70 400 L 135 350 L 200 400 Z"/>
   </g>
-  <rect x="120" y="430" width="30" height="40" fill="#FF9C00" opacity="0.35"/>
+  <rect x="120" y="430" width="30" height="40" fill="var(--sd-accent, #FF9C00)" opacity="0.35"/>
   <text x="135" y="510" text-anchor="middle" font-size="26" fill="currentColor">Your house</text>
 
   <!-- Trees blocking the direct path -->
@@ -20,42 +20,41 @@
   </g>
 
   <!-- Hilltop node (center) -->
-  <g stroke="#FF9C00" stroke-width="6" fill="none">
+  <g stroke="var(--sd-accent, #FF9C00)" stroke-width="6" fill="none">
     <line x1="560" y1="300" x2="560" y2="190"/>
     <line x1="540" y1="300" x2="580" y2="300"/>
   </g>
-  <circle cx="560" cy="182" r="8" fill="#FF9C00"/>
-  <g stroke="#FF9C00" stroke-width="3" fill="none" opacity="0.6">
+  <circle cx="560" cy="182" r="8" fill="var(--sd-accent, #FF9C00)"/>
+  <g stroke="var(--sd-accent, #FF9C00)" stroke-width="3" fill="none" opacity="0.6">
     <path d="M 535 165 Q 560 140 585 165"/>
     <path d="M 522 150 Q 560 112 598 150"/>
   </g>
-  <text x="560" y="345" text-anchor="middle" font-size="24" fill="#FF9C00" font-weight="bold">Hilltop node</text>
+  <text x="560" y="345" text-anchor="middle" font-size="24" fill="var(--sd-accent, #FF9C00)" font-weight="bold">Hilltop node</text>
 
   <!-- House C (right) -->
   <g stroke="currentColor" stroke-width="5" fill="none">
     <rect x="770" y="395" width="110" height="70"/>
     <path d="M 760 395 L 825 345 L 890 395 Z"/>
   </g>
-  <rect x="810" y="425" width="30" height="40" fill="#FF9C00" opacity="0.35"/>
+  <rect x="810" y="425" width="30" height="40" fill="var(--sd-accent, #FF9C00)" opacity="0.35"/>
   <text x="825" y="505" text-anchor="middle" font-size="26" fill="currentColor">Neighbor in town</text>
 
   <!-- Direct path: blocked -->
-  <line x1="150" y1="360" x2="810" y2="355" stroke="#E5534B" stroke-width="5" stroke-dasharray="14 10" opacity="0.8"/>
-  <g stroke="#E5534B" stroke-width="7" stroke-linecap="round">
+  <line x1="150" y1="360" x2="810" y2="355" stroke="var(--sd-red, #E5534B)" stroke-width="5" stroke-dasharray="14 10" opacity="0.8"/>
+  <g stroke="var(--sd-red, #E5534B)" stroke-width="7" stroke-linecap="round">
     <line x1="465" y1="335" x2="500" y2="378"/>
     <line x1="500" y1="335" x2="465" y2="378"/>
   </g>
-  <text x="330" y="330" text-anchor="middle" font-size="22" fill="#E5534B" font-weight="bold">too far, trees in the way</text>
+  <text x="330" y="330" text-anchor="middle" font-size="22" fill="var(--sd-red, #E5534B)" font-weight="bold">too far, trees in the way</text>
 
   <!-- Hop 1 and Hop 2 -->
-  <g stroke="#3FB950" stroke-width="7" fill="none" stroke-linecap="round">
+  <g stroke="var(--sd-green, #3FB950)" stroke-width="7" fill="none" stroke-linecap="round">
     <path d="M 150 345 Q 340 130 545 185"/>
     <path d="M 575 185 Q 750 150 820 340"/>
   </g>
-  <text x="300" y="180" text-anchor="middle" font-size="26" fill="#3FB950" font-weight="bold">hop 1</text>
-  <text x="740" y="170" text-anchor="middle" font-size="26" fill="#3FB950" font-weight="bold">hop 2</text>
+  <text x="300" y="180" text-anchor="middle" font-size="26" fill="var(--sd-green, #3FB950)" font-weight="bold">hop 1</text>
+  <text x="740" y="170" text-anchor="middle" font-size="26" fill="var(--sd-green, #3FB950)" font-weight="bold">hop 2</text>
 
   <!-- caption -->
-  <text x="480" y="70" text-anchor="middle" font-size="30" fill="currentColor" font-weight="bold">Every node repeats what it hears.</text>
-  <text x="480" y="105" text-anchor="middle" font-size="24" fill="currentColor" opacity="0.7">You don't need to reach everyone &#8212; just somebody.</text>
+  <text x="480" y="80" text-anchor="middle" font-size="27" fill="currentColor" opacity="0.85">You don't need to reach everyone &#8212; just somebody.</text>
 </svg>
