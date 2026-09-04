@@ -82,7 +82,7 @@ Walk it on screen (screenshots as backup if no screen/no volunteer):
    channel is encrypted end-to-end.
 6. Updates: same flasher, twice a year, optional.
 
-## 6. Channels: the part everybody gets wrong (7 min)
+## 6. Channels: what to set, and what not to touch (7 min)
 
 *Michael's section. This is new, it is the highest-value seven minutes in the
 talk, and it is the thing most likely to keep someone on the mesh past week one.
@@ -124,7 +124,7 @@ will actually have, and it has a true story attached (it fooled us this week).
 If the section is running long, drop it and keep it in the Q&A pocket instead.
 Full mechanism: [channels.md](channels.md).
 
-## 7. Range reality - the honest slide (4 min)
+## 7. What range actually looks like (4 min)
 
 - Height beats power. The 35-ft pole story. A node in a window beats a node on
   a desk; a node on a pole beats both.

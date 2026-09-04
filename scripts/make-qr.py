@@ -30,6 +30,7 @@ LINKS = {
     "buy-heltec":  ("https://www.amazon.com/dp/B0FY2WL3MN",          "Heltec V4 2-pack kit"),
     "buy-solar":   ("https://www.amazon.com/dp/B0FMDHBWX8",          "SenseCAP Solar Node P1-Pro"),
     "buy-seeed":   ("https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html", "Solar node direct from Seeed (cheaper)"),
+    "buy-wio":     ("https://www.amazon.com/dp/B0FNCS5ST1",          "Wio Tracker L1 Pro"),
 }
 
 

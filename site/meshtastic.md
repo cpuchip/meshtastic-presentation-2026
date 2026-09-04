@@ -140,7 +140,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 </div>
 
-**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · pocket nodes, 3D-printed cases, DIY antennas - GitHub all the way down
+**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · **Wio Tracker L1 Pro** $60 with GPS · pocket nodes, 3D-printed cases, DIY antennas - GitHub all the way down
 
 ---
 

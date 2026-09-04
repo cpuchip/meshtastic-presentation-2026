@@ -162,6 +162,7 @@ and a case, so the kit wins for a beginner.*
 - **RAK WisBlock** - modular, sips power, the serious solar builder's pick
 - **T-Deck** - keyboard + screen, no phone needed
 - **T-Echo** - e-ink, always-on readout
+- **Wio Tracker L1 Pro** - $60, GPS, rechargeable. I carry two
 - 3D-printed cases, DIY antennas, GitHub all the way down
 
 ---
@@ -224,7 +225,7 @@ found nobody sitting next to three working radios.*
 
 ---
 
-## SLIDE 16 - The trap nobody warns you about
+## SLIDE 16 - Renaming the main channel moves your frequency
 
 # Renaming your main channel
 # changes your frequency.
@@ -278,7 +279,7 @@ Private can be your doorstep.*
 
 ---
 
-## SLIDE 19 - Range: the honest slide
+## SLIDE 19 - What range actually looks like
 
 # Height beats power. Every time.
 
