@@ -70,13 +70,45 @@ meshtastic --port COM4 --sendtext "Hello to the whole channel."
 reached one person while the other reached the neighbourhood. That is addressing, and it
 is the thing people expect to be complicated.
 
-**Arm 3, the negative control.** Hold up the third radio first.
+**Arm 3, the negative control - and then FIX IT LIVE.** This is the strongest beat in the
+talk. Hold up the third radio first.
 
 ```
 meshtastic --port COM10 --sendtext "You should not see this one."
 ```
 
-Then show the phone. Nothing arrives.
+Show the phone. Nothing arrives. Then show its node list: **it knows about nobody but
+itself**, sitting on a table with working radios.
+
+Now change one setting, in front of them:
+
+```
+meshtastic --port COM10 --set lora.modem_preset LONG_FAST
+```
+
+**It reboots (about 15-20 seconds - say what is happening, do not fill the silence).** Then:
+
+```
+meshtastic --port COM10 --info
+meshtastic --port COM10 --sendtext "Same radio. One setting. Hello."
+```
+
+Measured on the bench 2026-09-04: the node list went from **1 node (itself) to 3** within
+seconds, and the broadcast arrived. Same radio, same room, same channel, nothing else
+touched.
+
+> "That is the whole fix. One dropdown. It was never broken, and it was never out of range."
+
+**⚠ The XIAO is currently ON LongFast**, because we fixed it. To restore the negative
+control before the talk:
+
+```
+meshtastic --port COM10 --set lora.modem_preset LONG_TURBO
+```
+
+**Read the config back AFTER the reboot settles.** A readback taken too early returns the
+OLD preset and an empty node list, which looks exactly like a failed write. It bit us once;
+check `rebootCount` went up before believing the readback.
 
 > "Same channel name. Same password. Sitting six inches from the other one. It is on
 > LongTurbo instead of LongFast, so it is transmitting on 908.750 while everything else
