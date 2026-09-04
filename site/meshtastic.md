@@ -21,7 +21,7 @@ Ozarks Homesteading Expo · September 5, 2026
 
 No power. No bars. No landline.
 
-What's the plan — for the people on your own land?
+What's the plan - for the people on your own land?
 
 ---
 
@@ -40,7 +40,7 @@ What's the plan — for the people on your own land?
 # LoRa: a whisper that carries.
 
 - Tiny messages, sent **slowly**, heard for **miles**
-- Unlicensed band — 902–928 MHz, same legal territory as your garage remote
+- Unlicensed band - 902–928 MHz, same legal territory as your garage remote
 - Sips battery: **days to weeks** per charge
 
 You give up voice and pictures. You get range and battery life that feel like magic.
@@ -76,7 +76,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 # What it's good for out here
 
 - **Family texting** across the property and into town
-- **Hunting, hiking, trail rides** — GPS built in
+- **Hunting, hiking, trail rides** - GPS built in
 - **Neighborhood resilience net** for storm days
 - Later: gate sensors, tank levels, weather stations
 - All of it keeps working **when the grid doesn't**
@@ -92,7 +92,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 </div>
 
 - Credit-card size, waterproof, GPS
-- **Meshtastic already installed** — charge it, pair it, done
+- **Meshtastic already installed** - charge it, pair it, done
 - Buy two: you're a network
 
 ---
@@ -111,7 +111,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# Set-and-forget: SenseCAP Solar Node — $70–100
+# Set-and-forget: SenseCAP Solar Node - $70–100
 
 <div class="img-row">
 
@@ -138,7 +138,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 </div>
 
-**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · pocket nodes, 3D-printed cases, DIY antennas — GitHub all the way down
+**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · pocket nodes, 3D-printed cases, DIY antennas - GitHub all the way down
 
 ---
 
@@ -159,8 +159,44 @@ You give up voice and pictures. You get range and battery life that feel like ma
 1. Charge it. **Antenna on before power.**
 2. Update: drag-and-drop (T1000-E) or **flasher.meshtastic.org** (Heltec)
 3. Phone app → pair → region **US**
-4. You're on **LongFast** — the public channel — with everyone in range
+4. You're on **LongFast** - the public channel - with everyone in range
 5. Private family channel: scan one QR code. **Encrypted.**
+
+---
+
+# Can we hear each other?
+# Can we read each other?
+
+- **Hearing** = region + preset + frequency. The radio settings.
+- **Reading** = channel name + key. The lock on the box.
+
+Same room, different language: you hear nothing useful.
+Different room: nothing helps. Get the radio settings right first.
+
+---
+
+# Renaming your main channel
+# changes your frequency.
+
+- Meshtastic hashes your **primary** channel's name to pick the frequency slot
+- Rename it and you quietly move off the air your neighbours are on
+- Not a different chat room. A different **frequency**. No key will fix it
+
+## Want privacy? Add a SECOND channel. Never rename the first.
+
+---
+
+# A node that cannot read your message
+# still carries it.
+
+- The address is on the outside; only the contents are locked
+- Your family channel gets the range of **everybody's** nodes
+- Your node is carrying messages for people you have never met, right now
+
+## Owning one is a contribution, not just a purchase.
+
+Leave rebroadcast on **ALL**, role on **CLIENT**.
+Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
@@ -172,16 +208,16 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 # Same radios, different philosophy: MeshCore
 
-- Meshtastic: **everyone repeats** — simple, self-organizing
-- MeshCore: **planned repeaters**, learned routes — tighter at scale, more setup
+- Meshtastic: **everyone repeats** - simple, self-organizing
+- MeshCore: **planned repeaters**, learned routes - tighter at scale, more setup
 - Young and moving fast; worth watching
 
 ---
 
 # Not a chat app: Reticulum
 
-- Encrypted networking over **any** radio — LoRa, packet, WiFi, even the internet
-- *"Not one network — a tool for building thousands of networks"*
+- Encrypted networking over **any** radio - LoRa, packet, WiFi, even the internet
+- *"Not one network - a tool for building thousands of networks"*
 - The deep end, for when you outgrow everything else
 
 ---
@@ -190,7 +226,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 - Voice, real power, repeaters, decades of infrastructure
 - Technician license = a weekend of study, one exam
-- Study **FREE** at **hamstudy.org** — built by our friend Richard, KD7BBC
+- Study **FREE** at **hamstudy.org** - built by our friend Richard, KD7BBC
 - Meshtastic is the on-ramp. Ham is the highway. **Run both.**
 
 ---
@@ -201,7 +237,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 **meshtastic.org/docs** · **flasher.meshtastic.org** · **hamstudy.org**
 
-Grab a handout on your way out — every link is on it.
+Grab a handout on your way out - every link is on it.
 
 ---
 
@@ -209,4 +245,4 @@ Grab a handout on your way out — every link is on it.
 
 ![Meshtastic](/images/presentations/meshtastic/meshtastic-logo.svg)
 
-Find us after — we'll get your node on the mesh right here.
+Find us after - we'll get your node on the mesh right here.
