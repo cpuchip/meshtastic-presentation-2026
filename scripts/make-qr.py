@@ -24,6 +24,12 @@ LINKS = {
     "local-map":   ("https://map.lzmesh.com",                       "LZMesh live local node map"),
     "local-chat":  ("https://discord.lzarc.com",                    "LZMesh community Discord"),
     "hamstudy":    ("https://hamstudy.org",                         "Free ham licence study"),
+    # Board store pages. Amazon by ASIN: short, stable, and it dodges the
+    # shipping surprise that makes a $39.90 vendor price arrive as $50.
+    "buy-t1000e":  ("https://www.amazon.com/dp/B0DJ6KGXKB",          "SenseCAP T1000-E"),
+    "buy-heltec":  ("https://www.amazon.com/dp/B0FY2WL3MN",          "Heltec V4 2-pack kit"),
+    "buy-solar":   ("https://www.amazon.com/dp/B0FMDHBWX8",          "SenseCAP Solar Node P1-Pro"),
+    "buy-seeed":   ("https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html", "Solar node direct from Seeed (cheaper)"),
 }
 
 

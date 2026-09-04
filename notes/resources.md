@@ -61,12 +61,31 @@ Missouri Mesh (https://missourimesh.org) · Show Me Mesh, Jefferson City
   Bateman, KD7BBC). Find an exam session near you from the same site.
   APRS intro: http://www.aprs.org
 
-## YouTube (candidates — NOT yet vetted, do not print)
+## YouTube - watched and ruled on 2026-09-04
 
-Rule at the top of this file: nothing goes on the handout we haven't personally
-opened. Neither of these has been watched, and a text tool cannot watch them.
-**Recommend cutting both from the printed handout** — the three written guides
-above already cover the same ground and are verified.
+Transcripts pulled with `yt-dlp` and read in full (kept in gitignored
+`reference/yt/`, never committed). The file rule is satisfied: these were
+actually opened, not just linked.
 
-- "Meshtastic For Dummies in 2026 — Heltec V4 Setup & Wio Tracker Build"
-- "Best Meshtastic Devices for Beginners (2026 Off Grid Comms Starter Guide)"
+**RECOMMEND - put on the handout / mention from stage:**
+
+- **"Meshtastic For Dummies in 2026 - Heltec V4 Setup & Wio Tracker Build"**
+  (DoItYourselfDad, 24 min) - `youtube.com/watch?v=MN4YUHjJtrk`
+  Genuinely beginner-shaped. Explains the mesh with a pass-it-on-in-class
+  analogy, and he is honest about prices having risen since his older video
+  instead of quietly leaving the old number up. Good match for our room.
+
+- **"Best LoRa Meshtastic Devices Of 2026"** (Ham Radio Crash Course, 21 min) -
+  `youtube.com/watch?v=VGiNDgdkyhs`
+  Not on the original list, found while searching. Well-known, credible ham
+  channel with a thoughtful read on why the device landscape is so scattered.
+  Doubles as a natural bridge to our ham radio slide.
+
+**CUT - do not put on the handout:**
+
+- **"Best Meshtastic Devices for Beginners (2026 Off Grid Comms Starter Guide)"**
+  (GhostStrats, 12.5 min). The device information is fine, but it opens on
+  cellular-outage news clips and a "safety is nothing more than an illusion"
+  framing, and it carries affiliate links, a discount code and a sponsor read.
+  That is a fear register we are deliberately not using, and we should not send
+  a room full of newcomers to a monetised pitch. Cut on tone, not on accuracy.

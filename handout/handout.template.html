@@ -2,65 +2,73 @@
 <meta charset="utf-8">
 <title>Meshtastic Handout — Ozarks Homesteading Expo 2026</title>
 <style>
-  /* One US Letter page, single side, black on white. The venue is a park
-     pavilion and these get printed cheap — no colour, no light greys, no
-     hairlines that vanish on a tired toner cartridge. */
+  /* Two US Letter pages, printed front and back. Park pavilion, cheap printer,
+     so: pure black on white, no light greys, no hairlines that vanish on a
+     tired toner cartridge. */
   @page { size: letter portrait; margin: 0.4in; }
   * { box-sizing: border-box; }
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body {
     margin: 0; background: #fff; color: #000;
-    font: 9.1pt/1.32 "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+    font: 9.05pt/1.31 "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
   }
   .sheet { width: 7.7in; margin: 0 auto; }
+  .page2 { break-before: page; page-break-before: always; padding-top: 2pt; }
 
   header { text-align: center; border-bottom: 2.5pt solid #000; padding-bottom: 5pt; }
-  h1 { font-size: 20pt; line-height: 1.05; margin: 0 0 2pt; letter-spacing: -0.4pt; }
-  .event { font-size: 8.6pt; font-weight: 600; }
-  .who { font-size: 8.6pt; }
+  h1 { font-size: 19.5pt; line-height: 1.05; margin: 0 0 2pt; letter-spacing: -0.4pt; }
+  .event { font-size: 8.5pt; font-weight: 600; }
+  .who { font-size: 8.5pt; }
   .pitch {
     margin: 6pt 0 0; padding: 5pt 8pt; border: 1.2pt solid #000;
-    font-size: 10.2pt; font-weight: 600; text-align: center;
+    font-size: 10pt; font-weight: 600; text-align: center;
   }
+  .banner {
+    border-bottom: 2pt solid #000; padding-bottom: 3pt; margin-bottom: 6pt;
+    font-size: 12.5pt; font-weight: 700;
+  }
+  .banner span { font-size: 8.2pt; font-weight: 400; float: right; padding-top: 4pt; }
 
-  .cols { column-count: 2; column-gap: 0.34in; column-fill: balance; margin-top: 7pt; }
+  .cols { column-count: 2; column-gap: 0.34in; margin-top: 7pt; }
   section { break-inside: avoid; margin-bottom: 7pt; }
   h2 {
-    font-size: 9.6pt; margin: 0 0 3pt; text-transform: uppercase;
+    font-size: 9.5pt; margin: 0 0 3pt; text-transform: uppercase;
     letter-spacing: 0.5pt; border-bottom: 1pt solid #000; padding-bottom: 1.5pt;
   }
   p, ul, ol { margin: 0 0 3pt; }
   ul, ol { padding-left: 13pt; }
-  li { margin-bottom: 1.2pt; }
-  .url { font-family: "Consolas", "DejaVu Sans Mono", monospace; font-size: 8.3pt; }
+  li { margin-bottom: 1.3pt; }
+  .url { font-family: "Consolas", "DejaVu Sans Mono", monospace; font-size: 8.2pt; }
 
-  table { width: 100%; border-collapse: collapse; font-size: 8.5pt; }
-  th, td { border: 0.8pt solid #000; padding: 2.4pt 3.4pt; text-align: left; vertical-align: top; }
-  th { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.3pt; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.4pt; }
+  th, td { border: 0.8pt solid #000; padding: 2.6pt 3.4pt; text-align: left; vertical-align: top; }
+  th { font-size: 7.9pt; text-transform: uppercase; letter-spacing: 0.3pt; }
   td.price { font-weight: 700; white-space: nowrap; text-align: right; }
+  td.qrcell { width: 0.62in; padding: 2.5pt; text-align: center; }
+  td.qrcell svg { width: 0.55in; height: auto; display: block; margin: 0 auto; }
 
   .rule { border: 1.5pt solid #000; padding: 4pt 6pt; margin: 0 0 3pt; }
-  .warn { border: 1.5pt solid #000; padding: 4pt 6pt; background: #ebebeb; }
+  .warn { border: 1.5pt solid #000; padding: 4pt 6pt; background: #e9e9e9; }
   .warn b { text-transform: uppercase; letter-spacing: 0.3pt; }
+  .big-idea { border: 2pt solid #000; padding: 5pt 7pt; margin-bottom: 4pt; }
 
   .qrs { display: flex; gap: 7pt; justify-content: space-between; margin: 4pt 0 2pt; }
   .qr { text-align: center; flex: 1; }
-  .qr svg { width: 100%; height: auto; max-width: 0.86in; display: block; margin: 0 auto; }
-  .qr .cap { font-size: 6.7pt; font-weight: 600; line-height: 1.12; margin-top: 1.5pt; }
+  .qr svg { width: 100%; height: auto; max-width: 0.84in; display: block; margin: 0 auto; }
+  .qr .cap { font-size: 6.6pt; font-weight: 600; line-height: 1.12; margin-top: 1.5pt; }
 
-  .assign {
-    margin-top: 4pt; border: 2.5pt solid #000; padding: 7pt 9pt; text-align: center;
-  }
-  .assign .lead { font-size: 7.6pt; text-transform: uppercase; letter-spacing: 1pt; }
-  .assign .big { font-size: 13.4pt; font-weight: 700; line-height: 1.16; margin-top: 2pt; }
+  .assign { margin-top: 4pt; border: 2.5pt solid #000; padding: 7pt 9pt; text-align: center; }
+  .assign .lead { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1pt; }
+  .assign .big { font-size: 13pt; font-weight: 700; line-height: 1.16; margin-top: 2pt; }
 
   footer {
     margin-top: 5pt; border-top: 1pt solid #000; padding-top: 3.5pt;
-    display: flex; justify-content: space-between; gap: 10pt; font-size: 7.7pt;
+    display: flex; justify-content: space-between; gap: 10pt; font-size: 7.6pt;
   }
   .todo { font-weight: 700; }
 </style>
 
+<!-- ============================ FRONT ============================ -->
 <div class="sheet">
   <header>
     <h1>Off-Grid Communication with Meshtastic</h1>
@@ -69,49 +77,56 @@
   </header>
 
   <div class="pitch">
-    A $27 radio that texts your family for miles.<br>
+    A pocket radio that texts your family for miles.<br>
     No tower. No subscription. No licence. No monthly bill.
   </div>
 
   <div class="cols">
 
     <section>
-      <h2>Start here</h2>
-      <div class="qrs">
-        <div class="qr">{{qr:start-here}}<div class="cap">Getting<br>started</div></div>
-        <div class="qr">{{qr:flasher}}<div class="cap">Update your<br>radio</div></div>
-        <div class="qr">{{qr:local-map}}<div class="cap">Local mesh<br>map</div></div>
-        <div class="qr">{{qr:local-chat}}<div class="cap">Local<br>community</div></div>
-        <div class="qr">{{qr:hamstudy}}<div class="cap">Free ham<br>study</div></div>
-      </div>
-      <p class="url">meshtastic.org/docs/getting-started/<br>
-      flasher.meshtastic.org &middot; client.meshtastic.org</p>
+      <h2>What it is, in one minute</h2>
+      <p>A small radio, a free app, and your phone. It sends <b>text and location</b>,
+      not voice and not internet. It runs for days on a charge.</p>
+      <p><b>Every radio repeats what it hears.</b> Your message hops from node to node,
+      so you do not need to reach your neighbour directly. You just need to reach
+      <i>somebody</i>. That is the mesh.</p>
     </section>
 
     <section>
-      <h2>What to buy &mdash; prices checked Sept 3, 2026</h2>
+      <h2>What to buy (prices Sept 4, 2026)</h2>
       <table>
-        <tr><th>If you want&hellip;</th><th>Get</th><th>Cost</th></tr>
+        <tr><th>Get</th><th>Why</th><th>Cost</th><th></th></tr>
         <tr>
-          <td>It just works</td>
-          <td><b>SenseCAP T1000-E</b> &mdash; Meshtastic preinstalled, GPS, waterproof, credit-card size</td>
-          <td class="price">$39.90</td>
+          <td><b>SenseCAP<br>T1000-E</b></td>
+          <td>Meshtastic already installed. Charge it, pair it, done. Credit-card size, GPS, waterproof.</td>
+          <td class="price">$50</td>
+          <td class="qrcell">{{qr:buy-t1000e}}</td>
         </tr>
         <tr>
-          <td>Cheapest way on</td>
-          <td><b>Heltec LoRa 32 V4</b> &mdash; antenna included; <b>no</b> battery or case</td>
-          <td class="price">$26.97</td>
+          <td><b>Heltec V4<br>2-pack kit</b></td>
+          <td><b>Best value.</b> Two complete nodes: batteries, cases, antennas. You and one other person, on the air.</td>
+          <td class="price">$90</td>
+          <td class="qrcell">{{qr:buy-heltec}}</td>
         </tr>
         <tr>
-          <td>Cover the place</td>
-          <td><b>SenseCAP Solar Node P1-Pro</b> &mdash; 5&nbsp;W solar + 18650s, pole-mount, weatherproof</td>
-          <td class="price">$93.90</td>
+          <td><b>SenseCAP<br>Solar Node<br>P1-Pro</b></td>
+          <td>Solar + batteries, weatherproof. Put it on a pole and forget it. This is the one on Michael's pole.</td>
+          <td class="price">$140</td>
+          <td class="qrcell">{{qr:buy-solar}}</td>
         </tr>
       </table>
-      <p style="margin-top:3pt">Where: <span class="url">seeedstudio.com &middot; store.rokland.com</span>
-      &middot; GigaParts &middot; Amazon (2-pack kits add case + battery).</p>
-      <p><b>You and one other person, on the air, for about $80</b> &mdash; less than a year
-      of a satellite-messenger subscription.</p>
+      <p style="margin-top:3pt"><b>Two people on the mesh for about $90.</b> That is less
+      than a year of a satellite messenger subscription, and there is no bill after it.</p>
+    </section>
+
+    <section>
+      <h2>Save $25 on the solar node</h2>
+      <div class="qrs" style="justify-content:flex-start;gap:9pt;align-items:center">
+        <div class="qr" style="flex:0 0 auto">{{qr:buy-seeed}}<div class="cap">Seeed<br>direct</div></div>
+        <p style="flex:1">Buying the solar node straight from Seeed Studio runs about
+        <b>$115 delivered</b> instead of $140. Worth it on the expensive one. On the
+        cheap boards the shipping eats the savings, so Amazon is simpler there.</p>
+      </div>
     </section>
 
     <section>
@@ -126,40 +141,19 @@
       <h2>Setup, start to finish</h2>
       <ol>
         <li>Charge it.</li>
-        <li>Update it &mdash; drag-and-drop (T1000-E) or <span class="url">flasher.meshtastic.org</span> (Heltec).</li>
-        <li>Install the free Meshtastic app (iOS/Android), pair over Bluetooth.</li>
-        <li>Set region to <b>US</b>. Name the node something you will recognise.</li>
-        <li>You are on <b>LongFast</b>, the public channel. For a private family
-            channel, make one and share its QR &mdash; that one is encrypted end to end.</li>
+        <li>Update it: drag-and-drop (T1000-E) or <span class="url">flasher.meshtastic.org</span> in Chrome (Heltec).</li>
+        <li>Install the free Meshtastic app (iOS or Android) and pair over Bluetooth.</li>
+        <li><b>Set your region to US.</b> Skip this and the radio will not transmit at all.
+            It is the number one reason a new node looks broken.</li>
+        <li>Name your node something you will recognise. You are now on the mesh.</li>
       </ol>
-    </section>
-
-    <section>
-      <h2>Is anyone out here?</h2>
-      <p><b>Yes.</b> Our regional network is <b>LZMesh</b> (Southwest Missouri) &mdash;
-      around <b>60 nodes live</b> on a given day.</p>
-      <p class="url">map.lzmesh.com &middot; discord.lzarc.com</p>
-      <div class="warn">
-        <b>If your node list looks empty, read this.</b> Most local nodes run a
-        named channel &mdash; <b>CHAOS JLN Main</b> &mdash; not the stock LongFast.
-        Being in range is not enough; you must be on the same channel. Ask in
-        their Discord for current settings before deciding the mesh is dead out here.
+      <div class="qrs">
+        <div class="qr">{{qr:start-here}}<div class="cap">Full setup<br>guide</div></div>
+        <div class="qr">{{qr:flasher}}<div class="cap">Update your<br>radio</div></div>
+        <div class="qr">{{qr:local-map}}<div class="cap">Local mesh<br>map</div></div>
+        <div class="qr">{{qr:local-chat}}<div class="cap">Local<br>community</div></div>
+        <div class="qr">{{qr:hamstudy}}<div class="cap">Free ham<br>study</div></div>
       </div>
-    </section>
-
-    <section>
-      <h2>When you want more</h2>
-      <ul>
-        <li><b>MeshCore</b> &mdash; same radios, planned repeaters instead of
-            everyone-repeats. Tighter at scale, more setup. <span class="url">meshcore.co.uk</span></li>
-        <li><b>Reticulum</b> &mdash; a whole encrypted network stack over any radio.
-            The deep end. <span class="url">reticulum.network</span></li>
-        <li><b>Ham radio</b> &mdash; voice, real power, repeaters. Technician licence
-            is a weekend of study. Study <b>free at <span class="url">hamstudy.org</span></b>,
-            built by our friend Richard Bateman, KD7BBC. The FCC charges <b>$35</b> for
-            the licence; studying costs nothing.<br>
-            <i>Meshtastic is the on-ramp. Ham is the highway. Plenty of us run both.</i></li>
-      </ul>
     </section>
 
   </div>
@@ -167,6 +161,104 @@
   <div class="assign">
     <div class="lead">Do this today</div>
     <div class="big">Buy two. Put one in a kid&rsquo;s backpack.<br>Text them from the house.</div>
+  </div>
+</div>
+
+<!-- ============================ BACK ============================ -->
+<div class="sheet page2">
+  <div class="banner">Channels: the part everybody gets wrong <span>Turn this page over for what to buy</span></div>
+
+  <div class="big-idea">
+    <b>There are two separate questions, and mixing them up causes almost every problem.</b><br>
+    <b>1. Can our radios hear each other?</b> That is <b>region + preset + frequency</b>.<br>
+    <b>2. Can we read what we hear?</b> That is the <b>channel name and its key</b>.<br>
+    Same room, different language: you hear nothing useful. Different room: nothing helps.
+    <b>Get the radio settings right first.</b>
+  </div>
+
+  <div class="cols">
+
+    <section>
+      <h2>The trap nobody warns you about</h2>
+      <div class="warn">
+        <b>Renaming your main channel changes your frequency.</b>
+        Meshtastic takes a hash of your <b>primary</b> channel's name and uses it to pick
+        the actual frequency slot. Rename it and your radio quietly moves off the
+        frequency your neighbours are on. Not a different chat room. A different
+        <i>frequency</i>. No key will fix it.
+      </div>
+      <p>So if you want privacy, <b>do not rename your main channel.</b> Read on.</p>
+    </section>
+
+    <section>
+      <h2>How to get a private family channel (the right way)</h2>
+      <ol>
+        <li><b>Leave the main channel exactly as it came.</b> No name, default key,
+            LongFast, region US. That is what keeps you on the mesh with everybody else.</li>
+        <li><b>Add a second channel.</b> Give it a name and generate a <b>random</b> key.
+            (Not "default" and not the "simple" ones. Those are published and everyone has them.)</li>
+        <li><b>Share it by QR code</b> to the phones you trust. That is the whole handshake.</li>
+      </ol>
+      <p>Now you have both: the public channel for reach, and a private channel only your
+      family can read. You get 8 channels total, so there is room.</p>
+      <p><b>Careful:</b> that QR <i>is</i> the key. Anyone who photographs it is in. Do not
+      put it on a slide or a Facebook post.</p>
+    </section>
+
+    <section>
+      <h2>"Is LongFast private?" No.</h2>
+      <p>LongFast is the channel every radio ships with, and its key is published in the
+      documentation. Everyone on earth has it. Treat it like the public square: good for
+      hello, for coordinating, for finding people. Wrong for anything you would not say
+      out loud at the expo.</p>
+      <p>Keep it anyway. It is how you find your neighbours, and how they find you.</p>
+    </section>
+
+    <section>
+      <h2>Do my messages still get through if we are not on the same channel?</h2>
+      <p><b>Yes, and this is the best part.</b> A radio that cannot read your message still
+      <b>carries</b> it. The address on the outside is readable; only the contents are
+      locked. So strangers' nodes pass your private family messages along without ever
+      being able to read a word of them.</p>
+      <p>Two things follow:</p>
+      <ul>
+        <li>Your private channel gets the range of <i>everybody's</i> radios.</li>
+        <li>Owning a node is a contribution. Yours is carrying messages for people you
+            have never met, right now, sitting in a window.</li>
+      </ul>
+      <p>Leave the rebroadcast setting on <b>ALL</b> (the default) and your role on
+      <b>CLIENT</b>. Do not set yours to Router or Repeater because it sounds stronger.
+      Those are for nodes up high with real power, and a badly placed one makes the mesh worse.</p>
+    </section>
+
+    <section>
+      <h2>Is anyone out here?</h2>
+      <p><b>Yes.</b> Our regional network is <b>LZMesh</b> (Southwest Missouri), running
+      around <b>60 nodes on a given day</b>. Map and Discord QR codes are on the front.</p>
+      <p class="url">map.lzmesh.com &middot; discord.lzarc.com</p>
+      <div class="warn">
+        <b>If your node list looks empty, you are probably not alone.</b> You are almost
+        certainly on a different frequency or a different preset. Check region, check
+        preset, check that nobody renamed the main channel. Ask in the Discord before you
+        decide the mesh is dead out here.
+      </div>
+    </section>
+
+    <section>
+      <h2>When you want more</h2>
+      <ul>
+        <li><b>MeshCore</b>: same radios, planned repeaters instead of everyone-repeats.
+            Tighter at scale, more setup. <span class="url">meshcore.co.uk</span></li>
+        <li><b>Reticulum</b>: a whole encrypted network stack over any radio. The deep end.
+            <span class="url">reticulum.network</span></li>
+        <li><b>Ham radio</b>: voice, real power, repeaters. The Technician licence is a
+            weekend of study. Study <b>free at <span class="url">hamstudy.org</span></b>,
+            built by our friend Richard Bateman (KD7BBC). The FCC charges <b>$35</b> for
+            the licence itself. Studying costs nothing.<br>
+            Meshtastic is the on-ramp. Ham is the highway. Plenty of us run both.</li>
+      </ul>
+    </section>
+
   </div>
 
   <footer>
