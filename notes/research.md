@@ -168,10 +168,14 @@ hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
 - [ ] Confirm with **Max Brixey** who covers what (he's the listed presenter). *Still the
       longest pole — external dependency, and it gates the Plan A / Plan B decision.*
 - [x] ~~Re-verify all prices week-of.~~ Done 2026-09-03, table above.
-- [ ] Watch/endorse the two YouTube candidates before the handout goes to print.
-      *Cannot be delegated to a text tool — someone has to actually watch them, or we cut
-      them from the handout. Recommend cutting: the three written guides already cover it.*
+- [x] ~~Watch/endorse the two YouTube candidates.~~ **Done 2026-09-04** via yt-dlp
+      transcripts, read in full. Keep DoItYourselfDad, add Ham Radio Crash Course, cut
+      GhostStrats on tone and monetisation. Verdicts in [resources.md](resources.md).
+      Neither made the printed handout.
 - [x] ~~Local mesh check.~~ Done 2026-09-03, section above.
 - [x] ~~Verify current FCC licence fee.~~ $35, confirmed.
-- [ ] Decide the live-demo shape: two nodes messaging in the pavilion is cheap
-      and reliable (no internet needed) — but rehearse it.
+- [x] ~~Decide the live-demo shape.~~ **DONE 2026-09-04: the preset A/B.** Positive arm
+      (LongFast radio reaches the phone, DM and broadcast) plus a **negative control**
+      (LongTurbo radio on the same table reaches nothing). All three arms run live today.
+      Runbook with exact commands, the failure branch and a fallback:
+      [demo-runbook.md](demo-runbook.md). Still needs one rehearsal pass.
