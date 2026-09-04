@@ -169,14 +169,31 @@ The whole hour is Michael's. What that changes:
 - **No section split to negotiate.** The timings in this outline are now one
   person's pacing, not two. Sixty minutes of solo talking is real work: build in
   water, and let the live demo and the setup walk-through carry some of the load.
-- **Q&A has no second fielder.** Anything not known gets "I don't know, come find
-  me after" rather than a glance at the other presenter. The Q&A pocket in
-  [channels.md](channels.md) and [range-test.md](range-test.md) matters more now.
+- **Max is in the room, just not presenting.** So there IS a second person for
+  hands-on help: passing radios round, handing out sheets, catching a side question
+  while Michael keeps the thread. Agree beforehand what he is picking up, so it happens
+  by arrangement rather than improvisation.
+- **But the talk itself is one voice.** Q&A still lands on Michael, and "I don't know,
+  come find me after" is a fine answer. The Q&A pockets in [channels.md](channels.md)
+  and [range-test.md](range-test.md) matter more now than when the hour was split.
 - **The printed schedule still says "Max Brixey - Mashtastic Off-Grid
   Communication"** (their typo on Meshtastic too). Clear that up in the opening
   fifteen seconds so nobody thinks they are in the wrong room.
 - **All demo nodes are Michael's**, which removes the "agree channel and node
   names beforehand" problem entirely. Everything is already on one mesh.
 
-- [ ] Confirm what the pavilion actually has: screen? power? Plan A (screen) /
-      Plan B (radios + handouts only - the talk must survive with no slides).
+- [x] ~~Confirm what the pavilion has.~~ **CONFIRMED 2026-09-04: power and a TV
+      screen.** Plan A is on.
+
+### What a TV screen changes (it is not a projector)
+
+- **A TV is smaller than a projector image.** The back row is the constraint. Anything
+  that matters must survive being read from ~25 feet: prices, the two frequencies, the
+  channel rules. Fine on our deck (big type, few words), but **do not add dense tables**.
+- **Take the adapter and a spare.** Laptop to TV is HDMI; a pavilion TV may present
+  HDMI only, and a dongle failure is a Plan B trigger with power sitting right there.
+  Test the actual cable at home first.
+- **Test it before the room fills.** Slot before ours ends at 2:30, so arrive early
+  enough to plug in during the changeover, not during the talk.
+- **Plan B still stands** and is now cheap insurance rather than the expected case:
+  two radios and the printed handout carry the hour with no screen at all.

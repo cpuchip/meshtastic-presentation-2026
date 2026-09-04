@@ -86,10 +86,29 @@ both exactly). US region runs 902-928 MHz, and the centre frequency is
 numbers on the slide, because "different frequency" is abstract and *906.875 vs 908.750*
 is not.
 
-**Unresolved:** we did not confirm *what* set it to LONG_TURBO. LONG_FAST is still enum 0
-and still the documented default, so this is not simply the protobuf zero value. Do not
-tell the room "new boards default to LongTurbo" as a fact; say "check your preset,
-because this one surprised us."
+**Resolved 2026-09-04, with the confidence stated honestly.** The question was only ever
+"LONG_FAST is protobuf enum 0 and the documented default, so a factory-fresh board should
+have come up on LongFast - what wrote LONG_TURBO instead?" Michael's answer: **the board
+came that way from the vendor.**
+
+That is coherent and it closes the loop, because **a flash without a full erase preserves
+the existing configuration.** So Seeed's preloaded settings survived the update to 2.7.26
+untouched. Nothing wrote LONG_TURBO during the flash; it was simply never overwritten.
+
+Confidence: this rests on Michael's recollection of the board as shipped, not on a
+measurement of a second sealed unit. Good enough to stop investigating, not good enough to
+state as a general fact about XIAO S3 boards.
+
+### ⚠ The tension this exposes, and it is worth a sentence on stage
+
+We tell people **"do not tick full erase"** so their identity keys survive an update. True,
+and it prevents the DM breakage above. But the same behaviour is why this board arrived on
+a preset nobody chose: **whatever the vendor shipped, survives.**
+
+So the two pieces of advice belong together:
+
+> "Update without a full erase, so you keep your keys. And then check your region and
+> preset anyway, because whatever the factory set is still in there."
 
 **A claim we checked and rejected:** a search result asserted that setting region US moves
 a node off LongFast because "LongFast's bandwidth is not US-compliant." Both the LoRa docs
