@@ -332,9 +332,22 @@ recovery today. Every peer has to clear it by hand.
   app's Security settings, and restore them after. Users report this is far less work than
   chasing down every peer afterwards.
 
-**Cure, once it has happened:**
+**Cure, once it has happened - and which side matters:**
 
-- **Both sides must forget the node.** One side is not enough.
+> **★ Refined 2026-09-04 by measurement.** After both sides cleared the node, our DM
+> **ACKed**. But the public key *we* held for KV9G came back **byte-identical** to the one
+> we had before (`y9m2DDyD83e0kavLB8t1/N39…`). So our copy was never the stale one.
+>
+> **The stale copy was on the receiving side** - his phone's stored key for *our* node.
+> That is why our DM NAKed with NO_CHANNEL: he could not decrypt it. Clearing it here was
+> belt-and-braces; **clearing it there was the fix.**
+>
+> Which sharpens why this is a deadlock: **the node that must act is the one that cannot be
+> reached.** You cannot DM someone to tell them their key for you is stale, because that DM
+> is the broken thing. Broadcast still works, so a channel message is the only way to ask.
+
+- **The receiver must forget the sender.** Clearing on the sending side alone will not fix
+  it. Clear both if you cannot tell which way round it is.
   - Phone app: long-press the node, remove it.
   - CLI: `meshtastic --port COM4 --remove-node '!2d21195a'`
 - Then wait for the node to re-announce. **Default `nodeInfoBroadcastSecs` is 10800, three
