@@ -113,7 +113,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# Set-and-forget: SenseCAP Solar Node - $70–100
+# Set-and-forget: SenseCAP Solar Node P1-Pro - $140
 
 <div class="img-row">
 
@@ -150,7 +150,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 |---|---|---|
 | Me and one other person | Heltec V4 **2-pack kit** | **$90** |
 | The no-fuss option | 1× SenseCAP T1000-E | **$50** |
-| Cover the farm | add a solar node on a pole | **+$90–100** |
+| Cover the whole place | add a solar node on a pole | **+$140** |
 
 ## Less than a year of a satellite messenger subscription.
 

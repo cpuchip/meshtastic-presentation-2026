@@ -17,7 +17,7 @@ Marshfield sits in tornado alley. Everyone in the room has lost power; most
 have lost cell service. The question that opens the talk: **when the grid and
 the towers are down, how do you tell your family you're okay?**
 
-Then the reveal: a $30–40 radio that fits in a pocket, texts your family miles
+Then the reveal: a $50 radio that fits in a pocket, texts your family miles
 away, needs no tower, no subscription, no license, and runs weeks on a battery.
 Hold one up. (If the live demo is rehearsed: send a message across the pavilion
 right now, first minute of the talk.)
@@ -57,7 +57,8 @@ One slide per tier, image-forward (all images in assets/):
    cases included). Single board is $26.97 bare. The hobbyist favorite, now with
    real transmit power (27 dBm). 2-pack kits with case/battery/antenna on
    Amazon. (V3 still fine at ~$18 if you find one.)
-3. **Set-and-forget: SenseCAP Solar Node P1 / P1-Pro** - $70–100, solar +
+3. **Set-and-forget: SenseCAP Solar Node P1-Pro** - $140 delivered ($115 direct
+   from Seeed), solar +
    18650s, weatherproof, pole-mount. This is Michael's roof node. The
    "cover the whole farm" piece.
 4. **Builder's row (one slide, fast):** RAK WisBlock (lowest power, modular),
@@ -114,6 +115,13 @@ Then the practical close:
 
 Callback to section 5: "region US" and "do not rename the primary" are the two
 settings that decide whether any of this works.
+
+**Optional 4th slide, marked CUT IF TIGHT: "does this broadcast my address?"**
+No - the public channel blurs your position to a ~1.5 mile grid cell and sends
+the centre, and precision is set per channel. It answers a question this room
+will actually have, and it has a true story attached (it fooled us this week).
+If the section is running long, drop it and keep it in the Q&A pocket instead.
+Full mechanism: [channels.md](channels.md).
 
 ## 7. Range reality - the honest slide (4 min)
 

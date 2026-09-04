@@ -18,7 +18,7 @@ get watched before we endorse them (open item in research.md).
   seeedstudio.com, GigaParts, Rokland
 - **Classic + cheap**: Heltec WiFi LoRa 32 V4 ($26.97) — Rokland, Amazon
   (2-pack kits with case/battery/antenna)
-- **Whole-property node**: SenseCAP Solar Node P1 / P1-Pro ($70–100) —
+- **Whole-property node**: SenseCAP Solar Node P1-Pro ($140 Amazon, ~$115 direct) —
   setup guide: https://wiki.seeedstudio.com/meshtastic_solar_node/
 - US vendors worth knowing: Rokland (store.rokland.com), GigaParts, Seeed direct
 

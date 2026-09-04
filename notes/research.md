@@ -155,7 +155,8 @@ St. Louis, Show Me Mesh — Jefferson City (mo-mesh.com), Kansas City Meshtastic
 | Heltec WiFi LoRa 32 V4 | $26.97 | **$26.97, in stock** at Rokland. Includes LoRa antenna; **no battery, no case**. Listed 28 ±1 dBm. | store.rokland.com |
 | SenseCAP Solar Node P1-Pro | $89.90 launch / ~$100.99 seen | **$93.90** per Seeed's own datasheet dated 2026-08-06 | files.seeedstudio.com datasheet |
 
-Deck slide 13's "$27 / ~$80 / +$90–100" tiers all still hold. Slide 10 should not imply the
+~~Deck slide 13's "$27 / ~$80 / +$90-100" tiers all still hold.~~ **Superseded 2026-09-04**:
+all audience-facing prices moved to delivered Amazon figures ($50 / $90 / $140). Slide 10 should not imply the
 $26.97 Rokland unit ships with a battery and case — the Amazon 2-pack kits do, that listing
 does not.
 

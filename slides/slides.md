@@ -139,7 +139,7 @@ and a case, so the kit wins for a beginner.*
 
 ## SLIDE 11 - Hardware tier 3: set-and-forget
 
-# SenseCAP Solar Node P1-Pro - ~$90–100
+# SenseCAP Solar Node P1-Pro - $140
 
 (image: sensecap-solar-node.webp)
 
@@ -254,7 +254,26 @@ add a channel for privacy.*
 
 ---
 
-## SLIDE 18 - Range: the honest slide
+## SLIDE 18 - Does this broadcast my address?  [CUT IF TIGHT]
+
+# No. It broadcasts a square about a mile and a half across.
+
+- On the public channel your position is **deliberately blurred**
+- Default setting rounds you to a **~1.5 mile grid cell** and sends the centre
+- Everyone at my house, *and John down the street*, publish the identical point
+
+### Precision is per channel. On my family channel, I set it to exact.
+
+*This fooled me this week. I spent an afternoon measuring distances from a
+point that turned out to be the centre of my own privacy cell, two miles from
+my actual house. The radio was protecting me and I misread it as data.*
+
+*So: know which channel you are sharing on. Public is a blurred square.
+Private can be your doorstep.*
+
+---
+
+## SLIDE 19 - Range: the honest slide
 
 # Height beats power. Every time.
 
@@ -267,7 +286,7 @@ add a channel for privacy.*
 
 ---
 
-## SLIDE 19 - The neighbors: MeshCore
+## SLIDE 20 - The neighbors: MeshCore
 
 # Same radios, different philosophy.
 
@@ -277,7 +296,7 @@ add a channel for privacy.*
 
 ---
 
-## SLIDE 20 - The neighbors: Reticulum
+## SLIDE 21 - The neighbors: Reticulum
 
 # Not a chat app - a whole network stack.
 
@@ -287,7 +306,7 @@ add a channel for privacy.*
 
 ---
 
-## SLIDE 21 - The neighbors: ham radio + APRS
+## SLIDE 22 - The neighbors: ham radio + APRS
 
 # The licensed path: voice, power, repeaters.
 
@@ -298,7 +317,7 @@ add a channel for privacy.*
 
 ---
 
-## SLIDE 22 - Do this today
+## SLIDE 23 - Do this today
 
 # Buy two. Put one in a kid's backpack. Text them from the house.
 
@@ -308,7 +327,7 @@ add a channel for privacy.*
 
 ---
 
-## SLIDE 23 - Q&A
+## SLIDE 24 - Q&A
 
 # Questions?
 
