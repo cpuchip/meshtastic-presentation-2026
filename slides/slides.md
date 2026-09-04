@@ -83,16 +83,17 @@ that feel like magic.*
 
 # Several nodes. One 35-foot pole. Zero utility bills.
 
-(photo: Michael's solar node on the pole - TODO take this photo)
+(image: solar-node-pole.webp - full bleed, portrait, node at the top clear
+of the treeline)
 
-- Solar node on the pole, running untouched
+- **SNST_cb53**, solar, on a 35-foot flagpole. No wires, no bill
 - The base station has been up **82 days straight** on one charge
   (4.16 volts, still going)
 - The kids' backpacks have trackers on the family channel
-- Last night my radio heard a neighbour I have never met, one hop away
+- **John down the street is one hop away.** That is the mesh, already working
 
-*Those numbers are real, read off my own node this week. Say the reading,
-not "months".*
+*Those numbers are real, read off my own node this week. Say the reading, not
+"months". The photo does the height argument for me, so do not narrate it.*
 
 *Max's story here too - his slide, his words.*
 
@@ -195,9 +196,21 @@ than the 2-pack every single year you keep it.*
 - **Hearing** = region + preset + frequency. The radio settings.
 - **Reading** = channel name + key. The lock on the box.
 
+### On my own bench this week:
+
+| Preset | Frequency |
+|---|---|
+| LongFast (all my old nodes) | **906.875 MHz** |
+| LongTurbo (one new board) | **908.750 MHz** |
+
+### 1.5 MHz apart. Same table. Zero contact.
+
 *Same room, different language: you hear nothing useful. Different room:
 nothing helps. Get the radio settings right first. This slide is the whole
 section; the next two are just consequences.*
+
+*If the room is quiet, this is the moment to hold up the new board and say it
+found nobody sitting next to three working radios.*
 
 ---
 
@@ -239,6 +252,8 @@ add a channel for privacy.*
 ## SLIDE 18 - Range: the honest slide
 
 # Height beats power. Every time.
+
+(callback to the pole photo from slide 7 - the node is above the treeline)
 
 - Window beats desk; pole beats window; **hilltop beats everything**
 - Miles line-of-sight is normal; hollers and oaks eat signal

@@ -54,3 +54,11 @@ read on both dark and light backgrounds.
 - [ ] Mesh-topology diagram in the site theme (draw as SVG during the
       cpuchip.net adaptation; don't borrow one)
 - [ ] Screenshots of the phone app pairing/channel-QR flow for slide 14 backup
+
+## Our own photographs (not third-party, no attribution needed)
+
+- `images/solar-node-pole.webp` - Michael's SenseCAP Solar Node **SNST_cb53** on his
+  35-foot flagpole, photographed 2026-09-04. Ours to use anywhere, including the
+  cpuchip.net presentations tab. EXIF rotation was baked in rather than left as an
+  orientation tag, because not every slide renderer or print pipeline honours the tag and
+  a sideways flagpole is not recoverable from the podium. Resized to 1400x1867.

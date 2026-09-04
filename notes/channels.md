@@ -72,6 +72,20 @@ desk as three working nodes.
 That is layer 1 failing, in the room, with nothing wrong with any radio. It is the best
 demo we have for this section: **same house, same channel name, same key, zero contact.**
 
+**In actual megahertz** (Michael read these off the radios; the arithmetic below reproduces
+both exactly). US region runs 902-928 MHz, and the centre frequency is
+`freqStart + bw/2000 + slot x bw/1000`, with `numChannels = floor(26 / (bw/1000))`:
+
+| Preset | Bandwidth | Slots | Slot | Centre | Occupies |
+|---|---|---|---|---|---|
+| `LONG_FAST` | 250 kHz | 104 | 19 | **906.875 MHz** | 906.750 - 907.000 |
+| `LONG_TURBO` | 500 kHz | 52 | 13 | **908.750 MHz** | 908.500 - 909.000 |
+
+**1.5 MHz of clear air between the two bands. They do not overlap at all.** This is not
+"weak signal" or "hard to hear" - it is a different radio channel. Worth putting the two
+numbers on the slide, because "different frequency" is abstract and *906.875 vs 908.750*
+is not.
+
 **Unresolved:** we did not confirm *what* set it to LONG_TURBO. LONG_FAST is still enum 0
 and still the documented default, so this is not simply the protobuf zero value. Do not
 tell the room "new boards default to LongTurbo" as a fact; say "check your preset,

@@ -65,6 +65,8 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ## Several nodes. One 35-foot pole. Zero utility bills.
 
+![Solar node on the flagpole](/images/presentations/meshtastic/solar-node-pole.webp)
+
 <!-- TODO: Michael's pole photo goes here -->
 
 - The solar node has run **untouched for months**
@@ -169,6 +171,13 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 - **Hearing** = region + preset + frequency. The radio settings.
 - **Reading** = channel name + key. The lock on the box.
+
+| Preset | Frequency |
+|---|---|
+| LongFast | **906.875 MHz** |
+| LongTurbo | **908.750 MHz** |
+
+## 1.5 MHz apart. Same table. Zero contact.
 
 Same room, different language: you hear nothing useful.
 Different room: nothing helps. Get the radio settings right first.
