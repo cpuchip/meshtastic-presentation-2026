@@ -278,3 +278,76 @@ that one really is a frequency-layer miss.
       2026-09-04**: their primary is blank; `LZMesh` is a secondary. See
       [lzmesh-channel-finding.md](lzmesh-channel-finding.md).
 - [ ] What set the new XIAO S3 to `LONG_TURBO`? Unresolved; do not assert a mechanism.
+
+---
+
+## The key-mismatch gotcha: when DMs break after an update
+
+*Hit live on our own bench 2026-09-04, then researched. This one belongs on the setup
+slide because it is caused by the very step we tell people to do.*
+
+### The symptom
+
+Broadcasts work fine. **Direct messages to one specific node silently fail.** Ask for an
+acknowledgement and the radio answers:
+
+```
+Received a NAK, error reason: NO_CHANNEL
+```
+
+**Note the error name misdirects.** `NO_CHANNEL` is Routing.Error 6, and Meshtastic has
+dedicated PKC errors (`PKI_FAILED` 34, `PKI_UNKNOWN_PUBKEY` 35, `PKI_SEND_FAIL_PUBLIC_KEY`
+39) which you do **not** get. So the error reads like a channel problem and is actually a
+key problem. Do not let the label steer the diagnosis; we nearly did.
+
+### The cause
+
+Direct messages are encrypted to the recipient's **public key** (PKC), not to the channel
+key. Every node stores the public keys of nodes it has met.
+
+**A full erase during a firmware flash wipes the device's key pair.** The node comes back
+with the *same node ID* and a *brand new key*. Everyone who met it before still holds the
+old public key, so their DMs are encrypted to a key it no longer has. It cannot decrypt
+them, and it NAKs.
+
+Maintainer guidance is blunt ([firmware discussion
+#5122](https://github.com/meshtastic/firmware/discussions/5122)):
+
+> "If you don't want to wipe the keys don't do a full erase."
+
+### The nasty part: it is a recovery deadlock
+
+From [firmware issue #10371](https://github.com/meshtastic/firmware/issues/10371): the
+node cannot tell its peers to fix it, **because direct messaging is exactly what is
+broken.** On a public mesh with many peers holding the stale key, there is no systematic
+recovery today. Every peer has to clear it by hand.
+
+### What to actually do
+
+**Prevention, and this is the real advice:**
+
+- **Do not tick "full erase" for routine firmware updates.** A normal update keeps your
+  keys and this never happens.
+- If you must full-erase, **back up the public and private keys first** from the phone
+  app's Security settings, and restore them after. Users report this is far less work than
+  chasing down every peer afterwards.
+
+**Cure, once it has happened:**
+
+- **Both sides must forget the node.** One side is not enough.
+  - Phone app: long-press the node, remove it.
+  - CLI: `meshtastic --port COM4 --remove-node '!2d21195a'`
+- Then wait for the node to re-announce. **Default `nodeInfoBroadcastSecs` is 10800, three
+  hours**, so it is not instant. Sending any message from the other node makes it announce
+  immediately, which is much faster than waiting.
+
+### For the stage
+
+One sentence on the setup slide, at the "update it" step:
+
+> "When you update, do not tick full erase. It wipes your radio's identity, and your
+> direct messages to everyone who already knows you stop working until both of you delete
+> each other and start over."
+
+That is a real, checkable, avoidable footgun, and it lands on the exact step where they
+will meet it.
