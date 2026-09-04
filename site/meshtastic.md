@@ -160,7 +160,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 1. Charge it. **Antenna on before power.**
 2. Update: drag-and-drop (T1000-E) or **flasher.meshtastic.org** (Heltec)
-3. Phone app → pair → region **US**
+3. Phone app → pair → **check TWO settings: Region = US, Preset = LongFast**
 4. You're on **LongFast** - the public channel - with everyone in range
 5. Private family channel: scan one QR code. **Encrypted.**
 

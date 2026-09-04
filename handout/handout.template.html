@@ -143,8 +143,10 @@
         <li>Charge it.</li>
         <li>Update it: drag-and-drop (T1000-E) or <span class="url">flasher.meshtastic.org</span> in Chrome (Heltec).</li>
         <li>Install the free Meshtastic app (iOS or Android) and pair over Bluetooth.</li>
-        <li><b>Set your region to US.</b> Skip this and the radio will not transmit at all.
-            It is the number one reason a new node looks broken.</li>
+        <li><b>Check two settings: Region = US, and Preset = LongFast.</b>
+            Wrong region and it will not transmit at all. Wrong preset and it transmits
+            into an empty room. Both look exactly like a dead radio. These two are the
+            first things to check, always.</li>
         <li>Name your node something you will recognise. You are now on the mesh.</li>
       </ol>
       <div class="qrs">
@@ -243,9 +245,10 @@
       <div class="warn">
         <b>Two cautions.</b> Scanning their channel QR can <b>replace channels you already
         have</b>, so save a private one first. And if your node list looks empty, check
-        <b>region</b> and <b>preset</b> before anything else: a radio on a different preset
-        hears nothing, even sitting on the same table. We caught a brand-new board doing
-        exactly that this week.
+        <b>region</b> and <b>preset</b> before anything else. A brand-new board here came up
+        on LongTurbo instead of LongFast: that put it on <b>908.750 MHz</b> while everything
+        else sat on <b>906.875</b>. It found nobody, on the same table as three working
+        radios.
       </div>
     </section>
 

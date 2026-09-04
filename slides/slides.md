@@ -180,9 +180,14 @@ than the 2-pack every single year you keep it.*
 
 1. Charge it. **Antenna on before power.**
 2. Update: drag-and-drop (T1000-E) or flasher.meshtastic.org (Heltec)
-3. Phone app → pair → region **US**
-4. You're on **LongFast** - the public channel - with everyone in range
+3. Phone app → pair → **check TWO settings:**
+   ### Region = US.  Preset = LongFast.
+4. That puts you on the public channel with everyone in range
 5. Make a private family channel: scan one QR code. Encrypted.
+
+*Two settings, not one. Region wrong = it never transmits. Preset wrong = it
+transmits into an empty room. Both look like a dead radio to a beginner, and
+I hit the second one on a new board this week.*
 
 *Live-walk this on screen; screenshots as backup.*
 
