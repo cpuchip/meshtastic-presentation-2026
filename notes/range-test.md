@@ -69,12 +69,29 @@ every 60 s forever is airtime everyone in range pays for.
 
 ---
 
+## ⚠ FIRST: raise the position precision, or the test is meaningless
+
+**The public channel publishes a quantised position**, not a real one. At the default
+`positionPrecision: 13` that is a **2.45 km (1.52 mi)** cell, and every node inside it
+reports the identical coordinate. That is larger than most of the range being measured, so
+a range test built on public positions produces one repeated point.
+
+This is exactly what wrecked the 2026-09-04 attempt: the "home cluster" coordinate several
+nodes shared was the centre of a privacy cell 2.00 mi from the actual house. Mechanism and
+proof in [channels.md](channels.md).
+
+**So before driving**, put the position on a channel with full precision - the private
+`Stuff` channel is the natural place - and confirm the coordinates you receive actually
+differ from the published public ones. If the mobile node's reported position matches the
+old cell-centre value, you are still reading quantised data.
+
 ## Reading the result honestly
 
 - **A dot means the base heard the mobile node.** It does not prove the reverse.
 - **Distance comes from the mobile node's own reported position.** If that is coarse or
   stale, the distance inherits the error. On 2026-09-04 a position went 27 minutes without
-  updating while we treated it as current.
+  updating while we treated it as current, and separately was quantised to a 2.45 km cell
+  while we treated it as a location. Both failures produced confident wrong numbers.
 - **SNR is the number that matters**, not distance. Two miles across a field and two miles
   through oak ridges are different experiments. Note the terrain.
 - **Watch for `hops_used > 0`.** That sample arrived *via a relay*, so it measures the mesh,

@@ -364,3 +364,60 @@ One sentence on the setup slide, at the "update it" step:
 
 That is a real, checkable, avoidable footgun, and it lands on the exact step where they
 will meet it.
+
+---
+
+## Position privacy: the mesh deliberately blurs where you are
+
+*Confirmed bit-exactly on our own data 2026-09-04, after it fooled us for an afternoon.*
+
+Meshtastic reduces the precision of the position it shares, per channel. It masks the low
+bits of the integer latitude/longitude and adds half a cell, so what goes out is the
+**centre of a grid cell**, not your house:
+
+```
+published = (value & (0xFFFFFFFF << (32 - bits))) + (1 << (31 - bits))
+```
+
+Our primary channel runs `positionPrecision: 13`, which is the default here.
+
+| | latitude | longitude |
+|---|---|---|
+| Michael's actual house | 37.32970 | -92.89390 |
+| **What the mesh publishes** | **37.35552** | **-92.87762** |
+
+Masking `373297000` at 13 bits gives `373555200` **exactly**. The published point sits
+**3.22 km / 2.00 mi** from the real one, and a 13-bit cell is **2.45 km (1.52 mi)** tall.
+
+### Why this fooled us, and why it will fool the room
+
+**Every node at the house reports the identical coordinate** - the Indicator, the solar
+node, the T1000-E, and John-Base down the street. They are all in one cell, so they all
+publish one point. We read that as "the home cluster", used it as a reference, and computed
+two miles of nonsense from it.
+
+**The tell we missed:** John lives down the street and reported coordinates identical to
+the house, to seven decimal places. Real GPS never agrees like that. Identical positions
+across several nodes means quantisation, not a location.
+
+### For the talk - this is a good slide, not a footnote
+
+People assume a GPS tracker on a public channel broadcasts their address. **It does not,
+by default.** It broadcasts a ~1.5 mile square. That is a genuine privacy feature that
+nobody explains, and it answers a question this audience will actually have.
+
+And the flip side, which is the honest half: **on your own private channel you can raise
+the precision**, and then it really is your address. So the rule to say out loud:
+
+> "Your public position is a blurred square about a mile and a half across. Your private
+> family channel can carry your exact position. Know which one you are sharing on."
+
+### ⚠ Consequence for range testing
+
+**You cannot measure range from public-channel positions.** The quantisation is 2.45 km,
+which is larger than most of the range you are trying to measure. Every sample inside one
+cell reports the same coordinate.
+
+A range test needs full-precision position, which means running it **on a private channel
+with `positionPrecision` raised**, and saying so in the writeup. See
+[range-test.md](range-test.md).
