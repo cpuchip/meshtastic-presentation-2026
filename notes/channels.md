@@ -296,7 +296,7 @@ that one really is a frequency-layer miss.
 - [x] ~~Ask LZMesh whether `CHAOS JLN Main` is their primary or a secondary.~~ **Settled
       2026-09-04**: their primary is blank; `LZMesh` is a secondary. See
       [lzmesh-channel-finding.md](lzmesh-channel-finding.md).
-- [ ] What set the new XIAO S3 to `LONG_TURBO`? Unresolved; do not assert a mechanism.
+- [x] ~~What set the new XIAO S3 to `LONG_TURBO`?~~ **Closed 2026-09-04: it shipped that way; a flash without full erase preserved it.**
 
 ---
 
