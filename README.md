@@ -17,6 +17,11 @@ and assets out of the site repo so it can be reused year to year.
 | `notes/research.md` | Verified facts + sources (every claim checked against a live source, dated) |
 | `notes/outline.md` | The one-hour talk structure + coordination checklist with Max |
 | `notes/resources.md` | The audience "where to go next" list — feeds the handout |
+| `notes/handout.md` | The one-page take-home, in markdown — source of truth for its wording |
+| `handout/handout.html` | **Print-ready handout.** Built; do not hand-edit. Open in Chrome → Ctrl-P |
+| `handout/handout.template.html` | The handout's layout + `{{qr:slug}}` tokens — edit this |
+| `scripts/make-qr.py` | Regenerates `assets/qr/*.svg` from the link list |
+| `scripts/build-handout.py` | Inlines the QR SVGs into the template → `handout/handout.html` |
 | `slides/slides.md` | Slide deck source (format-agnostic markdown, one `---` per slide) |
 | `assets/images/` | Device photos (from the Meshtastic docs repo, GPL-3.0 — see SOURCES.md) |
 | `reference/` | Shallow clones of meshtastic firmware + docs, MeshCore, Reticulum (gitignored) |
@@ -30,6 +35,17 @@ git clone --depth 1 https://github.com/meshtastic/meshtastic meshtastic-docs
 git clone --depth 1 https://github.com/meshcore-dev/MeshCore
 git clone --depth 1 https://github.com/markqvist/Reticulum
 ```
+
+## Printing the handout
+
+```sh
+python scripts/make-qr.py        # only when a link changes
+python scripts/build-handout.py  # -> handout/handout.html
+```
+
+Open `handout/handout.html` in Chrome, Ctrl-P, **Paper: Letter · Margins: Default ·
+Background graphics: ON**. One page, single-sided, designed to survive a cheap
+black-and-white printer. Target ~50 copies.
 
 ## Presenting offline
 

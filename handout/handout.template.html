@@ -1,0 +1,177 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Meshtastic Handout — Ozarks Homesteading Expo 2026</title>
+<style>
+  /* One US Letter page, single side, black on white. The venue is a park
+     pavilion and these get printed cheap — no colour, no light greys, no
+     hairlines that vanish on a tired toner cartridge. */
+  @page { size: letter portrait; margin: 0.4in; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0; background: #fff; color: #000;
+    font: 9.1pt/1.32 "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .sheet { width: 7.7in; margin: 0 auto; }
+
+  header { text-align: center; border-bottom: 2.5pt solid #000; padding-bottom: 5pt; }
+  h1 { font-size: 20pt; line-height: 1.05; margin: 0 0 2pt; letter-spacing: -0.4pt; }
+  .event { font-size: 8.6pt; font-weight: 600; }
+  .who { font-size: 8.6pt; }
+  .pitch {
+    margin: 6pt 0 0; padding: 5pt 8pt; border: 1.2pt solid #000;
+    font-size: 10.2pt; font-weight: 600; text-align: center;
+  }
+
+  .cols { column-count: 2; column-gap: 0.34in; column-fill: balance; margin-top: 7pt; }
+  section { break-inside: avoid; margin-bottom: 7pt; }
+  h2 {
+    font-size: 9.6pt; margin: 0 0 3pt; text-transform: uppercase;
+    letter-spacing: 0.5pt; border-bottom: 1pt solid #000; padding-bottom: 1.5pt;
+  }
+  p, ul, ol { margin: 0 0 3pt; }
+  ul, ol { padding-left: 13pt; }
+  li { margin-bottom: 1.2pt; }
+  .url { font-family: "Consolas", "DejaVu Sans Mono", monospace; font-size: 8.3pt; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 8.5pt; }
+  th, td { border: 0.8pt solid #000; padding: 2.4pt 3.4pt; text-align: left; vertical-align: top; }
+  th { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.3pt; }
+  td.price { font-weight: 700; white-space: nowrap; text-align: right; }
+
+  .rule { border: 1.5pt solid #000; padding: 4pt 6pt; margin: 0 0 3pt; }
+  .warn { border: 1.5pt solid #000; padding: 4pt 6pt; background: #ebebeb; }
+  .warn b { text-transform: uppercase; letter-spacing: 0.3pt; }
+
+  .qrs { display: flex; gap: 7pt; justify-content: space-between; margin: 4pt 0 2pt; }
+  .qr { text-align: center; flex: 1; }
+  .qr svg { width: 100%; height: auto; max-width: 0.86in; display: block; margin: 0 auto; }
+  .qr .cap { font-size: 6.7pt; font-weight: 600; line-height: 1.12; margin-top: 1.5pt; }
+
+  .assign {
+    margin-top: 4pt; border: 2.5pt solid #000; padding: 7pt 9pt; text-align: center;
+  }
+  .assign .lead { font-size: 7.6pt; text-transform: uppercase; letter-spacing: 1pt; }
+  .assign .big { font-size: 13.4pt; font-weight: 700; line-height: 1.16; margin-top: 2pt; }
+
+  footer {
+    margin-top: 5pt; border-top: 1pt solid #000; padding-top: 3.5pt;
+    display: flex; justify-content: space-between; gap: 10pt; font-size: 7.7pt;
+  }
+  .todo { font-weight: 700; }
+</style>
+
+<div class="sheet">
+  <header>
+    <h1>Off-Grid Communication with Meshtastic</h1>
+    <div class="event">Ozarks Homesteading Expo &middot; September 5, 2026 &middot; Marshfield, Missouri</div>
+    <div class="who">Max Brixey &middot; Michael Stufflebeam</div>
+  </header>
+
+  <div class="pitch">
+    A $27 radio that texts your family for miles.<br>
+    No tower. No subscription. No licence. No monthly bill.
+  </div>
+
+  <div class="cols">
+
+    <section>
+      <h2>Start here</h2>
+      <div class="qrs">
+        <div class="qr">{{qr:start-here}}<div class="cap">Getting<br>started</div></div>
+        <div class="qr">{{qr:flasher}}<div class="cap">Update your<br>radio</div></div>
+        <div class="qr">{{qr:local-map}}<div class="cap">Local mesh<br>map</div></div>
+        <div class="qr">{{qr:local-chat}}<div class="cap">Local<br>community</div></div>
+        <div class="qr">{{qr:hamstudy}}<div class="cap">Free ham<br>study</div></div>
+      </div>
+      <p class="url">meshtastic.org/docs/getting-started/<br>
+      flasher.meshtastic.org &middot; client.meshtastic.org</p>
+    </section>
+
+    <section>
+      <h2>What to buy &mdash; prices checked Sept 3, 2026</h2>
+      <table>
+        <tr><th>If you want&hellip;</th><th>Get</th><th>Cost</th></tr>
+        <tr>
+          <td>It just works</td>
+          <td><b>SenseCAP T1000-E</b> &mdash; Meshtastic preinstalled, GPS, waterproof, credit-card size</td>
+          <td class="price">$39.90</td>
+        </tr>
+        <tr>
+          <td>Cheapest way on</td>
+          <td><b>Heltec LoRa 32 V4</b> &mdash; antenna included; <b>no</b> battery or case</td>
+          <td class="price">$26.97</td>
+        </tr>
+        <tr>
+          <td>Cover the place</td>
+          <td><b>SenseCAP Solar Node P1-Pro</b> &mdash; 5&nbsp;W solar + 18650s, pole-mount, weatherproof</td>
+          <td class="price">$93.90</td>
+        </tr>
+      </table>
+      <p style="margin-top:3pt">Where: <span class="url">seeedstudio.com &middot; store.rokland.com</span>
+      &middot; GigaParts &middot; Amazon (2-pack kits add case + battery).</p>
+      <p><b>You and one other person, on the air, for about $80</b> &mdash; less than a year
+      of a satellite-messenger subscription.</p>
+    </section>
+
+    <section>
+      <h2>The one hardware rule</h2>
+      <div class="rule">
+        <b>Screw the antenna on BEFORE you power it up.</b> Transmitting with no
+        antenna can damage the radio. Everything else is forgiving.
+      </div>
+    </section>
+
+    <section>
+      <h2>Setup, start to finish</h2>
+      <ol>
+        <li>Charge it.</li>
+        <li>Update it &mdash; drag-and-drop (T1000-E) or <span class="url">flasher.meshtastic.org</span> (Heltec).</li>
+        <li>Install the free Meshtastic app (iOS/Android), pair over Bluetooth.</li>
+        <li>Set region to <b>US</b>. Name the node something you will recognise.</li>
+        <li>You are on <b>LongFast</b>, the public channel. For a private family
+            channel, make one and share its QR &mdash; that one is encrypted end to end.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Is anyone out here?</h2>
+      <p><b>Yes.</b> Our regional network is <b>LZMesh</b> (Southwest Missouri) &mdash;
+      around <b>60 nodes live</b> on a given day.</p>
+      <p class="url">map.lzmesh.com &middot; discord.lzarc.com</p>
+      <div class="warn">
+        <b>If your node list looks empty, read this.</b> Most local nodes run a
+        named channel &mdash; <b>CHAOS JLN Main</b> &mdash; not the stock LongFast.
+        Being in range is not enough; you must be on the same channel. Ask in
+        their Discord for current settings before deciding the mesh is dead out here.
+      </div>
+    </section>
+
+    <section>
+      <h2>When you want more</h2>
+      <ul>
+        <li><b>MeshCore</b> &mdash; same radios, planned repeaters instead of
+            everyone-repeats. Tighter at scale, more setup. <span class="url">meshcore.co.uk</span></li>
+        <li><b>Reticulum</b> &mdash; a whole encrypted network stack over any radio.
+            The deep end. <span class="url">reticulum.network</span></li>
+        <li><b>Ham radio</b> &mdash; voice, real power, repeaters. Technician licence
+            is a weekend of study. Study <b>free at <span class="url">hamstudy.org</span></b>,
+            built by our friend Richard Bateman, KD7BBC. The FCC charges <b>$35</b> for
+            the licence; studying costs nothing.<br>
+            <i>Meshtastic is the on-ramp. Ham is the highway. Plenty of us run both.</i></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="assign">
+    <div class="lead">Do this today</div>
+    <div class="big">Buy two. Put one in a kid&rsquo;s backpack.<br>Text them from the house.</div>
+  </div>
+
+  <footer>
+    <div>Find us after the talk: <span class="todo">[Michael &mdash; node name / contact]</span>
+      &middot; <span class="todo">[Max &mdash; node name / contact]</span></div>
+    <div class="url">github.com/cpuchip/meshtastic-presentation-2026</div>
+  </footer>
+</div>
