@@ -25,7 +25,7 @@ What's the plan — for the people on your own land?
 
 ---
 
-# This is a $40 radio.
+# This is a $50 radio.
 
 <div class="img-hero">
 
@@ -83,7 +83,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# Easiest start: SenseCAP T1000-E — $40
+# Easiest start: SenseCAP T1000-E - $50
 
 <div class="img-row">
 
@@ -97,7 +97,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# The classic: Heltec V4 — $27
+# The best value: Heltec V4 2-pack - $90
 
 <div class="img-row">
 
@@ -146,8 +146,8 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 | You want | Buy | Cost |
 |---|---|---|
-| Just me, joining a friend | 1× Heltec V4 | **$27** |
-| Me + spouse or kid | 2× T1000-E | **~$80** |
+| Me and one other person | Heltec V4 **2-pack kit** | **$90** |
+| The no-fuss option | 1× SenseCAP T1000-E | **$50** |
 | Cover the farm | add a solar node on a pole | **+$90–100** |
 
 ## Less than a year of a satellite messenger subscription.

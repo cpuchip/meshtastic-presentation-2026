@@ -1,4 +1,4 @@
-# Slides — draft v0.1 (source of truth for the deck)
+# Slides - draft v0.1 (source of truth for the deck)
 
 One `---`-separated block per slide. Format-agnostic on purpose: this adapts to
 a cpuchip.net slide view, reveal.js, or print without rework. Images referenced
@@ -7,11 +7,11 @@ not slide text.
 
 ---
 
-## SLIDE 1 — Title
+## SLIDE 1 - Title
 
 # Off-Grid Communication with Meshtastic
 
-**Max Brixey · Michael Stufflebeam** — Ozarks Homesteading Expo 2026
+**Max Brixey · Michael Stufflebeam** - Ozarks Homesteading Expo 2026
 
 (mesh logo + a node photo on a fence post)
 
@@ -20,19 +20,19 @@ if there is one.*
 
 ---
 
-## SLIDE 2 — The question
+## SLIDE 2 - The question
 
 # The storm takes the cell tower.
 # How do you tell your family you're okay?
 
 *Everyone here has lost power. Most have lost bars. Landlines are gone. What's
-your plan — for the people on your own land?*
+your plan - for the people on your own land?*
 
 ---
 
-## SLIDE 3 — The answer, held up in one hand
+## SLIDE 3 - The answer, held up in one hand
 
-# This is a $40 radio.
+# This is a $50 radio.
 ### No tower. No subscription. No license. Weeks on a charge.
 
 (photo: T1000-E next to a deck of cards)
@@ -41,12 +41,12 @@ your plan — for the people on your own land?*
 
 ---
 
-## SLIDE 4 — What is LoRa?
+## SLIDE 4 - What is LoRa?
 
 # A whisper that carries.
 
 - Tiny messages, sent slowly, heard for **miles**
-- Unlicensed band (902–928 MHz) — same legal territory as your garage remote
+- Unlicensed band (902–928 MHz) - same legal territory as your garage remote
 - Battery sips: days to weeks per charge
 
 *Trade-off framing: you give up voice and pictures; you get range and battery
@@ -54,168 +54,231 @@ that feel like magic.*
 
 ---
 
-## SLIDE 5 — What is a mesh?
+## SLIDE 5 - What is a mesh?
 
 # Every radio repeats what it hears.
 
 (diagram: house → hilltop node → neighbor; the middle node relaying)
 
-- You don't need to reach everyone — just **somebody**
+- You don't need to reach everyone - just **somebody**
 - More nodes = stronger network, automatically
 - A bucket brigade for text messages
 
 ---
 
-## SLIDE 6 — What Meshtastic actually is
+## SLIDE 6 - What Meshtastic actually is
 
 # Free, open-source firmware for cheap radios.
 
 - Your phone is the screen & keyboard (Bluetooth, free app, iOS/Android)
 - Texts + GPS locations, **encrypted**
-- The radio does the long haul — no internet anywhere in the loop
+- The radio does the long haul - no internet anywhere in the loop
 
-### It is NOT: voice · internet · Starlink. It's texting, off-grid, done right.
+### No voice. No internet. No Starlink.
+### Texting that works when nothing else does.
 
 ---
 
-## SLIDE 7 — Why we do it (Michael)
+## SLIDE 7 - Why we do it (Michael)
 
 # Several nodes. One 35-foot pole. Zero utility bills.
 
-(photo: Michael's solar node on the pole — TODO take this photo)
+(photo: Michael's solar node on the pole - TODO take this photo)
 
-- Solar node has run untouched for months
-- Coverage across the property and beyond
+- Solar node on the pole, running untouched
+- The base station has been up **82 days straight** on one charge
+  (4.16 volts, still going)
 - The kids' backpacks have trackers on the family channel
+- Last night my radio heard a neighbour I have never met, one hop away
 
-*Max's story here too — his slide, his words.*
+*Those numbers are real, read off my own node this week. Say the reading,
+not "months".*
+
+*Max's story here too - his slide, his words.*
 
 ---
 
-## SLIDE 8 — What it's good for out here
+## SLIDE 8 - What it's good for out here
 
 - Family texting across the property & into town
-- Hunting, hiking, trail rides — GPS built in
+- Hunting, hiking, trail rides - GPS built in
 - Neighborhood resilience net for storm days
 - Later: gate sensors, tank levels, weather stations
 - All of it keeps working when the grid doesn't
 
 ---
 
-## SLIDE 9 — Hardware tier 1: zero effort
+## SLIDE 9 - Hardware tier 1: zero effort
 
-# SenseCAP T1000-E — $40
+# SenseCAP T1000-E - $50
 
 (image: sensecap-t1000e.webp)
 
 - Credit-card size, waterproof, GPS
-- **Meshtastic already installed** — charge, pair, done
-- Buy two: you're a network
+- **Meshtastic already installed.** Charge, pair, done
+- Buy two and you are a network
 
 ---
 
-## SLIDE 10 — Hardware tier 2: the classic
+## SLIDE 10 - Hardware tier 2: the classic
 
-# Heltec V4 — $27
+# Heltec V4 2-pack - $90
 
 (image: heltec-v4.webp)
 
 - The hobbyist favorite, now with real power (27 dBm)
-- Little screen, USB-C, solder-free
-- Amazon 2-packs with case + battery + antenna
+- Little screen, USB-C, no soldering
+- **The kit is the deal: 2 boards, 2 batteries, cases, antennas.**
+  About $45 a node, and it is exactly "buy two"
+
+*Single board alone is $27 from Rokland, but you still need a battery
+and a case, so the kit wins for a beginner.*
 
 ---
 
-## SLIDE 11 — Hardware tier 3: set-and-forget
+## SLIDE 11 - Hardware tier 3: set-and-forget
 
-# SenseCAP Solar Node P1-Pro — ~$90–100
+# SenseCAP Solar Node P1-Pro - ~$90–100
 
 (image: sensecap-solar-node.webp)
 
 - 5W solar + four 18650 batteries, weatherproof
 - Pole-mount it once, forget it
 - This is the one on Michael's pole
+- **$115 direct from Seeed** if you can wait on shipping
 
 ---
 
-## SLIDE 12 — The rabbit hole (one slide, fast)
+## SLIDE 12 - The rabbit hole (one slide, fast)
 
 (4-up: rak-wisblock.webp · lilygo-t-deck.webp · lilygo-t-echo.webp · wio-tracker-l1.webp)
 
-- **RAK WisBlock** — modular, sips power, the serious solar builder's pick
-- **T-Deck** — keyboard + screen, no phone needed
-- **T-Echo** — e-ink, always-on readout
+- **RAK WisBlock** - modular, sips power, the serious solar builder's pick
+- **T-Deck** - keyboard + screen, no phone needed
+- **T-Echo** - e-ink, always-on readout
 - 3D-printed cases, DIY antennas, GitHub all the way down
 
 ---
 
-## SLIDE 13 — What it costs to start
+## SLIDE 13 - What it costs to start
 
 | You want | Buy | Cost |
 |---|---|---|
-| Just me, joining a friend | 1× Heltec V4 | **$27** |
-| Me + spouse/kid | 2× T1000-E | **~$80** |
-| Cover the farm | + Solar node on a pole | **+$90–100** |
+| Me and one other person | Heltec V4 **2-pack kit** | **$90** |
+| The no-fuss option | 1× SenseCAP T1000-E | **$50** |
+| Cover the whole place | + Solar node on a pole | **+$140** |
 
-### Less than one year of a satellite messenger subscription.
+### Two of you on the air for $90. No bill after that.
+
+*Delivered prices, checked this week. A satellite messenger costs more
+than the 2-pack every single year you keep it.*
 
 ---
 
-## SLIDE 14 — Setup: the whole thing
+## SLIDE 14 - Setup: the whole thing
 
 1. Charge it. **Antenna on before power.**
 2. Update: drag-and-drop (T1000-E) or flasher.meshtastic.org (Heltec)
 3. Phone app → pair → region **US**
-4. You're on **LongFast** — the public channel — with everyone in range
+4. You're on **LongFast** - the public channel - with everyone in range
 5. Make a private family channel: scan one QR code. Encrypted.
 
 *Live-walk this on screen; screenshots as backup.*
 
 ---
 
-## SLIDE 15 — Range: the honest slide
+## SLIDE 15 - Channels: two questions, not one
+
+# Can we hear each other?
+# Can we read each other?
+
+- **Hearing** = region + preset + frequency. The radio settings.
+- **Reading** = channel name + key. The lock on the box.
+
+*Same room, different language: you hear nothing useful. Different room:
+nothing helps. Get the radio settings right first. This slide is the whole
+section; the next two are just consequences.*
+
+---
+
+## SLIDE 16 - The trap nobody warns you about
+
+# Renaming your main channel
+# changes your frequency.
+
+- Meshtastic hashes your **primary** channel's name to pick the frequency slot
+- Rename it and you quietly move off the air your neighbours are on
+- Not a different chat room. A different **frequency**. No key will fix it
+
+### Want privacy? Add a SECOND channel. Never rename the first.
+
+*This is the one thing I most want them to walk out with. It is the reason
+someone buys a radio, sees an empty screen, and gives up in week one.*
+
+---
+
+## SLIDE 17 - Your private messages ride on strangers' radios
+
+# A node that cannot read your message still carries it.
+
+- The address is on the outside; only the contents are locked
+- So your family channel gets the range of **everybody's** nodes
+- And your node is carrying messages for people you have never met, right now
+
+### That is why owning one is a contribution, not just a purchase.
+
+- Leave rebroadcast on **ALL**, role on **CLIENT**
+- Do not set Router or Repeater because it sounds stronger. That is a pole
+  node's job, and a badly placed one makes the mesh worse
+
+*LongFast is public: its key is printed in the docs. Keep it for reach,
+add a channel for privacy.*
+
+---
+
+## SLIDE 18 - Range: the honest slide
 
 # Height beats power. Every time.
 
 - Window beats desk; pole beats window; **hilltop beats everything**
 - Miles line-of-sight is normal; hollers and oaks eat signal
-- Don't need range to everyone — just to somebody (that's the mesh)
+- Don't need range to everyone - just to somebody (that's the mesh)
 - Stock antenna is fine to start
 
 ---
 
-## SLIDE 16 — The neighbors: MeshCore
+## SLIDE 19 - The neighbors: MeshCore
 
 # Same radios, different philosophy.
 
-- Meshtastic: everyone repeats — simple, self-organizing
-- MeshCore: planned repeaters, learned routes — tighter at scale, more setup
+- Meshtastic: everyone repeats - simple, self-organizing
+- MeshCore: planned repeaters, learned routes - tighter at scale, more setup
 - Young and moving fast; worth watching
 
 ---
 
-## SLIDE 17 — The neighbors: Reticulum
+## SLIDE 20 - The neighbors: Reticulum
 
-# Not a chat app — a whole network stack.
+# Not a chat app - a whole network stack.
 
 - Encrypted networking over ANY radio (LoRa, packet, WiFi, internet)
-- "Not one network — a tool for building thousands of networks"
+- "Not one network - a tool for building thousands of networks"
 - The deep end, when you outgrow everything else
 
 ---
 
-## SLIDE 18 — The neighbors: ham radio + APRS
+## SLIDE 21 - The neighbors: ham radio + APRS
 
 # The licensed path: voice, power, repeaters.
 
 - Technician license = a weekend of study, one exam
-- Study **FREE**: **hamstudy.org** — built by our friend Richard, KD7BBC
+- Study **FREE**: **hamstudy.org** - built by our friend Richard, KD7BBC
 - APRS has done position + messages for decades
 - Meshtastic is the on-ramp. Ham is the highway. Run both.
 
 ---
 
-## SLIDE 19 — Do this today
+## SLIDE 22 - Do this today
 
 # Buy two. Put one in a kid's backpack. Text them from the house.
 
@@ -225,7 +288,7 @@ that feel like magic.*
 
 ---
 
-## SLIDE 20 — Q&A
+## SLIDE 23 - Q&A
 
 # Questions?
 
