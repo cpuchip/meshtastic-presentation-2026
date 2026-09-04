@@ -77,8 +77,17 @@ talk. Hold up the third radio first.
 meshtastic --port COM10 --sendtext "You should not see this one."
 ```
 
-Show the phone. Nothing arrives. Then show its node list: **it knows about nobody but
-itself**, sitting on a table with working radios.
+Show the phone. Nothing arrives. Then show its node list.
+
+> **⚠ Caveat found 2026-09-04, check this before relying on the beat.** The node database
+> **persists across a preset change.** After we moved the XIAO to LongFast its list held
+> `StuffleJuice` (`!903c20aa`), which is fermion's **LongTurbo** radio, so that entry was
+> almost certainly learned while the XIAO was still on LongTurbo. A node list is a record
+> of who was ever heard, not who is reachable now.
+>
+> So "look, it knows nobody" only lands on a radio that has genuinely never heard anything.
+> If the list is dirty, either reset the node database first, or skip the list and let the
+> *message* carry the point. Do not claim an empty list you have not checked.
 
 Now change one setting, in front of them:
 
