@@ -214,3 +214,46 @@ an acknowledgment."* That is a better lesson than a demo that just works.
 The solar node on the pole is the **strongest** signal on the mesh, which is the range
 slide's argument arriving as data rather than assertion. John, down the street, is the
 weakest and still perfectly usable at 0 hops.
+
+---
+
+## ★ The instrument lesson, paid for 2026-09-04: the node list is a RECORD, not a STATUS
+
+Michael drove out and asked to be tracked. We polled his node 55 times over 45 minutes.
+**Every field came back byte-identical every time** - same coordinates, same altitude, same
+`fix_t`, and critically the same `snr 6.75` and `hops 0`.
+
+That last part is the tell. **Live reception jitters SNR.** An SNR that does not move across
+45 minutes is not a weak live signal; it is *no live signal at all*. We were re-reading one
+cached snapshot from the last time we heard him.
+
+**`--info` reads the node database, which records the last time a node was heard. It is not
+a link status.** Reading it repeatedly produces a confident, stable, completely wrong
+picture of a live link. This is the same shape as two other traps this week: netbird
+reporting `Connected` while no packets flowed, and a node list keeping entries learned on a
+different modem preset.
+
+### The instrument that actually answers "can I reach them right now"
+
+An **acknowledged transmission**, and you must read which kind of ack you got:
+
+| Result | What it means |
+|---|---|
+| `Received an ACK.` | **The destination confirmed.** Round trip proven, both directions, at that moment. |
+| `Received an implicit ACK.` | **Someone rebroadcast our packet.** It entered the mesh. The destination said nothing. Reachability is UNPROVEN. |
+| `Received a NAK, error reason: ...` | It arrived and was actively refused. Read the reason. |
+| (timeout) | Nothing heard at all. |
+
+Measured on the same node an hour apart: explicit ACK at 2 miles when his radio was up,
+implicit ACK only after it had power-cycled. **The implicit ack is the interesting one** -
+it looks like success in the output and is not.
+
+### Consequences
+
+- **For the talk:** if anyone asks "how do I know my message got there?", this is the
+  answer, and it is a better answer than most people have. The app shows delivery state
+  too; the CLI just names it more precisely.
+- **For the range slide:** we do not yet have a clean own-hardware range number. What we
+  have is one explicit ACK at 2.0 miles, which is a real data point and worth exactly that
+  much - one point, one direction, one moment.
+- **For any future tracking:** poll with acks, not with `--info`.
