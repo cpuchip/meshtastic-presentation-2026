@@ -31,12 +31,25 @@ get watched before we endorse them (open item in research.md).
 - Seeed: The Complete Guide to Meshtastic Nodes — Basics & Deployment —
   https://www.seeedstudio.com/blog/2026/03/17/meshtastic-node-guide/
 
-## Find the mesh near you
+## Find the mesh near you  ← the local answer, verified 2026-09-03
 
-- Node map (opt-in, incomplete by design): https://meshmap.net
-- r/meshtastic · Meshtastic Discord (link on meshtastic.org) ·
-  forum: https://meshtastic.discourse.group
-- [ ] Local: Missouri / Springfield-area mesh group — research open item
+**Our regional network: LZMesh (Southwest Missouri)** — listed in the official
+Meshtastic local-groups directory.
+
+- Live node map: **https://map.lzmesh.com** (59 nodes live / 284 in 24 h, 2026-09-03)
+- Community Discord: **https://discord.lzarc.com**
+- Site: https://lzmesh.com
+
+> **Most LZMesh nodes use a named channel — `CHAOS JLN Main` — not the stock
+> LongFast.** If your node list looks empty, that is usually why. Ask in their
+> Discord for current channel settings before deciding the mesh is dead.
+
+Other Missouri groups (from meshtastic.org/docs/community/local-groups/):
+Missouri Mesh (https://missourimesh.org) · Show Me Mesh, Jefferson City
+(https://www.mo-mesh.com) · MeshSTL, St. Louis · Kansas City Meshtastic Group
+
+- Everywhere else: https://meshmap.net (opt-in, incomplete by design) ·
+  r/meshtastic · forum: https://meshtastic.discourse.group
 
 ## The neighbors (when you're ready for more)
 
@@ -48,7 +61,12 @@ get watched before we endorse them (open item in research.md).
   Bateman, KD7BBC). Find an exam session near you from the same site.
   APRS intro: http://www.aprs.org
 
-## YouTube (candidates — watch before endorsing)
+## YouTube (candidates — NOT yet vetted, do not print)
+
+Rule at the top of this file: nothing goes on the handout we haven't personally
+opened. Neither of these has been watched, and a text tool cannot watch them.
+**Recommend cutting both from the printed handout** — the three written guides
+above already cover the same ground and are verified.
 
 - "Meshtastic For Dummies in 2026 — Heltec V4 Setup & Wio Tracker Build"
 - "Best Meshtastic Devices for Beginners (2026 Off Grid Comms Starter Guide)"

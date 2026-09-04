@@ -107,13 +107,60 @@ the week of the expo (prices move).
   (MN4YUHjJtrk); "Best Meshtastic Devices for Beginners (2026)" (N8OOw5HIfA8)
   — both surfaced top in 2026 searches; watch before endorsing on the handout.
 
+## Local mesh — the "will I hear anyone out here?" answer (verified 2026-09-03)
+
+**Yes, and we can prove it from our own radio.** Two independent lines of evidence:
+
+**1. There is an organized regional mesh: LZMesh (SWMO).** Listed in the official
+Meshtastic local-groups directory. Live regional node map at https://map.lzmesh.com
+showed, on 2026-09-03: **59 nodes live, 284 in the last 24 hours, 2,239 over 90 days.**
+Community Discord at https://discord.lzarc.com. The "LZ" is the historic **Lead-Zinc
+(Tri-State) Mining District**, so the network's centre of gravity is the Joplin corner —
+but mapped nodes reach Springfield (~28 mi from Marshfield), Bolivar, and Buffalo.
+
+> **The catch worth saying out loud on stage:** most LZMesh nodes run a named channel,
+> **`CHAOS JLN Main`**, *not* the stock LongFast. Being in radio range is not enough —
+> you have to be on the same channel to see anyone. This is the single most likely reason
+> a newcomer gets a radio, sees an empty node list, and concludes "it doesn't work here."
+
+**2. Our own radio hears a stranger, unprompted.** Read off the demo node near Marshfield
+on 2026-09-03, on the stock public LongFast channel: the node database held **6 nodes**,
+and one of them is **not ours** — a RAK4631 heard **directly, zero hops**. Also present:
+our SenseCAP Solar Node (the pole node), a Heltec Wireless Tracker, a T1000-E, and a Wio
+Tracker L1.
+
+So the honest stage answer is: *"Right now, on the default channel, my radio in Marshfield
+hears a neighbour I've never met. Thirty miles west in Springfield there's a network of
+about sixty live nodes. It's thin out here — and that's the argument for you getting one."*
+
+Other Missouri groups (official directory): Missouri Mesh (missourimesh.org), MeshSTL —
+St. Louis, Show Me Mesh — Jefferson City (mo-mesh.com), Kansas City Meshtastic Group.
+
+## Prices re-verified 2026-09-03 (week-of check)
+
+| Item | Repo said | Verified now | Source |
+|---|---|---|---|
+| SenseCAP T1000-E | $39.90 | **$39.90** — unchanged | Seeed product page |
+| Heltec WiFi LoRa 32 V4 | $26.97 | **$26.97, in stock** at Rokland. Includes LoRa antenna; **no battery, no case**. Listed 28 ±1 dBm. | store.rokland.com |
+| SenseCAP Solar Node P1-Pro | $89.90 launch / ~$100.99 seen | **$93.90** per Seeed's own datasheet dated 2026-08-06 | files.seeedstudio.com datasheet |
+
+Deck slide 13's "$27 / ~$80 / +$90–100" tiers all still hold. Slide 10 should not imply the
+$26.97 Rokland unit ships with a battery and case — the Amazon 2-pack kits do, that listing
+does not.
+
+**FCC amateur licence application fee: $35** (Congressionally mandated, in force since
+2022; covers new licence, renewal, vanity call sign; administrative updates are free).
+hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
+
 ## Open items
 
-- [ ] Confirm with **Max Brixey** who covers what (he's the listed presenter).
-- [ ] Re-verify all prices week-of.
+- [ ] Confirm with **Max Brixey** who covers what (he's the listed presenter). *Still the
+      longest pole — external dependency, and it gates the Plan A / Plan B decision.*
+- [x] ~~Re-verify all prices week-of.~~ Done 2026-09-03, table above.
 - [ ] Watch/endorse the two YouTube candidates before the handout goes to print.
-- [ ] Local mesh check: is there an active mesh around Marshfield/Springfield MO?
-      (meshmap.net + Missouri mesh groups) — "will I hear anyone?" WILL be asked.
-- [ ] Verify current FCC license fee before quoting it.
+      *Cannot be delegated to a text tool — someone has to actually watch them, or we cut
+      them from the handout. Recommend cutting: the three written guides already cover it.*
+- [x] ~~Local mesh check.~~ Done 2026-09-03, section above.
+- [x] ~~Verify current FCC licence fee.~~ $35, confirmed.
 - [ ] Decide the live-demo shape: two nodes messaging in the pavilion is cheap
       and reliable (no internet needed) — but rehearse it.
