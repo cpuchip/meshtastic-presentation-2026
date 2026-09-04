@@ -116,3 +116,60 @@ undiagnosed as of 2026-09-04.
 - [ ] Phone screen visible on the projector, or big enough to hold up
 - [ ] Radios charged; the Indicator reads 0.00 V on USB, so it needs the cable
 - [ ] Know which COM port is which **before** standing up
+
+---
+
+## ⚠ Live finding 2026-09-04: the DM arm FAILED, the broadcast arm worked
+
+Ran the real thing against Michael's phone (KV9G, `!2d21195a`). Result:
+
+| Arm | Outcome |
+|---|---|
+| Broadcast from Stuff-Indicator, LongFast | **arrived** |
+| **DM from Stuff-Indicator to KV9G** | **did NOT arrive** |
+| Broadcast + DM from fermion's radio | **both arrived** |
+
+Retried the DM with `--ack`, which turns it from a guess into a measurement:
+
+```
+Received a NAK, error reason: NO_CHANNEL
+```
+
+**What that establishes:** the DM *reached* KV9G. KV9G received it and actively refused
+it. So this is not range, not frequency, not preset. Something about the
+Stuff-Indicator → KV9G direct path specifically, since fermion's DM to the same phone
+worked and our own broadcast on the same channel worked.
+
+**What it does NOT establish:** the cause. `NO_CHANNEL` is Routing.Error **6**. The
+PKC-specific failures have their own codes (`PKI_FAILED` 34, `PKI_UNKNOWN_PUBKEY` 35,
+`PKI_SEND_FAIL_PUBLIC_KEY` 39) and we did **not** get those, so a stale-public-key story
+is a guess, not a reading. Stuff-Indicator does hold a public key for KV9G and did receive
+fresh nodeinfo from it during the capture.
+
+**Candidate remedy, untried:** `meshtastic --port COM4 --remove-node '!2d21195a'` so the
+node is re-learned from scratch. Cheap and self-healing (it reappears from the next
+nodeinfo broadcast), but it is a change to Michael's radio, so it is his call.
+
+### What this means for the stage
+
+**Demote the DM arm.** Lead with the broadcast and the negative control, which both work
+and both carry the actual lesson. If the DM is wanted, rehearse it with `--ack` first: an
+unacked DM looks identical to a dead radio from the audience's side, and we would be
+debugging live for no teaching benefit.
+
+Silver lining worth one sentence if it comes up: *"a direct message that fails while the
+channel message works is a real thing, and the radio will tell you why if you ask it for
+an acknowledgment."* That is a better lesson than a demo that just works.
+
+### Telemetry captured during the exchange (all at 0 hops)
+
+| Node | SNR | RSSI |
+|---|---|---|
+| fermion's sender (`!336890bc`) | 5.5 | -12 |
+| Michael's phone KV9G (`!2d21195a`) | 6.0 | -41 |
+| Stuff Solar SNST (the pole node) | 7.75 | -55 |
+| John-Base (`!7ce82641`) | 1.0 | -102 |
+
+The solar node on the pole is the **strongest** signal on the mesh, which is the range
+slide's argument arriving as data rather than assertion. John, down the street, is the
+weakest and still perfectly usable at 0 hops.
