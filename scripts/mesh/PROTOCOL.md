@@ -57,9 +57,37 @@ attempt lacked:
 "LT didn't hear the LF broadcast" is now upgraded from unusable to corroborated,
 because the instrument has been shown able to hear.
 
-Reciprocal (fermion transmitting on both presets, 150 s listen) drew no reply in
-window — not alarming, since every text so far has arrived as **queue replay at
-client connect** rather than live, but it is unverified in that direction.
+### The reversal — same radios, preset switched back, result flips (13:50–13:56)
+
+Michael's call: move **both** LongTurbo radios to LongFast and re-run. That turns
+a one-shot observation into a **crossed design with a reversal**, which is the
+strongest form available here.
+
+fermion COM14 `!903c20aa`: `--set lora.modem_preset LONG_FAST`. Nothing else
+touched — same antenna, same desk, same channel, same firmware.
+
+| Transmitter | fermion COM14 | fermion COM15 |
+|---|---|---|
+| XIAO `!a1f7f7ec` **on LongTurbo** (13:40) | **HEARD** snr 6.0 | **not heard** |
+| XIAO `!a1f7f7ec` **on LongFast** (13:55) | **HEARD** snr 6.5 | **HEARD** snr 6.25 |
+
+The XIAO's own words on the second pass: *"Same XIAO that you could not hear
+earlier. One setting changed: LongTurbo to LongFast, 908.750 to 906.875. Nothing
+else touched. If this arrives, that was the whole problem."* It arrived.
+
+**COM14 went from 110 days of total silence to hearing live traffic within
+seconds of the change**, including Michael's handheld, and **transmits** too
+(COM15 copied it at snr 7.75). The radio was never faulty. It was alone.
+
+That is the demo, and it is now verified in both directions rather than argued:
+**one setting, one radio, deaf or not deaf.**
+
+### Practical gotcha found while doing it
+
+`sendText` raised **"Data payload too big"** on a 240-character message. Meshtastic
+text payloads cap around **200 bytes** — worth knowing before composing anything
+on stage, and worth one line in the talk: these are short messages by design, not
+a chat app.
 
 ## Results so far
 
