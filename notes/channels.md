@@ -38,12 +38,51 @@ screen. That is the #1 "my brand new node does nothing" cause.
 
 ### b. Modem preset
 
-Default is **LONG_FAST**. It bundles bandwidth, spreading factor and coding rate. Nine
-presets exist, from `SHORT_TURBO` to `VERY_LONG_SLOW`. Two nodes on different presets are
-deaf to each other, full stop.
+Default is **LONG_FAST** (protobuf enum 0). It bundles bandwidth, spreading factor and
+coding rate. **Two nodes on different presets are deaf to each other, full stop.**
 
 Leave it on LONG_FAST. The whole public mesh is there, and the slower presets buy range
 you will not notice while costing airtime everyone shares.
+
+### The preset list has grown, and the docs lag (checked 2026-09-04)
+
+The LoRa config docs page still lists **nine** presets and does not mention `LONG_TURBO`
+at all. The protobufs now go to **17** (0-16). Sources disagree by version, so count on
+none of them:
+
+| Where | Knows presets up to |
+|---|---|
+| meshtastic.org LoRa config page | 9 (no LONG_TURBO) |
+| `meshtastic` python package 2.7.11 (our CLI) | 13 (`NARROW_SLOW`) |
+| current protobufs | 16 (`MEDIUM_TURBO`) |
+
+Newer entries: `LONG_TURBO` (9) "performs similarly to LongFast, but with 500Khz
+bandwidth"; `LITE_FAST`/`LITE_SLOW`/`NARROW_FAST`/`NARROW_SLOW` (10-13, EU band
+compliance); `TINY_FAST`/`TINY_SLOW` (14-15, 20 kHz, amateur-radio compliance, needs a
+TCXO); `MEDIUM_TURBO` (16). `LONG_SLOW` is deprecated as of 2.7 and `VERY_LONG_SLOW` as
+of 2.5.
+
+### ⚠ A live example from our own bench, 2026-09-04
+
+A **brand new Seeed XIAO S3** flashed to 2.7.26 came up on **`LONG_TURBO` (500 kHz)**
+while every other node here runs **`LONG_FAST` (250 kHz)**. Its node database held exactly
+**one** entry: itself. It had heard nobody, and nobody had heard it, sitting on the same
+desk as three working nodes.
+
+That is layer 1 failing, in the room, with nothing wrong with any radio. It is the best
+demo we have for this section: **same house, same channel name, same key, zero contact.**
+
+**Unresolved:** we did not confirm *what* set it to LONG_TURBO. LONG_FAST is still enum 0
+and still the documented default, so this is not simply the protobuf zero value. Do not
+tell the room "new boards default to LongTurbo" as a fact; say "check your preset,
+because this one surprised us."
+
+**A claim we checked and rejected:** a search result asserted that setting region US moves
+a node off LongFast because "LongFast's bandwidth is not US-compliant." Both the LoRa docs
+page and the LongFast blog post contradict it, and it is backwards: 250 kHz is
+unremarkable in the US ISM band, while the **500 kHz** presets (`SHORT_TURBO`,
+`LONG_TURBO`, `MEDIUM_TURBO`) are the ones carrying region-legality caveats. Do not repeat
+it.
 
 ### c. Frequency slot - and here is the trap
 
