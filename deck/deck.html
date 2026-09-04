@@ -20,6 +20,13 @@ th,td{border:1px solid #666;padding:.7vh 1.1vw;text-align:left}
 th{background:#222;font-size:1.10em;text-transform:uppercase;letter-spacing:.05em}
 .imgs{display:flex;gap:1.4vw;justify-content:center;align-items:center;margin:1.6vh 0;min-height:0}
 .imgs img{max-height:32vh;max-width:80vw;object-fit:contain;border-radius:6px}
+/* text left, one picture right - uses the width a 16:9 screen actually has */
+.split{display:flex;gap:3vw;align-items:center;min-height:0;flex:1}
+.split .col-text{flex:1 1 58%;min-width:0}
+.split .col-img{flex:0 1 38%;display:flex;align-items:center;justify-content:center;min-height:0}
+.split .col-img .imgs{margin:0}
+.split .col-img img{max-height:62vh;max-width:100%}
+.split ul{padding-left:2vw}
 .label{position:absolute;top:1.4vh;left:6vw;font-size:1.1vw;color:#666;letter-spacing:.06em}
 .notes{display:none;position:absolute;left:6vw;right:6vw;bottom:5vh;
   border-top:2px solid #ffd479;padding-top:1vh;color:#ffd479;font-size:1.35vw;font-style:italic}
@@ -62,14 +69,12 @@ body.grid .notes{display:none}
 </ul>
 <h3>No voice. No internet. No Starlink.</h3>
 <h3>Texting that works when nothing else does.</h3></div></section>
-<section><div class='label'>SLIDE 7 - Why we do it (Michael)</div><div class='content'><h1>Several nodes. One 35-foot pole. Zero utility bills.</h1>
-<div class="imgs"><img src="../assets/images/solar-node-pole.webp" alt=""></div>
-<ul>
+<section><div class='label'>SLIDE 7 - Why we do it (Michael)</div><div class='content'><h1>Several nodes. One 35-foot pole. Zero utility bills.</h1><div class="split"><div class="col-text"><ul>
 <li><b>SNST_cb53</b>, solar, on a 35-foot flagpole. No wires, no bill</li>
 <li>The base station has been up <b>82 days straight</b> on one charge (4.16 volts, still going)</li>
 <li>The kids&#x27; backpacks have trackers on the family channel</li>
 <li><b>John down the street is one hop away.</b> That is the mesh, already working</li>
-</ul></div><div class='notes'><p>Those numbers are real, read off my own node this week. Say the reading, not &quot;months&quot;. The photo does the height argument for me, so do not narrate it.</p><p>Solo now, so this section is all yours. It can breathe a little longer than the 5 min budget if the room is engaged - the lived story is why they stay.</p></div></section>
+</ul></div><div class="col-img"><div class="imgs"><img src="../assets/images/solar-node-pole.webp" alt=""></div></div></div></div><div class='notes'><p>Those numbers are real, read off my own node this week. Say the reading, not &quot;months&quot;. The photo does the height argument for me, so do not narrate it.</p><p>Solo now, so this section is all yours. It can breathe a little longer than the 5 min budget if the room is engaged - the lived story is why they stay.</p></div></section>
 <section><div class='label'>SLIDE 8 - What it&#x27;s good for out here</div><div class='content'><ul>
 <li>Family texting across the property &amp; into town</li>
 <li>Hunting, hiking, trail rides - GPS built in</li>
@@ -77,28 +82,22 @@ body.grid .notes{display:none}
 <li>Later: gate sensors, tank levels, weather stations</li>
 <li>All of it keeps working when the grid doesn&#x27;t</li>
 </ul></div></section>
-<section><div class='label'>SLIDE 9 - Hardware tier 1: zero effort</div><div class='content'><h1>SenseCAP T1000-E - $50</h1>
-<div class="imgs"><img src="../assets/images/sensecap-t1000e.webp" alt=""></div>
-<ul>
+<section><div class='label'>SLIDE 9 - Hardware tier 1: zero effort</div><div class='content'><h1>SenseCAP T1000-E - $50</h1><div class="split"><div class="col-text"><ul>
 <li>Credit-card size, waterproof, GPS</li>
 <li><b>Meshtastic already installed.</b> Charge, pair, done</li>
 <li>Buy two and you are a network</li>
-</ul></div></section>
-<section><div class='label'>SLIDE 10 - Hardware tier 2: the classic</div><div class='content'><h1>Heltec V4 2-pack - $90</h1>
-<div class="imgs"><img src="../assets/images/heltec-v4.webp" alt=""></div>
-<ul>
+</ul></div><div class="col-img"><div class="imgs"><img src="../assets/images/sensecap-t1000e.webp" alt=""></div></div></div></div></section>
+<section><div class='label'>SLIDE 10 - Hardware tier 2: the classic</div><div class='content'><h1>Heltec V4 2-pack - $90</h1><div class="split"><div class="col-text"><ul>
 <li>The hobbyist favorite, now with real power (27 dBm)</li>
 <li>Little screen, USB-C, no soldering</li>
 <li><b>The kit is the deal: 2 boards, 2 batteries, cases, antennas.</b> About $45 a node, and it is exactly &quot;buy two&quot;</li>
-</ul></div><div class='notes'><p>Single board alone is $27 from Rokland, but you still need a battery and a case, so the kit wins for a beginner.</p></div></section>
-<section><div class='label'>SLIDE 11 - Hardware tier 3: set-and-forget</div><div class='content'><h1>SenseCAP Solar Node P1-Pro - $140</h1>
-<div class="imgs"><img src="../assets/images/sensecap-solar-node.webp" alt=""></div>
-<ul>
+</ul></div><div class="col-img"><div class="imgs"><img src="../assets/images/heltec-v4.webp" alt=""></div></div></div></div><div class='notes'><p>Single board alone is $27 from Rokland, but you still need a battery and a case, so the kit wins for a beginner.</p></div></section>
+<section><div class='label'>SLIDE 11 - Hardware tier 3: set-and-forget</div><div class='content'><h1>SenseCAP Solar Node P1-Pro - $140</h1><div class="split"><div class="col-text"><ul>
 <li>5W solar + four 18650 batteries, weatherproof</li>
 <li>Pole-mount it once, forget it</li>
 <li>This is the one on Michael&#x27;s pole</li>
 <li><b>$115 direct from Seeed</b> if you can wait on shipping</li>
-</ul></div></section>
+</ul></div><div class="col-img"><div class="imgs"><img src="../assets/images/sensecap-solar-node.webp" alt=""></div></div></div></div></section>
 <section><div class='label'>SLIDE 12 - The rabbit hole (one slide, fast)</div><div class='content'><div class="imgs"><img src="../assets/images/rak-wisblock.webp" alt=""><img src="../assets/images/lilygo-t-deck.webp" alt=""><img src="../assets/images/lilygo-t-echo.webp" alt=""><img src="../assets/images/wio-tracker-l1.webp" alt=""></div>
 <ul>
 <li><b>RAK WisBlock</b> - modular, sips power, the serious solar builder&#x27;s pick</li>
@@ -209,8 +208,12 @@ const S=[...document.querySelectorAll('section')];let i=0;
 function fit(sec){
   const c=sec.querySelector('.content'); if(!c) return;
   const base=1.5;                    // vw, matches the CSS
+  // Each probe forces a synchronous reflow, so keep the count low. Six steps
+  // resolve to ~1% of the range, which is finer than anyone can see. Eleven
+  // steps across nine image-load events made the page miss document_idle
+  // entirely - a deck that never settles is a deck that stalls on stage.
   let lo=0.5, hi=1.0;
-  for(let n=0;n<11;n++){
+  for(let n=0;n<6;n++){
     const mid=(lo+hi)/2;
     sec.style.fontSize=(base*mid)+'vw';
     const fits = c.scrollHeight<=c.clientHeight+1 && c.scrollWidth<=c.clientWidth+1;
@@ -218,21 +221,23 @@ function fit(sec){
   }
   sec.style.fontSize=(base*lo*0.97)+'vw';   // small margin so nothing grazes the edge
 }
+let pend=0;
+function refit(){ if(pend) return; pend=requestAnimationFrame(()=>{pend=0;fit(S[i]);}); }
 function show(n){i=Math.max(0,Math.min(S.length-1,n));
   S.forEach((s,k)=>s.classList.toggle('on',k===i));
   fit(S[i]);
   document.getElementById('bar').style.width=((i+1)/S.length*100)+'%';
   document.getElementById('num').textContent=(i+1)+' / '+S.length;
   location.hash=i+1;}
-addEventListener('resize',()=>fit(S[i]));
-// An image that has not decoded yet measures as zero-height, so the first fit
+addEventListener('resize',refit);
+// An image that has not decoded yet measures as zero height, so the first fit
 // on an image slide is computed against the wrong content and comes out too
-// large. Re-fit as each one lands.
+// large. Re-fit as they land - but coalesced into one frame, not once per image.
 document.querySelectorAll('img').forEach(im=>{
-  im.addEventListener('load',()=>fit(S[i]));
-  im.addEventListener('error',()=>fit(S[i]));
+  im.addEventListener('load',refit,{once:true});
+  im.addEventListener('error',refit,{once:true});
 });
-addEventListener('load',()=>fit(S[i]));
+addEventListener('load',refit);
 addEventListener('keydown',e=>{
   if(document.body.classList.contains('grid')&&e.key!=='g'&&e.key!=='G')return;
   if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){show(i+1);e.preventDefault();}

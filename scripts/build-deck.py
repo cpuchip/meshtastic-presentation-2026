@@ -130,9 +130,27 @@ def render(block):
     if ul: body.append("</ul>")
     flush_table()
 
+    # Lay a single image BESIDE the text rather than above it. Stacked, a
+    # headline plus a portrait photo plus four bullets has to shrink a long way
+    # to fit; side by side it uses the width a 16:9 screen actually has.
+    # Multi-image slides (the 4-up) stay full width, and a slide that is only a
+    # picture stays full width too.
+    imgs = [b for b in body if b.startswith('<div class="imgs">')]
+    others = [b for b in body if not b.startswith('<div class="imgs">')]
+    heads = [b for b in others if b.startswith("<h1>")]
+    rest = [b for b in others if not b.startswith("<h1>")]
+
+    single = len(imgs) == 1 and imgs[0].count("<img") == 1
+    if single and rest:
+        inner = ("".join(heads)
+                 + '<div class="split"><div class="col-text">' + "\n".join(rest)
+                 + '</div><div class="col-img">' + imgs[0] + "</div></div>")
+    else:
+        inner = "\n".join(body)
+
     note_html = ("<div class='notes'>" + "".join(f"<p>{n}</p>" for n in notes) + "</div>") if notes else ""
     return f"<section><div class='label'>{html.escape(label)}</div><div class='content'>" \
-           + "\n".join(body) + "</div>" + note_html + "</section>"
+           + inner + "</div>" + note_html + "</section>"
 
 slides = "\n".join(render(b) for b in blocks)
 
@@ -156,6 +174,13 @@ th,td{border:1px solid #666;padding:.7vh 1.1vw;text-align:left}
 th{background:#222;font-size:1.10em;text-transform:uppercase;letter-spacing:.05em}
 .imgs{display:flex;gap:1.4vw;justify-content:center;align-items:center;margin:1.6vh 0;min-height:0}
 .imgs img{max-height:32vh;max-width:80vw;object-fit:contain;border-radius:6px}
+/* text left, one picture right - uses the width a 16:9 screen actually has */
+.split{display:flex;gap:3vw;align-items:center;min-height:0;flex:1}
+.split .col-text{flex:1 1 58%;min-width:0}
+.split .col-img{flex:0 1 38%;display:flex;align-items:center;justify-content:center;min-height:0}
+.split .col-img .imgs{margin:0}
+.split .col-img img{max-height:62vh;max-width:100%}
+.split ul{padding-left:2vw}
 .label{position:absolute;top:1.4vh;left:6vw;font-size:1.1vw;color:#666;letter-spacing:.06em}
 .notes{display:none;position:absolute;left:6vw;right:6vw;bottom:5vh;
   border-top:2px solid #ffd479;padding-top:1vh;color:#ffd479;font-size:1.35vw;font-style:italic}
@@ -183,8 +208,12 @@ const S=[...document.querySelectorAll('section')];let i=0;
 function fit(sec){
   const c=sec.querySelector('.content'); if(!c) return;
   const base=1.5;                    // vw, matches the CSS
+  // Each probe forces a synchronous reflow, so keep the count low. Six steps
+  // resolve to ~1% of the range, which is finer than anyone can see. Eleven
+  // steps across nine image-load events made the page miss document_idle
+  // entirely - a deck that never settles is a deck that stalls on stage.
   let lo=0.5, hi=1.0;
-  for(let n=0;n<11;n++){
+  for(let n=0;n<6;n++){
     const mid=(lo+hi)/2;
     sec.style.fontSize=(base*mid)+'vw';
     const fits = c.scrollHeight<=c.clientHeight+1 && c.scrollWidth<=c.clientWidth+1;
@@ -192,21 +221,23 @@ function fit(sec){
   }
   sec.style.fontSize=(base*lo*0.97)+'vw';   // small margin so nothing grazes the edge
 }
+let pend=0;
+function refit(){ if(pend) return; pend=requestAnimationFrame(()=>{pend=0;fit(S[i]);}); }
 function show(n){i=Math.max(0,Math.min(S.length-1,n));
   S.forEach((s,k)=>s.classList.toggle('on',k===i));
   fit(S[i]);
   document.getElementById('bar').style.width=((i+1)/S.length*100)+'%';
   document.getElementById('num').textContent=(i+1)+' / '+S.length;
   location.hash=i+1;}
-addEventListener('resize',()=>fit(S[i]));
-// An image that has not decoded yet measures as zero-height, so the first fit
+addEventListener('resize',refit);
+// An image that has not decoded yet measures as zero height, so the first fit
 // on an image slide is computed against the wrong content and comes out too
-// large. Re-fit as each one lands.
+// large. Re-fit as they land - but coalesced into one frame, not once per image.
 document.querySelectorAll('img').forEach(im=>{
-  im.addEventListener('load',()=>fit(S[i]));
-  im.addEventListener('error',()=>fit(S[i]));
+  im.addEventListener('load',refit,{once:true});
+  im.addEventListener('error',refit,{once:true});
 });
-addEventListener('load',()=>fit(S[i]));
+addEventListener('load',refit);
 addEventListener('keydown',e=>{
   if(document.body.classList.contains('grid')&&e.key!=='g'&&e.key!=='G')return;
   if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){show(i+1);e.preventDefault();}
