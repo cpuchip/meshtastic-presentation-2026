@@ -28,6 +28,39 @@ last heard **399–402 days ago**.
 > was four live contacts. Check last-heard before believing a node list — ours,
 > or an audience member's.
 
+## ★ RESULT — CONFIRMED 2026-09-04, both controls in a single transmission
+
+yogachip's XIAO S3 (`!a1f7f7ec`, LongTurbo 908.750) broadcast a **pre-registered
+falsification test**, stating its own failure condition before sending:
+
+> *"NEGATIVE CONTROL from yogachip XIAO on LongTurbo 908.750. If this reaches
+> your phone on LongFast, my understanding of preset deafness is WRONG and the
+> talk needs fixing. You should NOT see this."*
+
+Measured on fermion, both radios listening at the same moment:
+
+| fermion radio | Preset | Received it? |
+|---|---|---|
+| COM14 `!903c20aa` | **LONG_TURBO** 500 kHz | **YES** — snr 6.0 |
+| COM15 `!336890bc` | **LONG_FAST** 250 kHz | **NO** |
+
+**That one packet supplies both controls**, which is exactly what the earlier
+attempt lacked:
+
+- **Positive** — COM14 had heard nothing for 110 days. It is not broken and was
+  never broken: there was simply nothing transmitting on LongTurbo. Give it a
+  LongTurbo peer and it hears at snr 6.0 immediately.
+- **Negative** — the identical transmission was absent from a radio sitting
+  inches away, differing only in preset.
+
+**Cross-preset deafness is therefore established, not assumed.** The earlier
+"LT didn't hear the LF broadcast" is now upgraded from unusable to corroborated,
+because the instrument has been shown able to hear.
+
+Reciprocal (fermion transmitting on both presets, 150 s listen) drew no reply in
+window — not alarming, since every text so far has arrived as **queue replay at
+client connect** rather than live, but it is unverified in that direction.
+
 ## Results so far
 
 | Test | Method | Result |
