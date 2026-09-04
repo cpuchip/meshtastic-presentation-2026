@@ -118,10 +118,21 @@ Community Discord at https://discord.lzarc.com. The "LZ" is the historic **Lead-
 (Tri-State) Mining District**, so the network's centre of gravity is the Joplin corner —
 but mapped nodes reach Springfield (~28 mi from Marshfield), Bolivar, and Buffalo.
 
-> **The catch worth saying out loud on stage:** most LZMesh nodes run a named channel,
-> **`CHAOS JLN Main`**, *not* the stock LongFast. Being in radio range is not enough —
-> you have to be on the same channel to see anyone. This is the single most likely reason
-> a newcomer gets a radio, sees an empty node list, and concludes "it doesn't work here."
+> **SETTLED 2026-09-04 (see [lzmesh-channel-finding.md](lzmesh-channel-finding.md)):**
+> LZMesh **does not rename the primary.** Their published setup keeps channel 0 blank
+> with the default key, and puts `LZMesh` at index 1 as a *secondary*. They call channel 1
+> their "Primary LZMesh network", meaning main/most-used, not Meshtastic's index-0 PRIMARY.
+>
+> **So a factory-fresh radio in Marshfield is already on their frequency.** Blank primary
+> hashes to the same slot as stock. You *hear* LZMesh nodes with no changes at all; you
+> add their channel only in order to *read* that traffic. This also explains the stranger's
+> RAK4631 our own node heard at zero hops on stock LongFast.
+>
+> An earlier draft of this file claimed their nodes ran a named primary called
+> `CHAOS JLN Main` and that range therefore was not enough. **That was wrong** and is
+> struck. Where `CHAOS JLN Main` comes from is unresolved; JLN is the Joplin airport code,
+> so it is plausibly a legacy or neighbouring-group channel seen on the map. It is not in
+> LZMesh's current published setup.
 
 **2. Our own radio hears a stranger, unprompted.** Read off the demo node near Marshfield
 on 2026-09-03, on the stock public LongFast channel: the node database held **6 nodes**,

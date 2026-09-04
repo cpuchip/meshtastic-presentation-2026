@@ -208,20 +208,31 @@ Reasons you would move off the default primary, all of them advanced:
 
 This is the worked example for the talk, and it is ours.
 
-Our demo node runs the stock primary: empty name, default key, US/LONG_FAST, slot 20. The
-regional network (LZMesh, SWMO) shows most nodes on a **named** channel, `CHAOS JLN Main`.
+Our demo node runs the stock primary: empty name, default key, US/LONG_FAST, slot 20.
 
-If that name is their **primary**, then by the hash rule they are on a **different
-frequency slot** than a stock node, and a factory-fresh radio in Marshfield cannot hear
-them at all - not "cannot decrypt them", cannot *hear* them. If it is a **secondary**
-channel on a stock primary, the radios do hear each other and just cannot read that
-traffic.
+**SETTLED 2026-09-04** by the `meshtastic` seat, from LZMesh's own published setup page:
+they keep **channel 0 blank** with the stock key and put `LZMesh` at **index 1 as a
+secondary**. Their page calls channel 1 the "Primary LZMesh network", which means
+main/most-used, not Meshtastic's index-0 PRIMARY. Full evidence:
+[lzmesh-channel-finding.md](lzmesh-channel-finding.md).
 
-**We should ask in their Discord which it is before Saturday**, because the answer changes
-what we tell the room to do. Do not guess this on stage.
+**So the good branch is the true one.** A factory-fresh radio here is already on LZMesh's
+frequency and hears their nodes without any change. Adding their channel only lets you
+*read* that traffic. One QR scan, not a frequency problem. This also explains the
+stranger's RAK4631 our node heard at zero hops on stock LongFast.
 
-Either way the lesson for a beginner holds and is worth the slide: **an empty node list is
-usually a settings mismatch, not a dead mesh.**
+Better still, **LZMesh is a worked local example of our own headline advice**: never
+rename the primary, add a secondary. The sixty-node network west of us is set up exactly
+the way we are telling the room to set up.
+
+Two riders if we send people to their QR:
+- **Scanning it replaces existing channels** (their own warning). Save custom ones first.
+- **Their page also publishes MQTT settings.** MQTT backhauls over the internet, which
+  cuts against the off-grid thesis. Advanced topic, not first-node material.
+
+The lesson still holds and is worth the slide: **an empty node list is usually a settings
+mismatch, not a dead mesh.** Our XIAO S3 on LONG_TURBO above is the sharper example, since
+that one really is a frequency-layer miss.
 
 ---
 
@@ -249,5 +260,7 @@ usually a settings mismatch, not a dead mesh.**
 
 ## Open
 
-- [ ] **Ask LZMesh whether `CHAOS JLN Main` is their primary or a secondary.** Changes the
-      advice we give the room. Their Discord: https://discord.lzarc.com
+- [x] ~~Ask LZMesh whether `CHAOS JLN Main` is their primary or a secondary.~~ **Settled
+      2026-09-04**: their primary is blank; `LZMesh` is a secondary. See
+      [lzmesh-channel-finding.md](lzmesh-channel-finding.md).
+- [ ] What set the new XIAO S3 to `LONG_TURBO`? Unresolved; do not assert a mechanism.

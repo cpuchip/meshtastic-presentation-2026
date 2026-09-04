@@ -40,9 +40,10 @@ Meshtastic local-groups directory.
 - Community Discord: **https://discord.lzarc.com**
 - Site: https://lzmesh.com
 
-> **Most LZMesh nodes use a named channel — `CHAOS JLN Main` — not the stock
-> LongFast.** If your node list looks empty, that is usually why. Ask in their
-> Discord for current channel settings before deciding the mesh is dead.
+> **LZMesh keeps the default channel intact.** Their published setup leaves channel 0
+> blank with the stock key and adds `LZMesh` as a secondary, so a brand-new radio is
+> already on their frequency. To *read* their traffic you add their channel from their
+> site. **Their QR replaces existing channels** - save any custom channel first.
 
 Other Missouri groups (from meshtastic.org/docs/community/local-groups/):
 Missouri Mesh (https://missourimesh.org) · Show Me Mesh, Jefferson City
