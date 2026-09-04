@@ -1,0 +1,247 @@
+<!doctype html><meta charset="utf-8">
+<title>Off-Grid Communication with Meshtastic</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#111;color:#f5f5f0;
+  font:400 1.5vw/1.4 "Segoe UI",system-ui,Helvetica,Arial,sans-serif;overflow:hidden}
+section{display:none;position:absolute;inset:0;padding:3vh 6vw 8vh;font-size:1.5vw;
+  flex-direction:column;justify-content:center;overflow:hidden}
+section .content{display:flex;flex-direction:column;justify-content:center;min-height:0;flex:1;overflow:hidden}
+section.on{display:flex}
+h1{font-size:2.95em;line-height:1.06;margin:0 0 2.2vh;letter-spacing:-.02em}
+h3{font-size:1.68em;line-height:1.2;margin:1.6vh 0 .8vh;color:#ffd479}
+ul{margin:.6vh 0;padding-left:3vw}
+li{font-size:1.40em;margin:.7vh 0}
+p{font-size:1.34em;margin:.7vh 0}
+b{color:#fff}
+code{font-family:Consolas,monospace;font-size:.9em;background:#000;padding:.1em .35em;border-radius:3px}
+table{border-collapse:collapse;margin:1.4vh 0;font-size:1.30em}
+th,td{border:1px solid #666;padding:.7vh 1.1vw;text-align:left}
+th{background:#222;font-size:1.10em;text-transform:uppercase;letter-spacing:.05em}
+.imgs{display:flex;gap:1.4vw;justify-content:center;align-items:center;margin:1.6vh 0;min-height:0}
+.imgs img{max-height:32vh;max-width:80vw;object-fit:contain;border-radius:6px}
+.label{position:absolute;top:1.4vh;left:6vw;font-size:1.1vw;color:#666;letter-spacing:.06em}
+.notes{display:none;position:absolute;left:6vw;right:6vw;bottom:5vh;
+  border-top:2px solid #ffd479;padding-top:1vh;color:#ffd479;font-size:1.35vw;font-style:italic}
+body.notes .notes{display:block}
+#bar{position:absolute;bottom:0;left:0;height:5px;background:#ffd479;transition:width .2s}
+#num{position:absolute;bottom:1.6vh;right:6vw;font-size:1.2vw;color:#777}
+#help{position:absolute;bottom:1.6vh;left:6vw;font-size:1.1vw;color:#555}
+body.grid{overflow:auto}
+body.grid section{display:block;position:relative;inset:auto;height:32vh;padding:1.5vh 2vw;
+  border:1px solid #333;margin:0;overflow:hidden;zoom:.42}
+body.grid #bar,body.grid #num,body.grid #help{display:none}
+body.grid .notes{display:none}
+</style>
+<section><div class='label'>SLIDE 1 - Title</div><div class='content'><h1>Off-Grid Communication with Meshtastic</h1>
+<p><b>Michael Stufflebeam</b> - Ozarks Homesteading Expo 2026</p>
+<p>(mesh logo + a node photo on a fence post)</p></div><div class='notes'><p>The printed schedule lists Max Brixey. Say in the first fifteen seconds that you are covering it solo today, so nobody spends the hour wondering whether they walked into the wrong session.</p><p>While people settle: two live nodes on the table, messages flowing on screen if there is one.</p></div></section>
+<section><div class='label'>SLIDE 2 - The question</div><div class='content'><h1>The storm takes the cell tower.</h1>
+<h1>How do you tell your family you&#x27;re okay?</h1></div><div class='notes'><p>Everyone here has lost power. Most have lost bars. Landlines are gone. What&#x27;s your plan - for the people on your own land?</p></div></section>
+<section><div class='label'>SLIDE 3 - The answer, held up in one hand</div><div class='content'><h1>This is a $50 radio.</h1>
+<h3>No tower. No subscription. No license. Weeks on a charge.</h3>
+<p>(photo: T1000-E next to a deck of cards)</p></div><div class='notes'><p>Send the live message across the pavilion here if rehearsed.</p></div></section>
+<section><div class='label'>SLIDE 4 - What is LoRa?</div><div class='content'><h1>A whisper that carries.</h1>
+<ul>
+<li>Tiny messages, sent slowly, heard for <b>miles</b></li>
+<li>Unlicensed band (902–928 MHz) - same legal territory as your garage remote</li>
+<li>Battery sips: days to weeks per charge</li>
+</ul></div><div class='notes'><p>Trade-off framing: you give up voice and pictures; you get range and battery that feel like magic.</p></div></section>
+<section><div class='label'>SLIDE 5 - What is a mesh?</div><div class='content'><h1>Every radio repeats what it hears.</h1>
+<p>(diagram: house → hilltop node → neighbor; the middle node relaying)</p>
+<ul>
+<li>You don&#x27;t need to reach everyone - just <b>somebody</b></li>
+<li>More nodes = stronger network, automatically</li>
+<li>A bucket brigade for text messages</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 6 - What Meshtastic actually is</div><div class='content'><h1>Free, open-source firmware for cheap radios.</h1>
+<ul>
+<li>Your phone is the screen &amp; keyboard (Bluetooth, free app, iOS/Android)</li>
+<li>Texts + GPS locations, <b>encrypted</b></li>
+<li>The radio does the long haul - no internet anywhere in the loop</li>
+</ul>
+<h3>No voice. No internet. No Starlink.</h3>
+<h3>Texting that works when nothing else does.</h3></div></section>
+<section><div class='label'>SLIDE 7 - Why we do it (Michael)</div><div class='content'><h1>Several nodes. One 35-foot pole. Zero utility bills.</h1>
+<div class="imgs"><img src="../assets/images/solar-node-pole.webp" alt=""></div>
+<ul>
+<li><b>SNST_cb53</b>, solar, on a 35-foot flagpole. No wires, no bill</li>
+<li>The base station has been up <b>82 days straight</b> on one charge (4.16 volts, still going)</li>
+<li>The kids&#x27; backpacks have trackers on the family channel</li>
+<li><b>John down the street is one hop away.</b> That is the mesh, already working</li>
+</ul></div><div class='notes'><p>Those numbers are real, read off my own node this week. Say the reading, not &quot;months&quot;. The photo does the height argument for me, so do not narrate it.</p><p>Solo now, so this section is all yours. It can breathe a little longer than the 5 min budget if the room is engaged - the lived story is why they stay.</p></div></section>
+<section><div class='label'>SLIDE 8 - What it&#x27;s good for out here</div><div class='content'><ul>
+<li>Family texting across the property &amp; into town</li>
+<li>Hunting, hiking, trail rides - GPS built in</li>
+<li>Neighborhood resilience net for storm days</li>
+<li>Later: gate sensors, tank levels, weather stations</li>
+<li>All of it keeps working when the grid doesn&#x27;t</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 9 - Hardware tier 1: zero effort</div><div class='content'><h1>SenseCAP T1000-E - $50</h1>
+<div class="imgs"><img src="../assets/images/sensecap-t1000e.webp" alt=""></div>
+<ul>
+<li>Credit-card size, waterproof, GPS</li>
+<li><b>Meshtastic already installed.</b> Charge, pair, done</li>
+<li>Buy two and you are a network</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 10 - Hardware tier 2: the classic</div><div class='content'><h1>Heltec V4 2-pack - $90</h1>
+<div class="imgs"><img src="../assets/images/heltec-v4.webp" alt=""></div>
+<ul>
+<li>The hobbyist favorite, now with real power (27 dBm)</li>
+<li>Little screen, USB-C, no soldering</li>
+<li><b>The kit is the deal: 2 boards, 2 batteries, cases, antennas.</b> About $45 a node, and it is exactly &quot;buy two&quot;</li>
+</ul></div><div class='notes'><p>Single board alone is $27 from Rokland, but you still need a battery and a case, so the kit wins for a beginner.</p></div></section>
+<section><div class='label'>SLIDE 11 - Hardware tier 3: set-and-forget</div><div class='content'><h1>SenseCAP Solar Node P1-Pro - $140</h1>
+<div class="imgs"><img src="../assets/images/sensecap-solar-node.webp" alt=""></div>
+<ul>
+<li>5W solar + four 18650 batteries, weatherproof</li>
+<li>Pole-mount it once, forget it</li>
+<li>This is the one on Michael&#x27;s pole</li>
+<li><b>$115 direct from Seeed</b> if you can wait on shipping</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 12 - The rabbit hole (one slide, fast)</div><div class='content'><div class="imgs"><img src="../assets/images/rak-wisblock.webp" alt=""><img src="../assets/images/lilygo-t-deck.webp" alt=""><img src="../assets/images/lilygo-t-echo.webp" alt=""><img src="../assets/images/wio-tracker-l1.webp" alt=""></div>
+<ul>
+<li><b>RAK WisBlock</b> - modular, sips power, the serious solar builder&#x27;s pick</li>
+<li><b>T-Deck</b> - keyboard + screen, no phone needed</li>
+<li><b>T-Echo</b> - e-ink, always-on readout</li>
+<li><b>Wio Tracker L1 Pro</b> - $60, GPS, rechargeable. I carry two</li>
+<li>3D-printed cases, DIY antennas, GitHub all the way down</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 13 - What it costs to start</div><div class='content'><table>
+<tr><th>You want</th><th>Buy</th><th>Cost</th></tr>
+<tr><td>Me and one other person</td><td>Heltec V4 <b>2-pack kit</b></td><td><b>$90</b></td></tr>
+<tr><td>The no-fuss option</td><td>1× SenseCAP T1000-E</td><td><b>$50</b></td></tr>
+<tr><td>Cover the whole place</td><td>+ Solar node on a pole</td><td><b>+$140</b></td></tr>
+</table>
+<h3>Two of you on the air for $90. No bill after that.</h3></div><div class='notes'><p>Delivered prices, checked this week. A satellite messenger costs more than the 2-pack every single year you keep it.</p></div></section>
+<section><div class='label'>SLIDE 14 - Setup: the whole thing</div><div class='content'><ul>
+<li>Charge it. <b>Antenna on before power.</b></li>
+<li>Update: drag-and-drop (T1000-E) or flasher.meshtastic.org (Heltec)</li>
+<li>Phone app → pair → <b>check TWO settings:</b></li>
+</ul>
+<h3>Region = US.  Preset = LongFast.</h3>
+<ul>
+<li>That puts you on the public channel with everyone in range</li>
+<li>Make a private family channel: scan one QR code. Encrypted.</li>
+</ul></div><div class='notes'><p>Two settings, not one. Region wrong = it never transmits. Preset wrong = it transmits into an empty room. Both look like a dead radio to a beginner, and I hit the second one on a new board this week.</p><p>Live-walk this on screen; screenshots as backup.</p></div></section>
+<section><div class='label'>SLIDE 15 - Channels: two questions, not one</div><div class='content'><h1>Can we hear each other?</h1>
+<h1>Can we read each other?</h1>
+<ul>
+<li><b>Hearing</b> = region + preset + frequency. The radio settings.</li>
+<li><b>Reading</b> = channel name + key. The lock on the box.</li>
+</ul>
+<h3>On my own bench this week:</h3>
+<table>
+<tr><th>Preset</th><th>Frequency</th></tr>
+<tr><td>LongFast (all my old nodes)</td><td><b>906.875 MHz</b></td></tr>
+<tr><td>LongTurbo (one new board)</td><td><b>908.750 MHz</b></td></tr>
+</table>
+<h3>1.5 MHz apart. Same table. Zero contact.</h3></div><div class='notes'><p>Same room, different language: you hear nothing useful. Different room: nothing helps. Get the radio settings right first. This slide is the whole section; the next two are just consequences.</p><p>If the room is quiet, this is the moment to hold up the new board and say it found nobody sitting next to three working radios.</p></div></section>
+<section><div class='label'>SLIDE 16 - Renaming the main channel moves your frequency</div><div class='content'><h1>Renaming your main channel</h1>
+<h1>changes your frequency.</h1>
+<ul>
+<li>Meshtastic hashes your <b>primary</b> channel&#x27;s name to pick the frequency slot</li>
+<li>Rename it and you quietly move off the air your neighbours are on</li>
+<li>Not a different chat room. A different <b>frequency</b>. No key will fix it</li>
+</ul>
+<h3>Want privacy? Add a SECOND channel. Never rename the first.</h3></div><div class='notes'><p>This is the one thing I most want them to walk out with. It is the reason someone buys a radio, sees an empty screen, and gives up in week one.</p></div></section>
+<section><div class='label'>SLIDE 17 - Your private messages ride on strangers&#x27; radios</div><div class='content'><h1>A node that cannot read your message still carries it.</h1>
+<ul>
+<li>The address is on the outside; only the contents are locked</li>
+<li>So your family channel gets the range of <b>everybody&#x27;s</b> nodes</li>
+<li>And your node is carrying messages for people you have never met, right now</li>
+</ul>
+<h3>That is why owning one is a contribution, not just a purchase.</h3>
+<ul>
+<li>Leave rebroadcast on <b>ALL</b>, role on <b>CLIENT</b></li>
+<li>Do not set Router or Repeater because it sounds stronger. That is a pole node&#x27;s job, and a badly placed one makes the mesh worse</li>
+</ul></div><div class='notes'><p>LongFast is public: its key is printed in the docs. Keep it for reach, add a channel for privacy.</p></div></section>
+<section><div class='label'>SLIDE 18 - Does this broadcast my address?  [CUT IF TIGHT]</div><div class='content'><h1>No. It broadcasts a square about a mile and a half across.</h1>
+<ul>
+<li>On the public channel your position is <b>deliberately blurred</b></li>
+<li>Default setting rounds you to a <b>~1.5 mile grid cell</b> and sends the centre</li>
+<li>Everyone at my house, <i>and John down the street</i>, publish the identical point</li>
+</ul>
+<h3>Precision is per channel. On my family channel, I set it to exact.</h3></div><div class='notes'><p>This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the centre of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.</p><p>So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep.</p></div></section>
+<section><div class='label'>SLIDE 19 - What range actually looks like</div><div class='content'><h1>Height beats power. Every time.</h1>
+<p>(callback to the pole photo from slide 7 - the node is above the treeline)</p>
+<ul>
+<li>Window beats desk; pole beats window; <b>hilltop beats everything</b></li>
+<li>Miles line-of-sight is normal; hollers and oaks eat signal</li>
+<li>Don&#x27;t need range to everyone - just to somebody (that&#x27;s the mesh)</li>
+<li>Stock antenna is fine to start</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 20 - The neighbors: MeshCore</div><div class='content'><h1>Same radios, different philosophy.</h1>
+<ul>
+<li>Meshtastic: everyone repeats - simple, self-organizing</li>
+<li>MeshCore: planned repeaters, learned routes - tighter at scale, more setup</li>
+<li>Young and moving fast; worth watching</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 21 - The neighbors: Reticulum</div><div class='content'><h1>Not a chat app - a whole network stack.</h1>
+<ul>
+<li>Encrypted networking over ANY radio (LoRa, packet, WiFi, internet)</li>
+<li>&quot;Not one network - a tool for building thousands of networks&quot;</li>
+<li>The deep end, when you outgrow everything else</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 22 - The neighbors: ham radio + APRS</div><div class='content'><h1>The licensed path: voice, power, repeaters.</h1>
+<ul>
+<li>Technician license = a weekend of study, one exam</li>
+<li>Study <b>FREE</b>: <b>hamstudy.org</b> - built by our friend Richard, KD7BBC</li>
+<li>APRS has done position + messages for decades</li>
+<li>Meshtastic is the on-ramp. Ham is the highway. Run both.</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 23 - Do this today</div><div class='content'><h1>Buy two. Put one in a kid&#x27;s backpack. Text them from the house.</h1>
+<p>(QR codes: meshtastic.org/docs · flasher · handout PDF · hamstudy.org)</p></div><div class='notes'><p>Point to the printed handouts. Where to find us after.</p></div></section>
+<section><div class='label'>SLIDE 24 - Q&amp;A</div><div class='content'><h1>Questions?</h1>
+<p>(node map + both presenters&#x27; node names on screen)</p></div></section>
+<div id="bar"></div><div id="num"></div>
+<div id="help">&larr;&rarr; move &middot; N notes &middot; G grid &middot; F fullscreen</div>
+<script>
+const S=[...document.querySelectorAll('section')];let i=0;
+// Shrink a slide's content until it fits. Guessing font sizes per slide is a
+// losing game - a headline plus an image plus five bullets will overflow at any
+// size that suits a sparse slide. Measuring is the only thing that always works,
+// and an overflowing slide on a TV means the room reads a cut-off sentence.
+// Scale the SECTION font size so the slide reflows to fit. A transform looked
+// right in theory and misaligned everything in practice, because the element
+// still occupies its unscaled box. Binary search is overkill-looking and is
+// simply the shortest way to land on the largest size that fits.
+function fit(sec){
+  const c=sec.querySelector('.content'); if(!c) return;
+  const base=1.5;                    // vw, matches the CSS
+  let lo=0.5, hi=1.0;
+  for(let n=0;n<11;n++){
+    const mid=(lo+hi)/2;
+    sec.style.fontSize=(base*mid)+'vw';
+    const fits = c.scrollHeight<=c.clientHeight+1 && c.scrollWidth<=c.clientWidth+1;
+    if(fits) lo=mid; else hi=mid;
+  }
+  sec.style.fontSize=(base*lo*0.97)+'vw';   // small margin so nothing grazes the edge
+}
+function show(n){i=Math.max(0,Math.min(S.length-1,n));
+  S.forEach((s,k)=>s.classList.toggle('on',k===i));
+  fit(S[i]);
+  document.getElementById('bar').style.width=((i+1)/S.length*100)+'%';
+  document.getElementById('num').textContent=(i+1)+' / '+S.length;
+  location.hash=i+1;}
+addEventListener('resize',()=>fit(S[i]));
+// An image that has not decoded yet measures as zero-height, so the first fit
+// on an image slide is computed against the wrong content and comes out too
+// large. Re-fit as each one lands.
+document.querySelectorAll('img').forEach(im=>{
+  im.addEventListener('load',()=>fit(S[i]));
+  im.addEventListener('error',()=>fit(S[i]));
+});
+addEventListener('load',()=>fit(S[i]));
+addEventListener('keydown',e=>{
+  if(document.body.classList.contains('grid')&&e.key!=='g'&&e.key!=='G')return;
+  if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){show(i+1);e.preventDefault();}
+  else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){show(i-1);e.preventDefault();}
+  else if(e.key==='Home')show(0); else if(e.key==='End')show(S.length-1);
+  else if(e.key==='n'||e.key==='N')document.body.classList.toggle('notes');
+  else if(e.key==='g'||e.key==='G')document.body.classList.toggle('grid');
+  else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+});
+addEventListener('click',e=>{if(!document.body.classList.contains('grid'))show(i+(e.clientX>innerWidth/2?1:-1));});
+show(parseInt(location.hash.slice(1)||'1')-1);
+</script>

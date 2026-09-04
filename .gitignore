@@ -4,3 +4,7 @@
 # OS noise
 Thumbs.db
 .DS_Store
+
+# Range test output - data, not source
+range*.csv
+range-map.html
