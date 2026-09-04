@@ -3,7 +3,8 @@
 Source repo for the **"Off-Grid Communication with Meshtastic"** talk at the
 [Ozarks Homesteading Expo](https://ozarkshomesteading.com/2026-homesteading-expo)
 — **Saturday, September 5, 2026, 2:30 PM, Pavilion in Park, Marshfield MO** —
-presented with Max Brixey. One hour, aimed at complete newcomers.
+presented solo by Michael Stufflebeam. One hour, aimed at complete newcomers.
+(The printed schedule still lists Max Brixey, who is no longer presenting.)
 
 The delivered presentation gets adapted into
 [cpuchip.net](https://github.com/cpuchip/cpuchip.net)'s presentations tab
@@ -15,7 +16,7 @@ and assets out of the site repo so it can be reused year to year.
 | Path | What |
 |---|---|
 | `notes/research.md` | Verified facts + sources (every claim checked against a live source, dated) |
-| `notes/outline.md` | The one-hour talk structure + coordination checklist with Max |
+| `notes/outline.md` | The one-hour talk structure + solo logistics checklist |
 | `notes/resources.md` | The audience "where to go next" list — feeds the handout |
 | `notes/handout.md` | The one-page take-home, in markdown — source of truth for its wording |
 | `handout/handout.html` | **Print-ready handout.** Built; do not hand-edit. Open in Chrome → Ctrl-P |

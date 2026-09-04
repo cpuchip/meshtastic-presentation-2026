@@ -11,7 +11,11 @@ not slide text.
 
 # Off-Grid Communication with Meshtastic
 
-**Max Brixey · Michael Stufflebeam** - Ozarks Homesteading Expo 2026
+**Michael Stufflebeam** - Ozarks Homesteading Expo 2026
+
+*The printed schedule lists Max Brixey. Say in the first fifteen seconds that
+you are covering it solo today, so nobody spends the hour wondering whether
+they walked into the wrong session.*
 
 (mesh logo + a node photo on a fence post)
 
@@ -95,7 +99,8 @@ of the treeline)
 *Those numbers are real, read off my own node this week. Say the reading, not
 "months". The photo does the height argument for me, so do not narrate it.*
 
-*Max's story here too - his slide, his words.*
+*Solo now, so this section is all yours. It can breathe a little longer than
+the 5 min budget if the room is engaged - the lived story is why they stay.*
 
 ---
 

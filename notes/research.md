@@ -9,7 +9,9 @@ the week of the expo (prices move).
 - **Ozarks Homesteading Expo — September 4–5, 2026, Marshfield, MO**
   (https://ozarkshomesteading.com/2026-homesteading-expo)
 - **Our slot: Saturday Sept 5, 2:30 PM, Pavilion in Park** — listed as
-  "Max Brixey — Mashtastic Off-Grid Communication" (their typo). Schedule image
+  "Max Brixey — Mashtastic Off-Grid Communication" (their typo on Meshtastic too).
+  **The schedule is out of date: Max is not presenting, Michael is, solo.** Worth
+  clearing up in the first fifteen seconds on the day. Schedule image
   saved at `assets/expo-saturday-schedule-2026.png`. Blocks run 1:00 / 2:30 /
   4:00, so ~60–75 min usable with changeover.
 - **Venue is a park pavilion** — plan for no reliable internet and possibly no
@@ -166,8 +168,9 @@ hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
 
 ## Open items
 
-- [ ] Confirm with **Max Brixey** who covers what (he's the listed presenter). *Still the
-      longest pole — external dependency, and it gates the Plan A / Plan B decision.*
+- [x] ~~Confirm with Max Brixey who covers what.~~ **Moot 2026-09-04: Max is no longer
+      presenting.** The hour is Michael's, solo. All demo nodes are his, so there is no
+      channel or node-name coordination either. See outline "Solo logistics".
 - [x] ~~Re-verify all prices week-of.~~ Done 2026-09-03, table above.
 - [x] ~~Watch/endorse the two YouTube candidates.~~ **Done 2026-09-04** via yt-dlp
       transcripts, read in full. Keep DoItYourselfDad, add Ham Radio Crash Course, cut

@@ -2,14 +2,14 @@
 title: "Off-Grid Communication with Meshtastic"
 date: "2026-09-05"
 event: "Ozarks Homesteading Expo · Marshfield, MO"
-presenters: "Max Brixey · Michael Stufflebeam"
+presenters: "Michael Stufflebeam"
 ---
 
 # Off-Grid Communication<br>with Meshtastic
 
 ![Meshtastic](/images/presentations/meshtastic/meshtastic-logo.svg)
 
-**Max Brixey · Michael Stufflebeam**
+**Michael Stufflebeam**
 
 Ozarks Homesteading Expo · September 5, 2026
 

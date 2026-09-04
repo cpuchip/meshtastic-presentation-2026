@@ -58,7 +58,8 @@ The load-bearing warnings:
 
 ## Still open
 
-- **Two placeholders in the footer**, marked bold on the sheet: Michael's and Max's
-  node names / contact for "find us after the talk."
+- **One placeholder in the footer**, marked bold on the sheet: Michael's node name /
+  contact for "find me after the talk." (Max's was removed 2026-09-04 - he is no longer
+  presenting and the talk is solo.)
 - Whether LZMesh's `CHAOS JLN Main` is a primary or a secondary channel changes the
   advice slightly. Asked in `channels.md`; worth a Discord question before Saturday.

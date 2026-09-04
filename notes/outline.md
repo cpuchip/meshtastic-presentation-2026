@@ -1,7 +1,8 @@
 # Outline - "Off-Grid Communication with Meshtastic" (working title)
 
 **Ozarks Homesteading Expo · Saturday Sept 5, 2026 · 2:30 PM · Pavilion in Park**
-Presenters: Max Brixey + Michael. ~60 minutes including Q&A.
+Presenter: Michael Stufflebeam, solo (Max is no longer presenting). ~60 minutes
+including Q&A.
 Audience: homesteaders and self-reliance folks who know little or nothing about
 Meshtastic. Goal: they leave knowing what it is, why it matters, what to buy
 (under $100), and exactly where to go next.
@@ -37,8 +38,8 @@ right now, first minute of the talk.)
 ## 3. Why we do it - the lived story (5 min)
 
 Michael's home mesh: several nodes, one on a 35-ft pole, a solar-powered
-SenseCAP P1-Pro that has run untouched for months. Max's story (his section -
-coordinate). Use cases that land with this audience:
+SenseCAP P1-Pro that has run untouched for months. Solo now, so there is room to
+let this run. Use cases that land with this audience:
 
 - Family off-grid texting (kids in the woods, spouse in town)
 - Farm/property coverage where cell never reached
@@ -161,10 +162,21 @@ uptime).
 
 ---
 
-## Coordination with Max
+## Solo logistics (Max is no longer presenting)
 
-- [ ] Split sections - suggestion: Max opens (hook + why), Michael runs
-      mechanism + hardware + setup, both on Q&A.
-- [ ] Who brings which demo nodes; agree channel + node names beforehand.
+The whole hour is Michael's. What that changes:
+
+- **No section split to negotiate.** The timings in this outline are now one
+  person's pacing, not two. Sixty minutes of solo talking is real work: build in
+  water, and let the live demo and the setup walk-through carry some of the load.
+- **Q&A has no second fielder.** Anything not known gets "I don't know, come find
+  me after" rather than a glance at the other presenter. The Q&A pocket in
+  [channels.md](channels.md) and [range-test.md](range-test.md) matters more now.
+- **The printed schedule still says "Max Brixey - Mashtastic Off-Grid
+  Communication"** (their typo on Meshtastic too). Clear that up in the opening
+  fifteen seconds so nobody thinks they are in the wrong room.
+- **All demo nodes are Michael's**, which removes the "agree channel and node
+  names beforehand" problem entirely. Everything is already on one mesh.
+
 - [ ] Confirm what the pavilion actually has: screen? power? Plan A (screen) /
       Plan B (radios + handouts only - the talk must survive with no slides).
