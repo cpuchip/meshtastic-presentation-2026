@@ -191,3 +191,26 @@ hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
   2026-09-04: https://www.amazon.com/dp/B08H8J6ZV6. Needs an N-female pigtail to the node's SMA cable; reviewers say seal
   the joint. Michael's Amazon history shows two ordered 2026-09-04. On slide 11 and the
   cpuchip.net take-home page.
+
+## LZMesh Beginner Guide (PDF, 10 pp., by Jonathan Jones AF0EC/WRMK568; Michael received it in their Discord 2026-09-04)
+
+Read in full 2026-09-04. Not hosted on lzmesh.com as far as a fetch of the front page shows; it
+lives in the Discord, so the deck points there rather than redistributing it. What it says, and
+where it corroborates the deck:
+- LZMesh covers SW Missouri, SE Kansas, NE Oklahoma, NW Arkansas; started early 2025 by Chris
+  ("Hoser"); Discord mid-2025; LZARC (LZ Amateur Radio Club) late 2025. They rely on MQTT as
+  backup and aim for full RF coverage; "one more node instantly increases our coverage".
+- Devices it recommends: RAK4631 + 19007/19003, Heltec V3, XIAO ESP32S3 + Wio-SX1262 ("Smallest
+  and cheapest node available"); pre-built Wio L1 Pro, T1000-E, WisMesh Pocket v2, WisMesh Tag;
+  with screens/keyboards T-Deck, NRF-TXT. Overlaps slides 9, 12 and the take-home page.
+- Setup: antenna (IPEX) on before power (slide 14 step 1); flash the latest stable from the web
+  flasher (step 2); Region = United States, "Use Preset", Long Range - Fast (step 3); Role Client,
+  Rebroadcast All (slide 17); hops 5; node-info interval 3 h.
+- Channels: LZMesh is added as a NEW channel with its own PSK (iOS steps say "Channel Role to
+  Secondary"); channel 0 is not renamed. Confirms notes/lzmesh-channel-finding.md and the
+  take-home page's worked example. The guide prints the channel PSK and the MQTT credentials
+  (mqtt.lzmesh.com, root msh/LZ); those are public by their choice and are NOT copied here.
+- Testing: send "Test" on LongFast; checkmark/"Acknowledged" = heard; slash/"Max Retransmission
+  Reached" = nobody heard, "that's why you are here".
+- Privacy FAQ: what a node sends (names, telemetry, location if enabled, node ID) and does not
+  (WiFi credentials, IP addresses, disabled location).

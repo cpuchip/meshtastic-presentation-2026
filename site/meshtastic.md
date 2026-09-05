@@ -175,8 +175,9 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# Can we hear each other?
-# Can we read each other?
+# Two questions, not one
+
+## Can we **hear** each other? Can we **read** each other?
 
 - **Hearing** = region + preset + frequency. The radio settings.
 - **Reading** = channel name + key. The lock on the box.
@@ -193,8 +194,7 @@ Different room: nothing helps. Get the radio settings right first.
 
 ---
 
-# Renaming your main channel
-# changes your frequency.
+# Renaming your main channel<br>changes your frequency.
 
 - Meshtastic hashes your **primary** channel's name to pick the frequency slot
 - Rename it and you quietly move off the air your neighbours are on
@@ -204,8 +204,7 @@ Different room: nothing helps. Get the radio settings right first.
 
 ---
 
-# A node that cannot read your message
-# still carries it.
+# A node that cannot read your message<br>still carries it.
 
 - The address is on the outside; only the contents are locked
 - Your family channel gets the range of **everybody's** nodes
@@ -254,6 +253,8 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 ## Buy two. Put one in a kid's backpack.<br>Text them from the house.
 
 [meshtastic.org/docs](https://meshtastic.org/docs/getting-started/) · [flasher.meshtastic.org](https://flasher.meshtastic.org) · [hamstudy.org](https://hamstudy.org) · [cpuchip.net/presentations](https://cpuchip.net/presentations/meshtastic)
+
+**Our local mesh: [LZMesh](https://lzmesh.com)**, four states around us. The channel QR and their beginner guide are in the [Discord](https://discord.lzarc.com).
 
 Grab a handout on your way out - every link is on it.
 
