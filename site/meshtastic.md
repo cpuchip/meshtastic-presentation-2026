@@ -33,7 +33,7 @@ What's the plan - for the people on your own land?
 
 </div>
 
-## No tower. No subscription. No license. Weeks on a charge.
+## No tower. No subscription. No license. Days on a charge.
 
 ---
 
@@ -41,7 +41,7 @@ What's the plan - for the people on your own land?
 
 - Tiny messages, sent **slowly**, heard for **miles**
 - Unlicensed band - 902–928 MHz, same legal territory as your garage remote
-- Sips battery: **days to weeks** per charge
+- Sips battery: **about two days** in your pocket, **indefinitely** on solar
 
 You give up voice and pictures. You get range and battery life that feel like magic.
 
@@ -92,6 +92,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 - Credit-card size, waterproof, GPS
 - **Meshtastic already installed** - charge it, pair it, done
+- **About two days** per charge, by Seeed's own math and my own use. Charge it with your phone
 
 **Buy:** [Amazon](https://www.amazon.com/dp/B0DJ6KGXKB) · [Seeed direct](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
 
@@ -108,6 +109,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 - The hobbyist favorite, now with real power (27 dBm)
 - Little screen, USB-C, no soldering
 - **The kit is the deal:** 2 boards, 2 batteries, cases, antennas
+- **About a day** on the kit battery. Charge it nightly, or feed it a solar panel
 
 **Buy:** [Amazon 2-pack kit](https://www.amazon.com/dp/B0FY2WL3MN) · [Bare board at Rokland](https://store.rokland.com/products/heltec-wifi-lora-32v4-esp32s3-sx1262-lora-node-meshtastic-lorawan)
 

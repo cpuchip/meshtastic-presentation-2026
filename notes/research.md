@@ -214,3 +214,28 @@ where it corroborates the deck:
   Reached" = nobody heard, "that's why you are here".
 - Privacy FAQ: what a node sends (names, telemetry, location if enabled, node ID) and does not
   (WiFi credentials, IP addresses, disabled location).
+
+## Battery life, honestly (checked 2026-09-04 after Michael flagged "weeks on a charge")
+
+"Weeks on a charge" is true of the solar node and of nothing else on the deck. Now: "days".
+- **T1000-E (700 mAh)**: Seeed's own spreadsheet, "T1000-E for Meshtastic Consumption Test and
+  Battery Life Calculation" (linked from the product page; files.seeedstudio.com/wiki/SenseCAP/
+  Meshtastic/), computes **1.93 days GPS off / 1.91 days GPS on** at US915 LongFast, 50 packets
+  an hour, 12.05 mA baseline, 148.5 mA on transmit, 53 mA GPS. Seeed's Amazon comparison table
+  says "2-4 Days". Owners: ~2 days GPS on, ~3 off, 5-7 in deep sleep (getupandgocamping.com);
+  "about a day per charge with GPS on as an active client" (nodakmesh.org); "GPS off 5+, GPS on
+  2-3" (r/meshtastic). Michael's own carry: 24-48 h. Deck says "about two days".
+- **Heltec V4 kit (one 3000 mAh cell)**: Heltec's own test (wiki.heltec.org/news/heltec-v4-test-
+  result) ran 2 x 3000 mAh in parallel with Bluetooth on for **46 h 40 min** at ~95 mA average,
+  "roughly double the consumption measured with Bluetooth disabled"; below 3.45 V the ESP32
+  reboots. One cell, Bluetooth on: about a day. Hexaspot's product page: "Expect 1-2 days on
+  battery". nepamesh.com: Heltec V3 ~19 h on 1100 mAh, ~44 h with light sleep. Deck says
+  "about a day; charge it nightly, or feed it a solar panel".
+- **Wio Tracker L1 Pro (2000 mAh, nRF52)**: Seeed blog 2025-06-25 "up to 5 days"; Seeed's
+  comparison table "5-7 Days".
+- **Solar Node P1-Pro (4 x 3350 mAh + 5 W panel)**: Seeed's table "Unlimited, Solar Power".
+  Amazon reviewer (FreeLancer75, 2026-03-11): 4.15 V -> 3.88 V over 16 days indoors with no sun;
+  on a pole, 4.16-4.20 V constant through April. Michael's: months untouched. Deck says
+  "indefinitely on solar".
+- Why the gap: nRF52 sleeps at microamps; ESP32 boards with Bluetooth on idle at tens of mA.
+  That is the real reason the T1000-E outlasts a Heltec on a smaller battery.
