@@ -118,7 +118,7 @@ Callback to section 5: "region US" and "do not rename the primary" are the two
 settings that decide whether any of this works.
 
 **Optional 4th slide, marked CUT IF TIGHT: "does this broadcast my address?"**
-No - the public channel blurs your position to a ~1.5 mile grid cell and sends
+No - the public channel blurs your position into a box roughly three miles across and sends
 the center, and precision is set per channel. It answers a question this room
 will actually have, and it has a true story attached (it fooled us this week).
 If the section is running long, drop it and keep it in the Q&A pocket instead.
