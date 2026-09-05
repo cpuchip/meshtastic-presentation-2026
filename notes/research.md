@@ -239,3 +239,40 @@ where it corroborates the deck:
   "indefinitely on solar".
 - Why the gap: nRF52 sleeps at microamps; ESP32 boards with Bluetooth on idle at tens of mA.
   That is the real reason the T1000-E outlasts a Heltec on a smaller battery.
+
+## Real emergencies, sourced (added talk day, appendix slides)
+
+Ham radio:
+- **Joplin tornado, 2011-05-22.** ARRL News 2011-05-25 "Radio Amateurs Assist American Red Cross,
+  Served Agencies During Joplin Storm" and "ARES Stands Down After Joplin Storms": hams provided the
+  only communication link between Freeman Hospital (Joplin) and hospitals in Springfield on Sunday
+  night, stood down 9 AM Monday; the Red Cross Springfield-Joplin link plus the MSSU shelter link
+  stayed open until Tuesday May 24 "as it was the only reliable method of communications"; Missouri
+  SEC Ken Baremore W0KRB: "more than 1900 hours" through the EOC. Both arrl.org pages fetched.
+- **Hurricane Maria, 2017.** ARRL "Force of 50" pages and the 2017 Hurricane Season AAR
+  (arrl.org/files): the Red Cross asked ARRL for 50 volunteers; 465 volunteered; 22 deployed
+  Sept 28 with Ham Aid kits for about 3 weeks; hospital VHF links (asked to cover 51 hospitals),
+  power utility AEE crews, FEMA ESF-2 liaison at the PREOC, the Mayaguez team "the only emergency
+  communication link from that city to San Juan"; 131 local hams at AEE technical plazas.
+- **Hurricane Helene, 2024.** WIRED 2024-10-08 (Makena Kelly): Mt. Mitchell repeater at 6,600 ft,
+  supply requests and road closures read over it, "Mom, your son is OK. No phone service. Happy
+  birthday."; Thomas Witherspoon K4SWL (swling.com 2024-10-18): passed wellness checks, coordinated
+  helicopter evacuations and supply drops via the N2GE repeater, handed handhelds to unlicensed
+  neighbors; RARS statement 2024-10-09: Tar Heel Emergency Net activated at NCEM's request; Farmer
+  et al. 2025 case study: all three WNC fiber trunks destroyed; a ham brought two radios to the
+  iHeart Asheville studios on day one.
+
+Meshtastic (thin, and honest about it):
+- **Helene, after the fact.** Witherspoon, qrper.com 2024-10-24: neighbors wanted a permanent
+  off-grid net; he planned Meshtastic test nodes, and the community chose a GMRS repeater for voice.
+  Asheville Watchdog 2025-10-01: a year on, "many have radios, Starlink or Meshtastic devices".
+  WTXL 2025-03-11: Jefferson County FL CERT proposes solar Meshtastic nodes on water towers, citing
+  deployments in NC and TN after Helene (their claim, as reported). A LinkedIn post claiming a
+  23-node Swannanoa mesh ran rescues during the storm is contradicted by Witherspoon's own account
+  from Swannanoa and was NOT used.
+- **Drills and tracking.** BuffaLoRa (N2WLS) 2025-09-14: fire company plus Civil Air Patrol drill,
+  T1000-E trackers on a UTV and a light rescue truck in TAK_TRACKER role, positions on ATAK
+  off-grid; the same setup at a Sept 2024 park drill. Cameron Highlands ARC 2026: LoRa APRS
+  trackers (ham, not Meshtastic) in a real missing-hiker search.
+- Not found with a source good enough for a slide: Meshtastic in the Jan 2025 LA fires (ARES LAX
+  NE mentions "text-based coordination" without naming it).

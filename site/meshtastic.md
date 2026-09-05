@@ -302,6 +302,7 @@ Find me after. I'll get your node on the mesh right here.
 - How the mesh actually decides who repeats
 - Radio roles, and why the wrong one hurts everybody
 - Using an AI to help you set up, and where it will lie to you
+- When the towers went down: ham radio, and Meshtastic, in real emergencies
 - Why now, and not during the emergency
 
 ---
@@ -371,6 +372,26 @@ Find me after. I'll get your node on the mesh right here.
 - Change **one setting at a time**, and never paste your private channel key into anything
 
 ## Ask it to explain. Make it show its source. You decide.
+
+---
+
+# When the towers went down: ham radio
+
+- **Joplin, May 22, 2011.** The EF5 took the phone lines and the cell towers. That night, hams were the **only link between Freeman Hospital and the Springfield hospitals**, and between the Red Cross offices in Joplin and Springfield until Tuesday. More than 1,900 volunteer hours
+- **Puerto Rico, Hurricane Maria, 2017.** The Red Cross asked for 50 hams; 22 flew in with radio kits for three weeks: **hospital links, the power utility's repair crews, FEMA liaison**, and the only link from Mayaguez to San Juan
+- **Western North Carolina, Helene, 2024.** All three fiber trunks destroyed. One repeater on Mount Mitchell carried **supply requests, road closures, helicopter evacuations**, and "Mom, your son is OK. No phone service."
+
+## The role, every time: the link between a hospital, a shelter or a family and the outside, when nothing else was one.
+
+---
+
+# When the towers went down: Meshtastic
+
+- **Helene, 2024, honestly.** The neighborhoods that got through used voice radios and a repeater. Meshtastic came **after**: Swannanoa neighbors wanted a permanent off-grid net anyone could join without a license, and a Florida county's emergency team is now hanging **solar nodes on water towers** before the next storm
+- **Search, rescue and fire drills.** A New York fire company tracked its UTV and rescue truck through the woods on **$50 card trackers**, positions landing on the team map with no cell service. The role: knowing where your people are when they are out of sight
+- **Your street.** Text and positions for the household and the neighbors, no operator needed, while the licensed folks carry the hospital link
+
+## The lesson from Helene: the mesh you build after the storm helps with the next one. Build it now.
 
 ---
 
