@@ -31,7 +31,7 @@ blocks = [b.strip() for b in raw.split("\n---\n")]
 # the first block is the file's own preamble, not a slide
 blocks = [b for b in blocks if b.strip().startswith("## SLIDE")]
 
-IMG_RE = re.compile(r"^\(?(?:image|photo|\d-up|diagram)\s*:\s*(.+?)\)?$", re.I)
+IMG_RE = re.compile(r"^\(?(?:image|photo|wide|\d-up|diagram)\s*:\s*(.+?)\)?$", re.I)
 
 
 def inline(t):
@@ -116,7 +116,7 @@ def render(block):
                     if d.is_file():
                         return io.open(d, encoding="utf-8").read()
                     return f'<img src="../assets/images/{f}" alt="">'
-                cls = "imgs grid" if len(files) > 4 else "imgs"
+                cls = "imgs grid" if len(files) > 4 else ("imgs wide" if s.lower().startswith(("(wide", "wide")) else "imgs")
                 body.append(f'<div class="{cls}">' + "".join(tag(f) for f in files) + "</div>")
             else:
                 notes.append(inline(s))
@@ -151,7 +151,7 @@ def render(block):
     heads = [b for b in others if b.startswith("<h1>")]
     rest = [b for b in others if not b.startswith("<h1>")]
 
-    single = len(imgs) == 1 and (imgs[0].count("<img") + imgs[0].count("<svg")) == 1
+    single = len(imgs) == 1 and (imgs[0].count("<img") + imgs[0].count("<svg")) == 1 and "imgs wide" not in imgs[0]
     if single and not rest:
         # a picture-only slide (the diagrams) gets the whole stage
         solo = imgs[0].replace('class="imgs"', 'class="imgs solo"', 1)
@@ -192,6 +192,7 @@ th{background:#222;font-size:1.10em;text-transform:uppercase;letter-spacing:.05e
 .imgs{display:flex;gap:1.4vw;justify-content:center;align-items:center;margin:1.6vh 0;min-height:0}
 .imgs img{max-height:32vh;max-width:80vw;object-fit:contain;border-radius:6px}
 .imgs.solo img,.imgs.solo svg{max-height:62vh;max-width:88vw;width:auto;height:62vh}
+.imgs.wide img{max-height:64vh;max-width:88vw}
 .imgs.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4vw;justify-items:center;max-width:88vw;margin-left:auto;margin-right:auto}
 .imgs.grid img{max-height:24vh;max-width:100%}
 .imgs svg{max-width:88vw;height:auto}

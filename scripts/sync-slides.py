@@ -39,6 +39,7 @@ def load_notes():
 
 def convert(block, n, notes):
     out, imgs = [], []
+    wide = 'class="img-full"' in block
     for line in block.splitlines():
         s = line.rstrip()
         t = s.strip()
@@ -69,7 +70,7 @@ def convert(block, n, notes):
     body = [f"## SLIDE {n} - {label}", ""] + heads
     if imgs:
         if len(imgs) == 1:
-            kind = "diagram" if imgs[0].endswith(".svg") else "image"
+            kind = "diagram" if imgs[0].endswith(".svg") else ("wide" if wide else "image")
             body += ["", f"({kind}: {imgs[0]})"]
         else:
             body += ["", f"({len(imgs)}-up: " + " · ".join(imgs) + ")"]

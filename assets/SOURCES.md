@@ -68,3 +68,5 @@ read on both dark and light backgrounds.
 - `node-printed-case.webp` — a home node in a 3D-printed case, screen showing Role: Client, US/LongFast, 906.875 MHz. Cropped from his phone photo.
 - `diy-xiao-wio-sx1262.webp` — a bare XIAO + Wio-SX1262 pair on anti-static foam with two flex antennas, powered off a USB-C cable. His phone photo.
 - `base-station.webp` — the base station on the shelf, new Meshtastic UI showing 18 of 21 nodes online on 906.875 MHz. His phone photo, EXIF orientation baked in.
+
+- `lzmesh-map.webp` - screenshot of LZMesh's live node map, map.lzmesh.com, captured 2026-09-05 about 10:30 CDT, zoomed one level in around the Springfield cluster, sidebar cropped off. Basemap tiles © OpenStreetMap contributors, © CARTO (attribution kept in the image); the map itself is LZMesh's work, used with credit on the slide and a link to the live map.

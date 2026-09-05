@@ -61,14 +61,27 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-# Why we do it.
+# Why I do it.
 
-## Several nodes. One 35-foot pole. Zero utility bills.
+## Several nodes. One 35-foot pole.
 
 ![Solar node on the flagpole](/images/presentations/meshtastic/solar-node-pole.webp)
 
-- The solar node has run **untouched for months**
-- Kid's backpack has a tracker on the family channel
+- **It's a hobby.** I want to see how far I can connect
+- **It's a public service.** The pole node extends the mesh toward Springfield and the rest of LZMesh
+- The solar node up there has run **untouched for months**
+
+---
+
+# The network I'm extending: LZMesh
+
+<div class="img-full">
+
+![LZMesh live node map: southwest Missouri and the four-state corner, the morning of the talk](/images/presentations/meshtastic/lzmesh-map.webp)
+
+</div>
+
+**316 nodes heard in the last 24 hours** this morning, Joplin to Rolla and down into Arkansas. Marshfield sits in the thin stretch east of Springfield; filling it in is what my pole is for. Live at [map.lzmesh.com](https://map.lzmesh.com).
 
 ---
 
@@ -177,9 +190,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-# Two questions, not one
-
-## Can we **hear** each other? Can we **read** each other?
+# Can we hear each other?<br>Can we read each other?
 
 - **Hearing** = region + preset + frequency. The radio settings.
 - **Reading** = channel name + key. The lock on the box.

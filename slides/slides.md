@@ -79,16 +79,17 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 7 - Why we do it.
+## SLIDE 7 - Why I do it.
 
-# Why we do it.
+# Why I do it.
 
 (image: solar-node-pole.webp)
 
-### Several nodes. One 35-foot pole. Zero utility bills.
+### Several nodes. One 35-foot pole.
 
-- The solar node has run **untouched for months**
-- Kid's backpack has a tracker on the family channel
+- **It's a hobby.** I want to see how far I can connect
+- **It's a public service.** The pole node extends the mesh toward Springfield and the rest of LZMesh
+- The solar node up there has run **untouched for months**
 
 *If you want numbers, the laptop seat read them off the base station this week: up 82 days straight, 4.16 volts. Say the reading, not "months". The photo does the height argument for you, so do not narrate it.*
 
@@ -96,7 +97,19 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 8 - What it's good for out here
+## SLIDE 8 - The network I'm extending: LZMesh
+
+# The network I'm extending: LZMesh
+
+(wide: lzmesh-map.webp)
+
+**316 nodes heard in the last 24 hours** this morning, Joplin to Rolla and down into Arkansas. Marshfield sits in the thin stretch east of Springfield; filling it in is what my pole is for. Live at [map.lzmesh.com](https://map.lzmesh.com).
+
+*Point at Marshfield. The Springfield cluster is dense, the stretch toward Rolla is thin, and the pole node's job is to thicken it. The 316 was read off the map at about 10:30 this morning; the map is live, so if there is internet, read today's number off the screen instead.*
+
+---
+
+## SLIDE 9 - What it's good for out here
 
 # What it's good for out here
 
@@ -108,7 +121,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 9 - Easiest start: SenseCAP T1000-E, $50
+## SLIDE 10 - Easiest start: SenseCAP T1000-E, $50
 
 # Easiest start: SenseCAP T1000-E, $50
 
@@ -122,7 +135,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 10 - The best value: Heltec V4 2-pack, $90
+## SLIDE 11 - The best value: Heltec V4 2-pack, $90
 
 # The best value: Heltec V4 2-pack, $90
 
@@ -139,7 +152,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 11 - Set-and-forget: SenseCAP Solar Node P1-Pro, $140
+## SLIDE 12 - Set-and-forget: SenseCAP Solar Node P1-Pro, $140
 
 # Set-and-forget: SenseCAP Solar Node P1-Pro, $140
 
@@ -153,7 +166,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 12 - The rabbit hole runs deep
+## SLIDE 13 - The rabbit hole runs deep
 
 # The rabbit hole runs deep
 
@@ -163,7 +176,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 13 - What it costs to start
+## SLIDE 14 - What it costs to start
 
 # What it costs to start
 
@@ -179,7 +192,7 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-## SLIDE 14 - Setup: the whole thing
+## SLIDE 15 - Setup: the whole thing
 
 # Setup: the whole thing
 
@@ -198,11 +211,9 @@ My carry node, a Wio Tracker L1 in a printed case. Its screen says it all: Clien
 
 ---
 
-## SLIDE 15 - Two questions, not one
+## SLIDE 16 - Can we hear each other? Can we read each other?
 
-# Two questions, not one
-
-### Can we **hear** each other? Can we **read** each other?
+# Can we hear each other?<br>Can we read each other?
 
 - **Hearing** = region + preset + frequency. The radio settings.
 - **Reading** = channel name + key. The lock on the box.
@@ -224,7 +235,7 @@ Different room: nothing helps. Get the radio settings right first.
 
 ---
 
-## SLIDE 16 - Renaming your main channel changes your frequency.
+## SLIDE 17 - Renaming your main channel changes your frequency.
 
 # Renaming your main channel<br>changes your frequency.
 
@@ -238,7 +249,7 @@ Different room: nothing helps. Get the radio settings right first.
 
 ---
 
-## SLIDE 17 - A node that cannot read your message still carries it.
+## SLIDE 18 - A node that cannot read your message still carries it.
 
 # A node that cannot read your message<br>still carries it.
 
@@ -256,7 +267,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 18 - Does this broadcast my address?
+## SLIDE 19 - Does this broadcast my address?
 
 # Does this broadcast my address?
 
@@ -274,7 +285,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 19 - Height beats power.
+## SLIDE 20 - Height beats power.
 
 # Height beats power.
 
@@ -282,7 +293,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 20 - Same radios, different philosophy: MeshCore
+## SLIDE 21 - Same radios, different philosophy: MeshCore
 
 # Same radios, different philosophy: MeshCore
 
@@ -292,7 +303,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 21 - Not a chat app: Reticulum
+## SLIDE 22 - Not a chat app: Reticulum
 
 # Not a chat app: Reticulum
 
@@ -302,7 +313,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 22 - The licensed path: ham radio + APRS
+## SLIDE 23 - The licensed path: ham radio + APRS
 
 # The licensed path: ham radio + APRS
 
@@ -313,7 +324,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 23 - Do this today
+## SLIDE 24 - Do this today
 
 # Do this today
 
@@ -329,7 +340,7 @@ Grab a handout on your way out: every link is on it.
 
 ---
 
-## SLIDE 24 - Questions?
+## SLIDE 25 - Questions?
 
 # Questions?
 

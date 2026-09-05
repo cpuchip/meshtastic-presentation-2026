@@ -29,40 +29,44 @@ If you want numbers, the laptop seat read them off the base station this week: u
 
 Solo now, so this section is all yours. It can breathe a little longer than the 5 min budget if the room is engaged; the lived story is why they stay.
 
-## Slide 10
+## Slide 8
+
+Point at Marshfield. The Springfield cluster is dense, the stretch toward Rolla is thin, and the pole node's job is to thicken it. The 316 was read off the map at about 10:30 this morning; the map is live, so if there is internet, read today's number off the screen instead.
+
+## Slide 11
 
 Single board alone is $27 from Rokland, but you still need a battery and a case, so the kit wins for a beginner.
 
-## Slide 13
+## Slide 14
 
 Delivered prices, checked this week. A satellite messenger costs more than the 2-pack every single year you keep it.
 
-## Slide 14
+## Slide 15
 
 Two settings, not one. Region wrong = it never transmits. Preset wrong = it transmits into an empty room. Both look like a dead radio to a beginner, and I hit the second one on a new board this week.
 
 Live-walk this on screen; screenshots as backup.
 
-## Slide 15
+## Slide 16
 
 This slide is the whole section; the next two are just consequences.
 
 If the room is quiet, this is the moment to hold up the new board and say it found nobody sitting next to three working radios.
 
-## Slide 16
+## Slide 17
 
 This is the one thing I most want them to walk out with. It is the reason someone buys a radio, sees an empty screen, and gives up in week one.
 
-## Slide 17
+## Slide 18
 
 LongFast is public: its key is printed in the docs. Keep it for reach, add a channel for privacy.
 
-## Slide 18
+## Slide 19
 
 This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.
 
 So: know which channel you are sharing on. Public is a blurred box. Private can be your doorstep. The number, verified in the firmware: precision 13 clears the low 19 bits of the coordinate, so the box is 5.8 km tall by 4.6 km wide here, about 3.6 by 2.9 miles, and the point sent is its center.
 
-## Slide 23
+## Slide 24
 
 Point to the printed handouts. Where to find me after.
