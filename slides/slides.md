@@ -409,12 +409,12 @@ Find me after. I'll get your node on the mesh right here.
 
 | Distance | What works | What does not |
 |---|---|---|
-| **1 mile** | Anything: FRS, MURS, GMRS, mesh, ham simplex | A handheld behind a hill |
-| **10 miles** | A repeater, GMRS or ham; ham simplex from height; mesh with one high node between | FRS; pocket mesh nodes at ground level |
-| **100 miles** | Ham through a mountain repeater (Joplin to Springfield, 70 miles, 2011); ham HF | GMRS, MURS, any direct link |
-| **200 to 500** | Ham HF on 40 and 80 meters; Winlink email; satellite | Everything VHF and UHF; the mesh |
-| **1,000** | Ham HF on 20 and 40 meters; FT8 and JS8; satellite | VHF, UHF, GMRS, MURS, mesh |
-| **2,000 and up** | Ham HF (a 20-meter net carried Puerto Rico to the mainland in 2017); satellite | Everything else |
+| **1 mile** | Everything | A handheld behind a hill |
+| **10 miles** | A repeater; ham simplex from height; mesh with a high node between | FRS; ground-level mesh |
+| **100 miles** | Ham through a mountain repeater (Joplin to Springfield, 2011); ham HF | GMRS, MURS, any direct link |
+| **200 to 500** | Ham HF on 40 and 80 meters; Winlink; satellite | VHF and UHF; the mesh |
+| **1,000** | Ham HF on 20 and 40 meters; FT8, JS8; satellite | Everything but HF and satellite |
+| **2,000 and up** | Ham HF (Puerto Rico to the mainland, 2017); satellite | Everything else |
 
 ### Range is height and frequency, not watts. Text survives what voice cannot.
 
