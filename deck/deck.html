@@ -260,13 +260,13 @@ body.grid .notes{display:none}
 <p>Leave rebroadcast on <b>ALL</b>, role on <b>CLIENT</b>.</p>
 <p>Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.</p></div><div class='notes'><p>LongFast is public: its key is printed in the docs. Keep it for reach, add a channel for privacy.</p></div></section>
 <section><div class='label'>SLIDE 18 - Does this broadcast my address?</div><div class='content'><h1>Does this broadcast my address?</h1>
-<h3>No. It broadcasts a square about a mile and a half across.</h3>
+<h3>No. It broadcasts a box about three miles across.</h3>
 <ul>
 <li>On the public channel your position is <b>deliberately blurred</b></li>
-<li>The default rounds you to a <b>1.5 mile grid cell</b> and sends its center</li>
-<li>Everyone at my house publishes the identical point, and so does anyone else inside the square</li>
+<li>The default rounds you into a <b>box roughly three miles across</b> and sends its center</li>
+<li>Everyone at my house publishes the identical point, and so does anyone else inside the box</li>
 </ul>
-<h3>Precision is per channel. On my family channel, I set it to exact.</h3></div><div class='notes'><p>This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.</p><p>So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep. The number: the primary channel runs positionPrecision 13, a 2.45 km cell.</p></div></section>
+<h3>Precision is per channel. On my family channel, I set it to exact.</h3></div><div class='notes'><p>This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.</p><p>So: know which channel you are sharing on. Public is a blurred box. Private can be your doorstep. The number, verified in the firmware: precision 13 clears the low 19 bits of the coordinate, so the box is 5.8 km tall by 4.6 km wide here, about 3.6 by 2.9 miles, and the point sent is its center.</p></div></section>
 <section><div class='label'>SLIDE 19 - Height beats power.</div><div class='content'><h1>Height beats power.</h1>
 <div class="imgs solo"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
   <!-- ground -->

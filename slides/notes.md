@@ -61,7 +61,7 @@ LongFast is public: its key is printed in the docs. Keep it for reach, add a cha
 
 This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.
 
-So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep. The number: the primary channel runs positionPrecision 13, a 2.45 km cell.
+So: know which channel you are sharing on. Public is a blurred box. Private can be your doorstep. The number, verified in the firmware: precision 13 clears the low 19 bits of the coordinate, so the box is 5.8 km tall by 4.6 km wide here, about 3.6 by 2.9 miles, and the point sent is its center.
 
 ## Slide 23
 

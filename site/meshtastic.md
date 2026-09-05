@@ -221,11 +221,11 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 # Does this broadcast my address?
 
-## No. It broadcasts a square about a mile and a half across.
+## No. It broadcasts a box about three miles across.
 
 - On the public channel your position is **deliberately blurred**
-- The default rounds you to a **1.5 mile grid cell** and sends its center
-- Everyone at my house publishes the identical point, and so does anyone else inside the square
+- The default rounds you into a **box roughly three miles across** and sends its center
+- Everyone at my house publishes the identical point, and so does anyone else inside the box
 
 ## Precision is per channel. On my family channel, I set it to exact.
 
