@@ -70,3 +70,7 @@ So: know which channel you are sharing on. Public is a blurred box. Private can 
 ## Slide 24
 
 Point to the printed handouts. Where to find me after.
+
+## Slide 29
+
+If digital comes up: digital voice (DMR, D-STAR, Fusion) reaches the world only through the internet; in a blackout it is a local repeater like any other. HF digital (FT8, JS8, Winlink) reaches far on tiny power, but it carries text, not voice. And the reason text wins at the edge: a mesh message or an HF digital burst gets through a signal too weak to carry a voice.

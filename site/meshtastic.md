@@ -190,7 +190,9 @@ You give up voice and pictures. You get miles of range from a radio in your shir
 
 ---
 
-# Can we hear each other?<br>Can we read each other?
+# Can we hear each other?
+
+## Can we read each other?
 
 - **Hearing** = region + preset + frequency. The radio settings.
 - **Reading** = channel name + key. The lock on the box.
@@ -342,6 +344,16 @@ Find me after. I'll get your node on the mesh right here.
 
 | Distance | What works | What does not |
 |---|---|---|
+| **1 mile** | Anything: FRS, MURS, GMRS, mesh, ham simplex | A handheld behind a hill |
+| **10 miles** | A repeater, GMRS or ham; ham simplex from height; mesh with one high node between | FRS; pocket mesh nodes at ground level |
+| **100 miles** | Ham through a mountain repeater (Joplin to Springfield, 70 miles, 2011); ham HF | GMRS, MURS, any direct link |
+| **200 to 500** | Ham HF on 40 and 80 meters; Winlink email; satellite | Everything VHF and UHF; the mesh |
+| **1,000** | Ham HF on 20 and 40 meters; FT8 and JS8; satellite | VHF, UHF, GMRS, MURS, mesh |
+| **2,000 and up** | Ham HF (a 20-meter net carried Puerto Rico to the mainland in 2017); satellite | Everything else |
+
+## Range is height and frequency, not watts. Text survives what voice cannot.
+
+---|---|---|
 | **1 mile** | Everything: FRS, MURS, GMRS handhelds, mesh node to node, ham simplex | A handheld in a car behind a hill |
 | **10 miles** | GMRS or ham through a repeater; ham VHF or UHF simplex from height; mesh with one high node in between; MURS on a good antenna | FRS blister packs; pocket mesh nodes at ground level |
 | **100 miles** | Ham VHF or UHF through a mountain repeater (Joplin to Springfield, 70 miles, the night of the tornado); ham HF; mesh only as a chain of infrastructure nodes | GMRS, whose repeaters may not be linked over the internet; MURS; any direct link |

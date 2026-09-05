@@ -234,7 +234,8 @@ body.grid .notes{display:none}
 <li>Private family channel: scan one QR code. <b>Encrypted.</b></li>
 </ul>
 <p>My carry node, a Wio Tracker L1 in a printed case. Its screen says it all: Client, US/LongFast, 906.875 MHz.</p></div><div class="col-img"><div class="imgs"><img src="../assets/images/node-printed-case-screen.webp" alt=""></div></div></div></div><div class='notes'><p>Two settings, not one. Region wrong = it never transmits. Preset wrong = it transmits into an empty room. Both look like a dead radio to a beginner, and I hit the second one on a new board this week.</p><p>Live-walk this on screen; screenshots as backup.</p></div></section>
-<section><div class='label'>SLIDE 16 - Can we hear each other? Can we read each other?</div><div class='content'><h1>Can we hear each other?<br>Can we read each other?</h1>
+<section><div class='label'>SLIDE 16 - Can we hear each other?</div><div class='content'><h1>Can we hear each other?</h1>
+<h3>Can we read each other?</h3>
 <ul>
 <li><b>Hearing</b> = region + preset + frequency. The radio settings.</li>
 <li><b>Reading</b> = channel name + key. The lock on the box.</li>
@@ -389,7 +390,17 @@ body.grid .notes{display:none}
 <section><div class='label'>SLIDE 29 - One mile to two thousand: what reaches, what does not</div><div class='content'><h1>One mile to two thousand: what reaches, what does not</h1>
 <table>
 <tr><th>Distance</th><th>What works</th><th>What does not</th></tr>
-<tr><td><b>1 mile</b></td><td>Everything: FRS, MURS, GMRS handhelds, mesh node to node, ham simplex</td><td>A handheld in a car behind a hill</td></tr>
+<tr><td><b>1 mile</b></td><td>Anything: FRS, MURS, GMRS, mesh, ham simplex</td><td>A handheld behind a hill</td></tr>
+<tr><td><b>10 miles</b></td><td>A repeater, GMRS or ham; ham simplex from height; mesh with one high node between</td><td>FRS; pocket mesh nodes at ground level</td></tr>
+<tr><td><b>100 miles</b></td><td>Ham through a mountain repeater (Joplin to Springfield, 70 miles, 2011); ham HF</td><td>GMRS, MURS, any direct link</td></tr>
+<tr><td><b>200 to 500</b></td><td>Ham HF on 40 and 80 meters; Winlink email; satellite</td><td>Everything VHF and UHF; the mesh</td></tr>
+<tr><td><b>1,000</b></td><td>Ham HF on 20 and 40 meters; FT8 and JS8; satellite</td><td>VHF, UHF, GMRS, MURS, mesh</td></tr>
+<tr><td><b>2,000 and up</b></td><td>Ham HF (a 20-meter net carried Puerto Rico to the mainland in 2017); satellite</td><td>Everything else</td></tr>
+</table>
+<h3>Range is height and frequency, not watts. Text survives what voice cannot.</h3>
+<p>---|---|---|</p>
+<table>
+<tr><th><b>1 mile</b></th><th>Everything: FRS, MURS, GMRS handhelds, mesh node to node, ham simplex</th><th>A handheld in a car behind a hill</th></tr>
 <tr><td><b>10 miles</b></td><td>GMRS or ham through a repeater; ham VHF or UHF simplex from height; mesh with one high node in between; MURS on a good antenna</td><td>FRS blister packs; pocket mesh nodes at ground level</td></tr>
 <tr><td><b>100 miles</b></td><td>Ham VHF or UHF through a mountain repeater (Joplin to Springfield, 70 miles, the night of the tornado); ham HF; mesh only as a chain of infrastructure nodes</td><td>GMRS, whose repeaters may not be linked over the internet; MURS; any direct link</td></tr>
 <tr><td><b>200 to 500</b></td><td>Ham HF on 40 and 80 meters, the regional bands; Winlink email over HF; satellite</td><td>Everything VHF and UHF without a chain of repeaters; the mesh</td></tr>
@@ -400,7 +411,7 @@ body.grid .notes{display:none}
 <li><b>Range is height and frequency, not watts.</b> The pole beats the power knob every time</li>
 <li><b>Digital voice</b> (DMR, D-STAR, Fusion) reaches the world only through the internet; in a blackout it is a local repeater like any other. <b>HF digital</b> (FT8, JS8, Winlink) reaches far on tiny power, but carries text</li>
 <li><b>Text survives what voice cannot.</b> A mesh message or an HF digital burst gets through a signal too weak for a voice</li>
-</ul></div></section>
+</ul></div><div class='notes'><p>If digital comes up: digital voice (DMR, D-STAR, Fusion) reaches the world only through the internet; in a blackout it is a local repeater like any other. HF digital (FT8, JS8, Winlink) reaches far on tiny power, but it carries text, not voice. And the reason text wins at the edge: a mesh message or an HF digital burst gets through a signal too weak to carry a voice.</p></div></section>
 <section><div class='label'>SLIDE 30 - How the mesh decides who repeats</div><div class='content'><h1>How the mesh decides who repeats</h1>
 <ul>
 <li>Every radio that hears a new packet <b>may</b> rebroadcast it, once</li>
