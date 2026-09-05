@@ -67,10 +67,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ![Solar node on the flagpole](/images/presentations/meshtastic/solar-node-pole.webp)
 
-<!-- TODO: Michael's pole photo goes here -->
-
 - The solar node has run **untouched for months**
-- Coverage across the property and beyond
 - Kid's backpack has a tracker on the family channel
 
 ---
@@ -95,7 +92,8 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 - Credit-card size, waterproof, GPS
 - **Meshtastic already installed** - charge it, pair it, done
-- Buy two: you're a network
+
+**Buy:** [Amazon](https://www.amazon.com/dp/B0DJ6KGXKB) · [Seeed direct](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
 
 ---
 
@@ -109,7 +107,9 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 - The hobbyist favorite, now with real power (27 dBm)
 - Little screen, USB-C, no soldering
-- Amazon 2-packs with case + battery + antenna
+- **The kit is the deal:** 2 boards, 2 batteries, cases, antennas
+
+**Buy:** [Amazon 2-pack kit](https://www.amazon.com/dp/B0FY2WL3MN) · [Bare board at Rokland](https://store.rokland.com/products/heltec-wifi-lora-32v4-esp32s3-sx1262-lora-node-meshtastic-lorawan)
 
 ---
 
@@ -125,6 +125,8 @@ You give up voice and pictures. You get range and battery life that feel like ma
 - Pole-mount it once, forget it
 - **This is the one on our 35-ft pole**
 
+**Buy:** [Amazon](https://www.amazon.com/dp/B0FMDHBWX8) · [Seeed direct](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)
+
 ---
 
 # The rabbit hole runs deep
@@ -134,13 +136,13 @@ You give up voice and pictures. You get range and battery life that feel like ma
 ![RAK WisBlock](/images/presentations/meshtastic/rak-wisblock.webp)
 ![LILYGO T-Deck](/images/presentations/meshtastic/lilygo-t-deck.webp)
 ![LILYGO T-Echo](/images/presentations/meshtastic/lilygo-t-echo.webp)
+![Wio Tracker L1 Pro](/images/presentations/meshtastic/wio-tracker-l1.webp)
 ![WisMesh Pocket](/images/presentations/meshtastic/rak-wismesh-pocket.webp)
 ![Heltec MeshPocket](/images/presentations/meshtastic/heltec-meshpocket.webp)
-![muzi R1 Neo](/images/presentations/meshtastic/muzi-r1-neo.webp)
 
 </div>
 
-**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · **Wio Tracker L1 Pro** $60 with GPS · pocket nodes, 3D-printed cases, DIY antennas - GitHub all the way down
+**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · [**Wio Tracker L1 Pro**](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) $60 with GPS · pocket nodes, 3D-printed cases, DIY antennas - GitHub all the way down
 
 ---
 
@@ -148,9 +150,9 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 | You want | Buy | Cost |
 |---|---|---|
-| Me and one other person | Heltec V4 **2-pack kit** | **$90** |
-| The no-fuss option | 1× SenseCAP T1000-E | **$50** |
-| Cover the whole place | add a solar node on a pole | **+$140** |
+| Me and one other person | [Heltec V4 2-pack kit](https://www.amazon.com/dp/B0FY2WL3MN) | **$90** |
+| The no-fuss option | 1× [SenseCAP T1000-E](https://www.amazon.com/dp/B0DJ6KGXKB) | **$50** |
+| Cover the whole place | add a [solar node](https://www.amazon.com/dp/B0FMDHBWX8) on a pole | **+$140** |
 
 ## Less than a year of a satellite messenger subscription.
 
@@ -159,10 +161,9 @@ You give up voice and pictures. You get range and battery life that feel like ma
 # Setup: the whole thing
 
 1. Charge it. **Antenna on before power.**
-2. Update: drag-and-drop (T1000-E) or **flasher.meshtastic.org** (Heltec)
-3. Phone app → pair → **check TWO settings: Region = US, Preset = LongFast**
-4. You're on **LongFast** - the public channel - with everyone in range
-5. Private family channel: scan one QR code. **Encrypted.**
+2. Update: drag-and-drop (T1000-E) or [flasher.meshtastic.org](https://flasher.meshtastic.org) (Heltec)
+3. Phone app → pair → **check TWO settings: Region = US, Preset = LongFast.** That puts you on the public channel with everyone in range
+4. Private family channel: scan one QR code. **Encrypted.**
 
 ---
 
@@ -235,7 +236,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 - Voice, real power, repeaters, decades of infrastructure
 - Technician license = a weekend of study, one exam
-- Study **FREE** at **hamstudy.org** - built by our friend Richard, KD7BBC
+- Study **FREE** at [hamstudy.org](https://hamstudy.org) - built by my friend Richard, KD7BBC
 - Meshtastic is the on-ramp. Ham is the highway. **Run both.**
 
 ---
@@ -244,7 +245,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ## Buy two. Put one in a kid's backpack.<br>Text them from the house.
 
-**meshtastic.org/docs** · **flasher.meshtastic.org** · **hamstudy.org**
+[meshtastic.org/docs](https://meshtastic.org/docs/getting-started/) · [flasher.meshtastic.org](https://flasher.meshtastic.org) · [hamstudy.org](https://hamstudy.org) · [cpuchip.net/presentations](https://cpuchip.net/presentations/meshtastic)
 
 Grab a handout on your way out - every link is on it.
 
@@ -254,4 +255,4 @@ Grab a handout on your way out - every link is on it.
 
 ![Meshtastic](/images/presentations/meshtastic/meshtastic-logo.svg)
 
-Find us after - we'll get your node on the mesh right here.
+Find me after - I'll get your node on the mesh right here.
