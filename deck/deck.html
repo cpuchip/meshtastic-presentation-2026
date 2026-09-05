@@ -259,7 +259,15 @@ body.grid .notes{display:none}
 <h3>Owning one is a contribution, not just a purchase.</h3>
 <p>Leave rebroadcast on <b>ALL</b>, role on <b>CLIENT</b>.</p>
 <p>Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.</p></div><div class='notes'><p>LongFast is public: its key is printed in the docs. Keep it for reach, add a channel for privacy.</p></div></section>
-<section><div class='label'>SLIDE 18 - Height beats power.</div><div class='content'><h1>Height beats power.</h1>
+<section><div class='label'>SLIDE 18 - Does this broadcast my address?</div><div class='content'><h1>Does this broadcast my address?</h1>
+<h3>No. It broadcasts a square about a mile and a half across.</h3>
+<ul>
+<li>On the public channel your position is <b>deliberately blurred</b></li>
+<li>The default rounds you to a <b>1.5 mile grid cell</b> and sends its center</li>
+<li>Everyone at my house publishes the identical point, and so does anyone else inside the square</li>
+</ul>
+<h3>Precision is per channel. On my family channel, I set it to exact.</h3></div><div class='notes'><p>This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.</p><p>So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep. The number: the primary channel runs positionPrecision 13, a 2.45 km cell.</p></div></section>
+<section><div class='label'>SLIDE 19 - Height beats power.</div><div class='content'><h1>Height beats power.</h1>
 <div class="imgs solo"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
   <!-- ground -->
   <line x1="30" y1="440" x2="930" y2="440" stroke="currentColor" stroke-width="4" opacity="0.5"/>
@@ -315,31 +323,31 @@ body.grid .notes{display:none}
   <text x="810" y="505" text-anchor="middle" font-size="21" fill="currentColor" opacity="0.65">the county</text>
 </svg>
 </div></div></section>
-<section><div class='label'>SLIDE 19 - Same radios, different philosophy: MeshCore</div><div class='content'><h1>Same radios, different philosophy: MeshCore</h1>
+<section><div class='label'>SLIDE 20 - Same radios, different philosophy: MeshCore</div><div class='content'><h1>Same radios, different philosophy: MeshCore</h1>
 <ul>
 <li>Meshtastic: <b>everyone repeats</b>. Simple, and it organizes itself</li>
 <li>MeshCore: <b>planned repeaters</b> and learned routes. Tighter at scale, more setup</li>
 <li>Young and moving fast; worth watching</li>
 </ul></div></section>
-<section><div class='label'>SLIDE 20 - Not a chat app: Reticulum</div><div class='content'><h1>Not a chat app: Reticulum</h1>
+<section><div class='label'>SLIDE 21 - Not a chat app: Reticulum</div><div class='content'><h1>Not a chat app: Reticulum</h1>
 <ul>
 <li>Encrypted networking over <b>any</b> radio: LoRa, packet, WiFi, even the internet</li>
 <li>Their own words: <i>&quot;Reticulum is not one network. It is a tool for building thousands of networks.&quot;</i></li>
 <li>The deep end, for when you outgrow everything else</li>
 </ul></div></section>
-<section><div class='label'>SLIDE 21 - The licensed path: ham radio + APRS</div><div class='content'><h1>The licensed path: ham radio + APRS</h1>
+<section><div class='label'>SLIDE 22 - The licensed path: ham radio + APRS</div><div class='content'><h1>The licensed path: ham radio + APRS</h1>
 <ul>
 <li>Voice, real power, repeaters, decades of infrastructure</li>
 <li>Technician license = a weekend of study, one exam</li>
 <li>Study <b>FREE</b> at <a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a>, built by my friend Richard, KD7BBC</li>
 <li>Meshtastic is the on-ramp. Ham is the highway. <b>Run both.</b></li>
 </ul></div></section>
-<section><div class='label'>SLIDE 22 - Do this today</div><div class='content'><h1>Do this today</h1>
+<section><div class='label'>SLIDE 23 - Do this today</div><div class='content'><h1>Do this today</h1>
 <h3>Buy two. Put one in a kid&#x27;s backpack.<br>Text them from the house.</h3>
 <p><a href="https://meshtastic.org/docs/getting-started/" target="_blank" rel="noopener">meshtastic.org/docs</a> · <a href="https://flasher.meshtastic.org" target="_blank" rel="noopener">flasher.meshtastic.org</a> · <a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a> · <a href="https://cpuchip.net/presentations/meshtastic" target="_blank" rel="noopener">cpuchip.net/presentations</a></p>
 <p><b>Our local mesh: <a href="https://lzmesh.com" target="_blank" rel="noopener">LZMesh</a></b>, four states around us. The channel QR and their beginner guide are in the <a href="https://discord.lzarc.com" target="_blank" rel="noopener">Discord</a>.</p>
 <p>Grab a handout on your way out: every link is on it.</p></div><div class='notes'><p>Point to the printed handouts. Where to find me after.</p></div></section>
-<section><div class='label'>SLIDE 23 - Questions?</div><div class='content'><h1>Questions?</h1><div class="split"><div class="col-text"><p>Find me after. I&#x27;ll get your node on the mesh right here.</p></div><div class="col-img"><div class="imgs"><img src="../assets/images/base-station.webp" alt=""></div></div></div></div></section>
+<section><div class='label'>SLIDE 24 - Questions?</div><div class='content'><h1>Questions?</h1><div class="split"><div class="col-text"><p>Find me after. I&#x27;ll get your node on the mesh right here.</p></div><div class="col-img"><div class="imgs"><img src="../assets/images/base-station.webp" alt=""></div></div></div></div></section>
 <div id="bar"></div><div id="num"></div>
 <div id="help">&larr;&rarr; move &middot; N notes &middot; G grid &middot; F fullscreen</div>
 <script>

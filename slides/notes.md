@@ -57,19 +57,12 @@ This is the one thing I most want them to walk out with. It is the reason someon
 
 LongFast is public: its key is printed in the docs. Keep it for reach, add a channel for privacy.
 
-## Slide 22
+## Slide 18
+
+This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.
+
+So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep. The number: the primary channel runs positionPrecision 13, a 2.45 km cell.
+
+## Slide 23
 
 Point to the printed handouts. Where to find me after.
-
-# Parked slide (in neither deck; Michael's call)
-
-Was slide 18 in the old offline deck, marked CUT IF TIGHT. Kept here so it is not lost.
-
-    # Does this broadcast my address?
-    # No. It broadcasts a square about a mile and a half across.
-    - On the public channel your position is deliberately blurred
-    - Default setting rounds you to a ~1.5 mile grid cell and sends the center
-    - Everyone at my house, and John down the street, publish the identical point
-    ### Precision is per channel. On my family channel, I set it to exact.
-
-Notes: This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data. So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep.

@@ -256,7 +256,25 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 18 - Height beats power.
+## SLIDE 18 - Does this broadcast my address?
+
+# Does this broadcast my address?
+
+### No. It broadcasts a square about a mile and a half across.
+
+- On the public channel your position is **deliberately blurred**
+- The default rounds you to a **1.5 mile grid cell** and sends its center
+- Everyone at my house publishes the identical point, and so does anyone else inside the square
+
+### Precision is per channel. On my family channel, I set it to exact.
+
+*This fooled me this week. I spent an afternoon measuring distances from a point that turned out to be the center of my own privacy cell, two miles from my actual house. The radio was protecting me and I misread it as data.*
+
+*So: know which channel you are sharing on. Public is a blurred square. Private can be your doorstep. The number: the primary channel runs positionPrecision 13, a 2.45 km cell.*
+
+---
+
+## SLIDE 19 - Height beats power.
 
 # Height beats power.
 
@@ -264,7 +282,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 19 - Same radios, different philosophy: MeshCore
+## SLIDE 20 - Same radios, different philosophy: MeshCore
 
 # Same radios, different philosophy: MeshCore
 
@@ -274,7 +292,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 20 - Not a chat app: Reticulum
+## SLIDE 21 - Not a chat app: Reticulum
 
 # Not a chat app: Reticulum
 
@@ -284,7 +302,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 21 - The licensed path: ham radio + APRS
+## SLIDE 22 - The licensed path: ham radio + APRS
 
 # The licensed path: ham radio + APRS
 
@@ -295,7 +313,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 ---
 
-## SLIDE 22 - Do this today
+## SLIDE 23 - Do this today
 
 # Do this today
 
@@ -311,7 +329,7 @@ Grab a handout on your way out: every link is on it.
 
 ---
 
-## SLIDE 23 - Questions?
+## SLIDE 24 - Questions?
 
 # Questions?
 
