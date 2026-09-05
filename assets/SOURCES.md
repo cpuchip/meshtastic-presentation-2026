@@ -62,3 +62,9 @@ read on both dark and light backgrounds.
   cpuchip.net presentations tab. EXIF rotation was baked in rather than left as an
   orientation tag, because not every slide renderer or print pipeline honours the tag and
   a sideways flagpole is not recoverable from the podium. Resized to 1400x1867.
+
+## Michael's own photos, 2026-09-04 (his, no licence question)
+
+- `node-printed-case.webp` — a home node in a 3D-printed case, screen showing Role: Client, US/LongFast, 906.875 MHz. Cropped from his phone photo.
+- `diy-xiao-wio-sx1262.webp` — a bare XIAO + Wio-SX1262 pair on anti-static foam with two flex antennas, powered off a USB-C cable. His phone photo.
+- `base-station.webp` — the base station on the shelf, new Meshtastic UI showing 18 of 21 nodes online on 906.875 MHz. His phone photo, EXIF orientation baked in.

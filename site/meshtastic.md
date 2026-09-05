@@ -138,11 +138,11 @@ You give up voice and pictures. You get range and battery life that feel like ma
 ![LILYGO T-Echo](/images/presentations/meshtastic/lilygo-t-echo.webp)
 ![Wio Tracker L1 Pro](/images/presentations/meshtastic/wio-tracker-l1.webp)
 ![WisMesh Pocket](/images/presentations/meshtastic/rak-wismesh-pocket.webp)
-![Heltec MeshPocket](/images/presentations/meshtastic/heltec-meshpocket.webp)
+![A bare XIAO + Wio-SX1262 pair on foam with two flex antennas](/images/presentations/meshtastic/diy-xiao-wio-sx1262.webp)
 
 </div>
 
-**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · [**Wio Tracker L1 Pro**](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) $60 with GPS · pocket nodes, 3D-printed cases, DIY antennas - GitHub all the way down
+**RAK WisBlock** modular builder · **T-Deck** no phone needed · **T-Echo** e-ink · [**Wio Tracker L1 Pro**](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) $60 with GPS · pocket nodes · or a **bare XIAO + Wio-SX1262** with two taped-on antennas, mine · 3D-printed cases, GitHub all the way down
 
 ---
 
@@ -160,10 +160,18 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 # Setup: the whole thing
 
+<div class="split">
+
 1. Charge it. **Antenna on before power.**
 2. Update: drag-and-drop (T1000-E) or [flasher.meshtastic.org](https://flasher.meshtastic.org) (Heltec)
 3. Phone app → pair → **check TWO settings: Region = US, Preset = LongFast.** That puts you on the public channel with everyone in range
 4. Private family channel: scan one QR code. **Encrypted.**
+
+![My carry node, a Wio Tracker L1 in a printed case: Role Client, US/LongFast, 906.875 MHz](/images/presentations/meshtastic/node-printed-case-screen.webp)
+
+</div>
+
+*My carry node, a Wio Tracker L1 in a printed case. Its screen says it all: Client, US/LongFast, 906.875 MHz.*
 
 ---
 
@@ -253,6 +261,6 @@ Grab a handout on your way out - every link is on it.
 
 # Questions?
 
-![Meshtastic](/images/presentations/meshtastic/meshtastic-logo.svg)
+![The base station on the shelf: 18 of 21 nodes online on 906.875 MHz](/images/presentations/meshtastic/base-station.webp)
 
 Find me after - I'll get your node on the mesh right here.
