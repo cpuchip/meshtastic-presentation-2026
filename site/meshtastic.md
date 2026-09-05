@@ -299,6 +299,7 @@ Find me after. I'll get your node on the mesh right here.
 
 - Ham radio and Meshtastic, side by side
 - The walkie-talkies on the shelf: FRS, GMRS, MURS
+- One mile to two thousand: what reaches, what does not
 - How the mesh actually decides who repeats
 - Radio roles, and why the wrong one hurts everybody
 - Using an AI to help you set up, and where it will lie to you
@@ -334,6 +335,23 @@ Find me after. I'll get your node on the mesh right here.
 | Reach | Half a mile to two | 1 to 25 miles with a repeater | A few miles, more with an antenna | Miles line of sight, more through the mesh |
 
 ## They are voice; this is text. The blister-pack radio in your truck and a mesh node solve different halves of the same storm.
+
+---
+
+# One mile to two thousand: what reaches, what does not
+
+| Distance | What works | What does not |
+|---|---|---|
+| **1 mile** | Everything: FRS, MURS, GMRS handhelds, mesh node to node, ham simplex | A handheld in a car behind a hill |
+| **10 miles** | GMRS or ham through a repeater; ham VHF or UHF simplex from height; mesh with one high node in between; MURS on a good antenna | FRS blister packs; pocket mesh nodes at ground level |
+| **100 miles** | Ham VHF or UHF through a mountain repeater (Joplin to Springfield, 70 miles, the night of the tornado); ham HF; mesh only as a chain of infrastructure nodes | GMRS, whose repeaters may not be linked over the internet; MURS; any direct link |
+| **200 to 500** | Ham HF on 40 and 80 meters, the regional bands; Winlink email over HF; satellite | Everything VHF and UHF without a chain of repeaters; the mesh |
+| **1,000** | Ham HF on 20 and 40 meters; low-power digital modes like FT8 and JS8; satellite | VHF, UHF, GMRS, MURS, the mesh |
+| **2,000 and up** | Ham HF (a 20-meter net carried Puerto Rico's traffic to the mainland in 2017); satellite phone, satellite messenger, Starlink with power | Everything else |
+
+- **Range is height and frequency, not watts.** The pole beats the power knob every time
+- **Digital voice** (DMR, D-STAR, Fusion) reaches the world only through the internet; in a blackout it is a local repeater like any other. **HF digital** (FT8, JS8, Winlink) reaches far on tiny power, but carries text
+- **Text survives what voice cannot.** A mesh message or an HF digital burst gets through a signal too weak for a voice
 
 ---
 

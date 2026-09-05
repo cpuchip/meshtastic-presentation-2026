@@ -276,3 +276,20 @@ Meshtastic (thin, and honest about it):
   trackers (ham, not Meshtastic) in a real missing-hiker search.
 - Not found with a source good enough for a slide: Meshtastic in the Jan 2025 LA fires (ARES LAX
   NE mentions "text-based coordination" without naming it).
+
+## Range-by-distance slide: what each cell rests on (talk day)
+
+- FRS "under half a mile on 0.5 W, up to two miles on 2 W", MURS "less than a few miles, ten or
+  more with an external antenna", GMRS "one to twenty-five miles depending on station class,
+  terrain, and repeater use": FCC's own service pages, fetched today.
+- Ham VHF repeater at 70 miles: ARRL, Joplin 2011, hams "provided communications between Freeman
+  Hospital in Joplin to the hospitals in Springfield... Springfield is about 70 miles east of
+  Joplin", via the Joplin repeater and a 2 meter beam.
+- Ham HF across 1,500+ miles: ARRL Force of 50 page, the Mayaguez team "in contact with the
+  mainland via the SATERN" 20-meter net; SATERN "supporting communications through their 20-meter
+  phone net" (2017 AAR).
+- Satellite in a blackout: Farmer et al. 2025 Helene case study, iHeart's eight stations linked by
+  a Starlink uplink; recommendation 9, satellite uplinks and phones.
+- HF band reach (40/80 m regional, 20/40 m across the country and beyond) and the digital-mode
+  claims (FT8, JS8, Winlink; DMR, D-STAR, Fusion internet-linked) are standard licensing-course
+  material, stated qualitatively on the slide without numbers for that reason.

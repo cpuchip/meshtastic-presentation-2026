@@ -357,6 +357,7 @@ body.grid .notes{display:none}
 <ul>
 <li>Ham radio and Meshtastic, side by side</li>
 <li>The walkie-talkies on the shelf: FRS, GMRS, MURS</li>
+<li>One mile to two thousand: what reaches, what does not</li>
 <li>How the mesh actually decides who repeats</li>
 <li>Radio roles, and why the wrong one hurts everybody</li>
 <li>Using an AI to help you set up, and where it will lie to you</li>
@@ -385,7 +386,22 @@ body.grid .notes{display:none}
 <tr><td>Reach</td><td>Half a mile to two</td><td>1 to 25 miles with a repeater</td><td>A few miles, more with an antenna</td><td>Miles line of sight, more through the mesh</td></tr>
 </table>
 <h3>They are voice; this is text. The blister-pack radio in your truck and a mesh node solve different halves of the same storm.</h3></div></section>
-<section><div class='label'>SLIDE 29 - How the mesh decides who repeats</div><div class='content'><h1>How the mesh decides who repeats</h1>
+<section><div class='label'>SLIDE 29 - One mile to two thousand: what reaches, what does not</div><div class='content'><h1>One mile to two thousand: what reaches, what does not</h1>
+<table>
+<tr><th>Distance</th><th>What works</th><th>What does not</th></tr>
+<tr><td><b>1 mile</b></td><td>Everything: FRS, MURS, GMRS handhelds, mesh node to node, ham simplex</td><td>A handheld in a car behind a hill</td></tr>
+<tr><td><b>10 miles</b></td><td>GMRS or ham through a repeater; ham VHF or UHF simplex from height; mesh with one high node in between; MURS on a good antenna</td><td>FRS blister packs; pocket mesh nodes at ground level</td></tr>
+<tr><td><b>100 miles</b></td><td>Ham VHF or UHF through a mountain repeater (Joplin to Springfield, 70 miles, the night of the tornado); ham HF; mesh only as a chain of infrastructure nodes</td><td>GMRS, whose repeaters may not be linked over the internet; MURS; any direct link</td></tr>
+<tr><td><b>200 to 500</b></td><td>Ham HF on 40 and 80 meters, the regional bands; Winlink email over HF; satellite</td><td>Everything VHF and UHF without a chain of repeaters; the mesh</td></tr>
+<tr><td><b>1,000</b></td><td>Ham HF on 20 and 40 meters; low-power digital modes like FT8 and JS8; satellite</td><td>VHF, UHF, GMRS, MURS, the mesh</td></tr>
+<tr><td><b>2,000 and up</b></td><td>Ham HF (a 20-meter net carried Puerto Rico&#x27;s traffic to the mainland in 2017); satellite phone, satellite messenger, Starlink with power</td><td>Everything else</td></tr>
+</table>
+<ul>
+<li><b>Range is height and frequency, not watts.</b> The pole beats the power knob every time</li>
+<li><b>Digital voice</b> (DMR, D-STAR, Fusion) reaches the world only through the internet; in a blackout it is a local repeater like any other. <b>HF digital</b> (FT8, JS8, Winlink) reaches far on tiny power, but carries text</li>
+<li><b>Text survives what voice cannot.</b> A mesh message or an HF digital burst gets through a signal too weak for a voice</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 30 - How the mesh decides who repeats</div><div class='content'><h1>How the mesh decides who repeats</h1>
 <ul>
 <li>Every radio that hears a new packet <b>may</b> rebroadcast it, once</li>
 <li>The <b>farthest</b> listener goes first: weaker signal, shorter wait</li>
@@ -394,7 +410,7 @@ body.grid .notes{display:none}
 <li>The sender counts a message as delivered when it hears <b>anyone</b> repeat it, even a stranger&#x27;s node that cannot read it</li>
 </ul>
 <h3>Managed flooding: no map, no central brain, and it still finds the way.</h3></div></section>
-<section><div class='label'>SLIDE 30 - Radio roles, and why the wrong one hurts everybody</div><div class='content'><h1>Radio roles, and why the wrong one hurts everybody</h1>
+<section><div class='label'>SLIDE 31 - Radio roles, and why the wrong one hurts everybody</div><div class='content'><h1>Radio roles, and why the wrong one hurts everybody</h1>
 <table>
 <tr><th>Role</th><th>What it does</th><th>Use it when</th></tr>
 <tr><td><b>CLIENT</b></td><td>Repeats only when nobody else has. The default</td><td>Almost always. This is you</td></tr>
@@ -405,7 +421,7 @@ body.grid .notes{display:none}
 <tr><td><b>REPEATER</b></td><td>Router that hides from node lists</td><td>Infrastructure you do not want on the map</td></tr>
 </table>
 <h3>A ROUTER on a windowsill repeats everything, first, into a wall. Leave it on CLIENT unless you own the pole.</h3></div></section>
-<section><div class='label'>SLIDE 31 - Using an AI to help you set up</div><div class='content'><h1>Using an AI to help you set up</h1>
+<section><div class='label'>SLIDE 32 - Using an AI to help you set up</div><div class='content'><h1>Using an AI to help you set up</h1>
 <ul>
 <li><b>What works:</b> paste the exact screen or setting and ask why the radio finds nobody. Ask it to explain a setting before you change it</li>
 <li><b>Keep the official docs open beside it.</b> meshtastic.org/docs is the source; the AI is the reader</li>
@@ -413,21 +429,21 @@ body.grid .notes{display:none}
 <li>Change <b>one setting at a time</b>, and never paste your private channel key into anything</li>
 </ul>
 <h3>Ask it to explain. Make it show its source. You decide.</h3></div></section>
-<section><div class='label'>SLIDE 32 - When the towers went down: ham radio</div><div class='content'><h1>When the towers went down: ham radio</h1>
+<section><div class='label'>SLIDE 33 - When the towers went down: ham radio</div><div class='content'><h1>When the towers went down: ham radio</h1>
 <ul>
 <li><b>Joplin, May 22, 2011.</b> The EF5 took the phone lines and the cell towers. That night, hams were the <b>only link between Freeman Hospital and the Springfield hospitals</b>, and between the Red Cross offices in Joplin and Springfield until Tuesday. More than 1,900 volunteer hours</li>
 <li><b>Puerto Rico, Hurricane Maria, 2017.</b> The Red Cross asked for 50 hams; 22 flew in with radio kits for three weeks: <b>hospital links, the power utility&#x27;s repair crews, FEMA liaison</b>, and the only link from Mayaguez to San Juan</li>
 <li><b>Western North Carolina, Helene, 2024.</b> All three fiber trunks destroyed. One repeater on Mount Mitchell carried <b>supply requests, road closures, helicopter evacuations</b>, and &quot;Mom, your son is OK. No phone service.&quot;</li>
 </ul>
 <h3>The role, every time: the link between a hospital, a shelter or a family and the outside, when nothing else was one.</h3></div></section>
-<section><div class='label'>SLIDE 33 - When the towers went down: Meshtastic</div><div class='content'><h1>When the towers went down: Meshtastic</h1>
+<section><div class='label'>SLIDE 34 - When the towers went down: Meshtastic</div><div class='content'><h1>When the towers went down: Meshtastic</h1>
 <ul>
 <li><b>Helene, 2024, honestly.</b> The neighborhoods that got through used voice radios and a repeater. Meshtastic came <b>after</b>: Swannanoa neighbors wanted a permanent off-grid net anyone could join without a license, and a Florida county&#x27;s emergency team is now hanging <b>solar nodes on water towers</b> before the next storm</li>
 <li><b>Search, rescue and fire drills.</b> A New York fire company tracked its UTV and rescue truck through the woods on <b>$50 card trackers</b>, positions landing on the team map with no cell service. The role: knowing where your people are when they are out of sight</li>
 <li><b>Your street.</b> Text and positions for the household and the neighbors, no operator needed, while the licensed folks carry the hospital link</li>
 </ul>
 <h3>The lesson from Helene: the mesh you build after the storm helps with the next one. Build it now.</h3></div></section>
-<section><div class='label'>SLIDE 34 - Why now, and not during the emergency</div><div class='content'><h1>Why now, and not during the emergency</h1>
+<section><div class='label'>SLIDE 35 - Why now, and not during the emergency</div><div class='content'><h1>Why now, and not during the emergency</h1>
 <h3>Three is two. Two is one. One is none.</h3>
 <ul>
 <li>The radio you configure during the storm is a brick. <b>Configure it on a sunny afternoon</b></li>
