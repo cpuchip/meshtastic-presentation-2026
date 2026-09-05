@@ -352,6 +352,63 @@ body.grid .notes{display:none}
 <p><b>Our local mesh: <a href="https://lzmesh.com" target="_blank" rel="noopener">LZMesh</a></b>, four states around us. The channel QR and their beginner guide are in the <a href="https://discord.lzarc.com" target="_blank" rel="noopener">Discord</a>.</p>
 <p>Grab a handout on your way out: every link is on it.</p></div><div class='notes'><p>Point to the printed handouts. Where to find me after.</p></div></section>
 <section><div class='label'>SLIDE 25 - Questions?</div><div class='content'><h1>Questions?</h1><div class="split"><div class="col-text"><p>Find me after. I&#x27;ll get your node on the mesh right here.</p></div><div class="col-img"><div class="imgs"><img src="../assets/images/base-station.webp" alt=""></div></div></div></div></section>
+<section><div class='label'>SLIDE 26 - Appendix: for the questions</div><div class='content'><h1>Appendix: for the questions</h1>
+<h3>Deeper answers, in case they come up.</h3>
+<ul>
+<li>Ham radio and Meshtastic, side by side</li>
+<li>How the mesh actually decides who repeats</li>
+<li>Radio roles, and why the wrong one hurts everybody</li>
+<li>Using an AI to help you set up, and where it will lie to you</li>
+<li>Why now, and not during the emergency</li>
+</ul></div></section>
+<section><div class='label'>SLIDE 27 - Ham radio and Meshtastic, side by side</div><div class='content'><h1>Ham radio and Meshtastic, side by side</h1>
+<table>
+<tr><th></th><th>Meshtastic</th><th>Ham radio</th></tr>
+<tr><td>License</td><td>None. Unlicensed 902-928 MHz band</td><td>Technician exam, FCC fee $35, study free at hamstudy.org</td></tr>
+<tr><td>Carries</td><td>Text and location</td><td>Voice, data, images, and APRS for position and messages</td></tr>
+<tr><td>Encryption</td><td>On by default, per channel</td><td>Not allowed on ham bands, so hams running Meshtastic there turn it off</td></tr>
+<tr><td>Power</td><td>Up to 30 dBm here, a fraction of a watt to one watt</td><td>A handheld runs about 5 watts; base stations far more</td></tr>
+<tr><td>Infrastructure</td><td>Your own nodes, plus everyone else&#x27;s</td><td>Repeaters on towers, maintained by clubs</td></tr>
+<tr><td>Reach</td><td>Miles line of sight, farther through the mesh</td><td>A county through a repeater, the world on HF</td></tr>
+</table>
+<h3>Different tools. The people who run both have the most options when the towers go down.</h3></div></section>
+<section><div class='label'>SLIDE 28 - How the mesh decides who repeats</div><div class='content'><h1>How the mesh decides who repeats</h1>
+<ul>
+<li>Every radio that hears a new packet <b>may</b> rebroadcast it, once</li>
+<li>The <b>farthest</b> listener goes first: weaker signal, shorter wait</li>
+<li>A radio that hears someone else&#x27;s rebroadcast <b>stays quiet</b></li>
+<li>Each hop counts down. <b>Default 3 hops</b>, never more than 7. Three is fine</li>
+<li>The sender counts a message as delivered when it hears <b>anyone</b> repeat it, even a stranger&#x27;s node that cannot read it</li>
+</ul>
+<h3>Managed flooding: no map, no central brain, and it still finds the way.</h3></div></section>
+<section><div class='label'>SLIDE 29 - Radio roles, and why the wrong one hurts everybody</div><div class='content'><h1>Radio roles, and why the wrong one hurts everybody</h1>
+<table>
+<tr><th>Role</th><th>What it does</th><th>Use it when</th></tr>
+<tr><td><b>CLIENT</b></td><td>Repeats only when nobody else has. The default</td><td>Almost always. This is you</td></tr>
+<tr><td><b>CLIENT_MUTE</b></td><td>Never repeats for others</td><td>A second radio in the same house, so only one talks</td></tr>
+<tr><td><b>CLIENT_BASE</b></td><td>Always repeats for its favorited nodes</td><td>An attic radio backing up your weaker handhelds</td></tr>
+<tr><td><b>ROUTER</b></td><td>Always repeats, once, first</td><td>A high, well-placed pole or hilltop node, and nothing else</td></tr>
+<tr><td><b>ROUTER_LATE</b></td><td>Always repeats, but after everyone else</td><td>Filling a dead spot for a cluster</td></tr>
+<tr><td><b>REPEATER</b></td><td>Router that hides from node lists</td><td>Infrastructure you do not want on the map</td></tr>
+</table>
+<h3>A ROUTER on a windowsill repeats everything, first, into a wall. Leave it on CLIENT unless you own the pole.</h3></div></section>
+<section><div class='label'>SLIDE 30 - Using an AI to help you set up</div><div class='content'><h1>Using an AI to help you set up</h1>
+<ul>
+<li><b>What works:</b> paste the exact screen or setting and ask why the radio finds nobody. Ask it to explain a setting before you change it</li>
+<li><b>Keep the official docs open beside it.</b> meshtastic.org/docs is the source; the AI is the reader</li>
+<li><b>It will state numbers confidently and wrong.</b> This deck had a battery life, a price and a privacy-cell size wrong until each was checked against the maker&#x27;s page, the maker&#x27;s spreadsheet and the firmware source</li>
+<li>Change <b>one setting at a time</b>, and never paste your private channel key into anything</li>
+</ul>
+<h3>Ask it to explain. Make it show its source. You decide.</h3></div></section>
+<section><div class='label'>SLIDE 31 - Why now, and not during the emergency</div><div class='content'><h1>Why now, and not during the emergency</h1>
+<h3>Three is two. Two is one. One is none.</h3>
+<ul>
+<li>The radio you configure during the storm is a brick. <b>Configure it on a sunny afternoon</b></li>
+<li>A family channel you have never used is a plan, not a skill. <b>Text on it this week</b></li>
+<li>The mesh only reaches you if you were already on it. <b>Every node added in good weather is range in bad</b></li>
+<li>Drive a range test once, so you know the real number, not the box number</li>
+</ul>
+<h3>Practice is the whole difference between a gadget and a plan.</h3></div></section>
 <div id="bar"></div><div id="num"></div>
 <div id="help">&larr;&rarr; move &middot; N notes &middot; G grid &middot; F fullscreen</div>
 <script>

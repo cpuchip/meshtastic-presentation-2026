@@ -347,3 +347,93 @@ Grab a handout on your way out: every link is on it.
 (image: base-station.webp)
 
 Find me after. I'll get your node on the mesh right here.
+
+---
+
+## SLIDE 26 - Appendix: for the questions
+
+# Appendix: for the questions
+
+### Deeper answers, in case they come up.
+
+- Ham radio and Meshtastic, side by side
+- How the mesh actually decides who repeats
+- Radio roles, and why the wrong one hurts everybody
+- Using an AI to help you set up, and where it will lie to you
+- Why now, and not during the emergency
+
+---
+
+## SLIDE 27 - Ham radio and Meshtastic, side by side
+
+# Ham radio and Meshtastic, side by side
+
+| | Meshtastic | Ham radio |
+|---|---|---|
+| License | None. Unlicensed 902-928 MHz band | Technician exam, FCC fee $35, study free at hamstudy.org |
+| Carries | Text and location | Voice, data, images, and APRS for position and messages |
+| Encryption | On by default, per channel | Not allowed on ham bands, so hams running Meshtastic there turn it off |
+| Power | Up to 30 dBm here, a fraction of a watt to one watt | A handheld runs about 5 watts; base stations far more |
+| Infrastructure | Your own nodes, plus everyone else's | Repeaters on towers, maintained by clubs |
+| Reach | Miles line of sight, farther through the mesh | A county through a repeater, the world on HF |
+
+### Different tools. The people who run both have the most options when the towers go down.
+
+---
+
+## SLIDE 28 - How the mesh decides who repeats
+
+# How the mesh decides who repeats
+
+- Every radio that hears a new packet **may** rebroadcast it, once
+- The **farthest** listener goes first: weaker signal, shorter wait
+- A radio that hears someone else's rebroadcast **stays quiet**
+- Each hop counts down. **Default 3 hops**, never more than 7. Three is fine
+- The sender counts a message as delivered when it hears **anyone** repeat it, even a stranger's node that cannot read it
+
+### Managed flooding: no map, no central brain, and it still finds the way.
+
+---
+
+## SLIDE 29 - Radio roles, and why the wrong one hurts everybody
+
+# Radio roles, and why the wrong one hurts everybody
+
+| Role | What it does | Use it when |
+|---|---|---|
+| **CLIENT** | Repeats only when nobody else has. The default | Almost always. This is you |
+| **CLIENT_MUTE** | Never repeats for others | A second radio in the same house, so only one talks |
+| **CLIENT_BASE** | Always repeats for its favorited nodes | An attic radio backing up your weaker handhelds |
+| **ROUTER** | Always repeats, once, first | A high, well-placed pole or hilltop node, and nothing else |
+| **ROUTER_LATE** | Always repeats, but after everyone else | Filling a dead spot for a cluster |
+| **REPEATER** | Router that hides from node lists | Infrastructure you do not want on the map |
+
+### A ROUTER on a windowsill repeats everything, first, into a wall. Leave it on CLIENT unless you own the pole.
+
+---
+
+## SLIDE 30 - Using an AI to help you set up
+
+# Using an AI to help you set up
+
+- **What works:** paste the exact screen or setting and ask why the radio finds nobody. Ask it to explain a setting before you change it
+- **Keep the official docs open beside it.** meshtastic.org/docs is the source; the AI is the reader
+- **It will state numbers confidently and wrong.** This deck had a battery life, a price and a privacy-cell size wrong until each was checked against the maker's page, the maker's spreadsheet and the firmware source
+- Change **one setting at a time**, and never paste your private channel key into anything
+
+### Ask it to explain. Make it show its source. You decide.
+
+---
+
+## SLIDE 31 - Why now, and not during the emergency
+
+# Why now, and not during the emergency
+
+### Three is two. Two is one. One is none.
+
+- The radio you configure during the storm is a brick. **Configure it on a sunny afternoon**
+- A family channel you have never used is a plan, not a skill. **Text on it this week**
+- The mesh only reaches you if you were already on it. **Every node added in good weather is range in bad**
+- Drive a range test once, so you know the real number, not the box number
+
+### Practice is the whole difference between a gadget and a plan.
