@@ -67,7 +67,7 @@ meshtastic --port COM4 --sendtext "Hello to the whole channel."
 ```
 
 *Beat worth taking:* those two went out of the same radio on the same channel, and one
-reached one person while the other reached the neighbourhood. That is addressing, and it
+reached one person while the other reached the neighborhood. That is addressing, and it
 is the thing people expect to be complicated.
 
 **Arm 3, the negative control - and then FIX IT LIVE.** This is the strongest beat in the

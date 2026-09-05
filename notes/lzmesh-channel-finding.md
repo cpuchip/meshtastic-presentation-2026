@@ -57,7 +57,7 @@ is blank — the stock default.
 - `notes/research.md` open items — the "ask LZMesh primary or secondary" item closes.
 
 Where `CHAOS JLN Main` came from is unresolved. **JLN is the Joplin airport code**, so
-it is plausibly a legacy or neighbouring-group channel name seen on the map. It is not
+it is plausibly a legacy or neighboring-group channel name seen on the map. It is not
 in LZMesh's current published setup.
 
 ## Honest limit of this finding

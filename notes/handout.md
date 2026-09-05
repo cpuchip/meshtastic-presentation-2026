@@ -48,7 +48,7 @@ The load-bearing warnings:
 
 1. **Renaming the primary channel changes your frequency.** A hash of the primary
    channel name picks the frequency slot, so renaming it silently moves you off the
-   air your neighbours are on. This is the single most useful thing on the sheet.
+   air your neighbors are on. This is the single most useful thing on the sheet.
 2. **Get a private channel by adding a second one**, never by renaming the first.
 3. **LongFast is not private.** Its key is published. Keep it anyway, for reach.
 4. **Messages relay even when they cannot be read** (the header is in the clear), so a

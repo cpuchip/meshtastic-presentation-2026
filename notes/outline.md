@@ -119,7 +119,7 @@ settings that decide whether any of this works.
 
 **Optional 4th slide, marked CUT IF TIGHT: "does this broadcast my address?"**
 No - the public channel blurs your position to a ~1.5 mile grid cell and sends
-the centre, and precision is set per channel. It answers a question this room
+the center, and precision is set per channel. It answers a question this room
 will actually have, and it has a true story attached (it fooled us this week).
 If the section is running long, drop it and keep it in the Q&A pocket instead.
 Full mechanism: [channels.md](channels.md).
@@ -148,8 +148,8 @@ Full mechanism: [channels.md](channels.md).
 
 - The QR slide / printed handout: docs, flasher, buy links, local groups,
   hamstudy.org. (handout.md → print ~50 copies.)
-- The one-sentence assignment: **buy two, put one in a kid's backpack, and
-  text them from the house.**
+- The one-sentence assignment: **buy two and play: leave one at home and see
+  how far you get, or keep one in the car for emergencies.**
 - Where to find us afterward.
 
 ## 10. Q&A (remainder, ~8 min)

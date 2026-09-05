@@ -73,10 +73,10 @@ That is layer 1 failing, in the room, with nothing wrong with any radio. It is t
 demo we have for this section: **same house, same channel name, same key, zero contact.**
 
 **In actual megahertz** (Michael read these off the radios; the arithmetic below reproduces
-both exactly). US region runs 902-928 MHz, and the centre frequency is
+both exactly). US region runs 902-928 MHz, and the center frequency is
 `freqStart + bw/2000 + slot x bw/1000`, with `numChannels = floor(26 / (bw/1000))`:
 
-| Preset | Bandwidth | Slots | Slot | Centre | Occupies |
+| Preset | Bandwidth | Slots | Slot | Center | Occupies |
 |---|---|---|---|---|---|
 | `LONG_FAST` | 250 kHz | 104 | 19 | **906.875 MHz** | 906.750 - 907.000 |
 | `LONG_TURBO` | 500 kHz | 52 | 13 | **908.750 MHz** | 908.500 - 909.000 |
@@ -102,7 +102,7 @@ state as a general fact about XIAO S3 boards.
 ### ⚠ The tension this exposes, and it is worth a sentence on stage
 
 We tell people **"do not tick full erase"** so their identity keys survive an update. True,
-and it prevents the DM breakage above. But the same behaviour is why this board arrived on
+and it prevents the DM breakage above. But the same behavior is why this board arrived on
 a preset nobody chose: **whatever the vendor shipped, survives.**
 
 So the two pieces of advice belong together:
@@ -129,7 +129,7 @@ Read that twice, because it is genuinely surprising:
 
 > ### Renaming your primary channel moves you to a different frequency.
 
-Not a different "chat room". A different **frequency**. Your radio and your neighbour's
+Not a different "chat room". A different **frequency**. Your radio and your neighbor's
 radio stop hearing each other at the physical layer, and no amount of key-swapping fixes
 it.
 
@@ -189,7 +189,7 @@ Two consequences worth saying out loud in the talk:
    stranger's node without any of them being able to read a word. Strangers' radios are
    working for you right now.
 2. **Being on the mesh is a contribution, not just a consumption.** A node sitting in a
-   window is helping neighbours it has never decrypted a byte from.
+   window is helping neighbors it has never decrypted a byte from.
 
 The default rebroadcast mode is **`ALL`**: "rebroadcast ALL messages from its primary mesh
 as well as other meshes with the same modem settings." Leave it there. The alternatives:
@@ -204,7 +204,7 @@ as well as other meshes with the same modem settings." Leave it there. The alter
 | `NONE` | No rebroadcast. Only for SENSOR / TRACKER / TAK_TRACKER roles |
 
 Setting `LOCAL_ONLY` to "keep my mesh clean" is the move that quietly makes you a worse
-neighbour. Unless you have a reason, leave it on ALL.
+neighbor. Unless you have a reason, leave it on ALL.
 
 ### Roles, quickly
 
@@ -222,7 +222,7 @@ rebroadcasting from a hole. That is a pole node's job, not a desk node's.
 **Keep it, and add to it.** The recommended shape for a homesteader:
 
 - **Primary: leave it exactly as shipped.** Empty name, default key, LONG_FAST, region US.
-  This is your reach and your neighbours. Renaming it is what silently removes you from the
+  This is your reach and your neighbors. Renaming it is what silently removes you from the
   local mesh.
 - **Secondary: your family channel.** Name it, generate a **random** key (not `default`,
   not a `simple` one - those are publicly known too), share it by QR to the people you
@@ -392,7 +392,7 @@ will meet it.
 
 Meshtastic reduces the precision of the position it shares, per channel. It masks the low
 bits of the integer latitude/longitude and adds half a cell, so what goes out is the
-**centre of a grid cell**, not your house:
+**center of a grid cell**, not your house:
 
 ```
 published = (value & (0xFFFFFFFF << (32 - bits))) + (1 << (31 - bits))
@@ -417,7 +417,7 @@ two miles of nonsense from it.
 
 **The tell we missed:** John lives down the street and reported coordinates identical to
 the house, to seven decimal places. Real GPS never agrees like that. Identical positions
-across several nodes means quantisation, not a location.
+across several nodes means quantization, not a location.
 
 ### For the talk - this is a good slide, not a footnote
 
@@ -433,7 +433,7 @@ the precision**, and then it really is your address. So the rule to say out loud
 
 ### ⚠ Consequence for range testing
 
-**You cannot measure range from public-channel positions.** The quantisation is 2.45 km,
+**You cannot measure range from public-channel positions.** The quantization is 2.45 km,
 which is larger than most of the range you are trying to measure. Every sample inside one
 cell reports the same coordinate.
 

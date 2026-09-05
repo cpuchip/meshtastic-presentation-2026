@@ -117,7 +117,7 @@ the week of the expo (prices move).
 Meshtastic local-groups directory. Live regional node map at https://map.lzmesh.com
 showed, on 2026-09-03: **59 nodes live, 284 in the last 24 hours, 2,239 over 90 days.**
 Community Discord at https://discord.lzarc.com. The "LZ" is the historic **Lead-Zinc
-(Tri-State) Mining District**, so the network's centre of gravity is the Joplin corner —
+(Tri-State) Mining District**, so the network's center of gravity is the Joplin corner —
 but mapped nodes reach Springfield (~28 mi from Marshfield), Bolivar, and Buffalo.
 
 > **SETTLED 2026-09-04 (see [lzmesh-channel-finding.md](lzmesh-channel-finding.md)):**
@@ -133,7 +133,7 @@ but mapped nodes reach Springfield (~28 mi from Marshfield), Bolivar, and Buffal
 > An earlier draft of this file claimed their nodes ran a named primary called
 > `CHAOS JLN Main` and that range therefore was not enough. **That was wrong** and is
 > struck. Where `CHAOS JLN Main` comes from is unresolved; JLN is the Joplin airport code,
-> so it is plausibly a legacy or neighbouring-group channel seen on the map. It is not in
+> so it is plausibly a legacy or neighboring-group channel seen on the map. It is not in
 > LZMesh's current published setup.
 
 **2. Our own radio hears a stranger, unprompted.** Read off the demo node near Marshfield
@@ -143,7 +143,7 @@ our SenseCAP Solar Node (the pole node), a Heltec Wireless Tracker, a T1000-E, a
 Tracker L1.
 
 So the honest stage answer is: *"Right now, on the default channel, my radio in Marshfield
-hears a neighbour I've never met. Thirty miles west in Springfield there's a network of
+hears a neighbor I've never met. Thirty miles west in Springfield there's a network of
 about sixty live nodes. It's thin out here — and that's the argument for you getting one."*
 
 Other Missouri groups (official directory): Missouri Mesh (missourimesh.org), MeshSTL —
@@ -162,8 +162,8 @@ all audience-facing prices moved to delivered Amazon figures ($50 / $90 / $140).
 $26.97 Rokland unit ships with a battery and case — the Amazon 2-pack kits do, that listing
 does not.
 
-**FCC amateur licence application fee: $35** (Congressionally mandated, in force since
-2022; covers new licence, renewal, vanity call sign; administrative updates are free).
+**FCC amateur license application fee: $35** (Congressionally mandated, in force since
+2022; covers new license, renewal, vanity call sign; administrative updates are free).
 hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
 
 ## Open items
@@ -177,7 +177,7 @@ hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
       GhostStrats on tone and monetisation. Verdicts in [resources.md](resources.md).
       Neither made the printed handout.
 - [x] ~~Local mesh check.~~ Done 2026-09-03, section above.
-- [x] ~~Verify current FCC licence fee.~~ $35, confirmed.
+- [x] ~~Verify current FCC license fee.~~ $35, confirmed.
 - [x] ~~Decide the live-demo shape.~~ **DONE 2026-09-04: the preset A/B.** Positive arm
       (LongFast radio reaches the phone, DM and broadcast) plus a **negative control**
       (LongTurbo radio on the same table reaches nothing). All three arms run live today.

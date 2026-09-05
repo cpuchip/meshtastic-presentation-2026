@@ -93,7 +93,7 @@ a chat app.
 
 | Test | Method | Result |
 |---|---|---|
-| LF → live neighbour, directed | `mesh_linktest.py COM15 '!d5faaa85'` | **NAK `NO_CHANNEL`** in 19.4 s — directed messages take the PKI path; not a clean physical-layer answer. Use broadcast instead. |
+| LF → live neighbor, directed | `mesh_linktest.py COM15 '!d5faaa85'` | **NAK `NO_CHANNEL`** in 19.4 s — directed messages take the PKI path; not a clean physical-layer answer. Use broadcast instead. |
 | LF broadcast → LT radio (cross-preset) | `mesh_dual_listen.py 120 --tx COM15` | LT did **not** hear it |
 | Positive control | — | **MISSING** — see below |
 

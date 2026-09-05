@@ -54,7 +54,7 @@ three working nodes.
 mechanism either.** Note only that it makes the anomaly sharper, not softer:
 `lora.mdx:37` says *"Default is `unset` which equates to `LONG_FAST`"* — so a
 factory-fresh board should not have come up on LONG_TURBO. Vendor pre-flash,
-carried-over config, and a 2.7.26 behaviour change are all live hypotheses with
+carried-over config, and a 2.7.26 behavior change are all live hypotheses with
 no evidence separating them. **Do not offer a cause from the stage.**
 
 Limit of this instrument: the clones are `--depth 1` from **2026-08-28** and are

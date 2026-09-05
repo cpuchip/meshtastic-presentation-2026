@@ -264,7 +264,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 # Do this today
 
-## Buy two. Put one in a kid's backpack.<br>Text them from the house.
+## Buy two and play. Leave one at home and see how far you get.<br>Or keep one in the car for emergencies.
 
 [meshtastic.org/docs](https://meshtastic.org/docs/getting-started/) · [flasher.meshtastic.org](https://flasher.meshtastic.org) · [hamstudy.org](https://hamstudy.org) · [cpuchip.net/presentations](https://cpuchip.net/presentations/meshtastic)
 
