@@ -298,6 +298,7 @@ Find me after. I'll get your node on the mesh right here.
 ## Deeper answers, in case they come up.
 
 - Ham radio and Meshtastic, side by side
+- The walkie-talkies on the shelf: FRS, GMRS, MURS
 - How the mesh actually decides who repeats
 - Radio roles, and why the wrong one hurts everybody
 - Using an AI to help you set up, and where it will lie to you
@@ -317,6 +318,22 @@ Find me after. I'll get your node on the mesh right here.
 | Reach | Miles line of sight, farther through the mesh | A county through a repeater, the world on HF |
 
 ## Different tools. The people who run both have the most options when the towers go down.
+
+---
+
+# The walkie-talkies on the shelf: FRS, GMRS, MURS
+
+| | FRS | GMRS | MURS | Meshtastic |
+|---|---|---|---|---|
+| License | None | $35, ten years, no exam, covers your immediate family | None | None |
+| Band | 22 UHF channels near 462 and 467 MHz, shared with GMRS | The same channels, plus repeater inputs | 5 VHF channels near 151 and 154 MHz | Unlicensed 902-928 MHz |
+| Power | 2 W, or 0.5 W on channels 8 to 14 | Up to 50 W on mobiles, bases and repeaters | 2 W | Up to 30 dBm, about 1 W |
+| Carries | Voice, some data | Voice, text and GPS since 2017 | Voice or data | Text and location, encrypted |
+| Repeaters | No | Yes, but never linked over the internet | No | Every node is one |
+| Antenna | Fixed to the radio | Detachable | External allowed | External on most boards |
+| Reach | Under half a mile on 0.5 W, about two on 2 W | One to twenty-five miles with a repeater | A few miles, ten or more with a good antenna | Miles line of sight, farther through the mesh |
+
+## They are voice; this is text. The blister-pack radio in your truck and a mesh node solve different halves of the same storm.
 
 ---
 

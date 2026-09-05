@@ -356,6 +356,7 @@ body.grid .notes{display:none}
 <h3>Deeper answers, in case they come up.</h3>
 <ul>
 <li>Ham radio and Meshtastic, side by side</li>
+<li>The walkie-talkies on the shelf: FRS, GMRS, MURS</li>
 <li>How the mesh actually decides who repeats</li>
 <li>Radio roles, and why the wrong one hurts everybody</li>
 <li>Using an AI to help you set up, and where it will lie to you</li>
@@ -372,7 +373,19 @@ body.grid .notes{display:none}
 <tr><td>Reach</td><td>Miles line of sight, farther through the mesh</td><td>A county through a repeater, the world on HF</td></tr>
 </table>
 <h3>Different tools. The people who run both have the most options when the towers go down.</h3></div></section>
-<section><div class='label'>SLIDE 28 - How the mesh decides who repeats</div><div class='content'><h1>How the mesh decides who repeats</h1>
+<section><div class='label'>SLIDE 28 - The walkie-talkies on the shelf: FRS, GMRS, MURS</div><div class='content'><h1>The walkie-talkies on the shelf: FRS, GMRS, MURS</h1>
+<table>
+<tr><th></th><th>FRS</th><th>GMRS</th><th>MURS</th><th>Meshtastic</th></tr>
+<tr><td>License</td><td>None</td><td>$35, ten years, no exam, covers your immediate family</td><td>None</td><td>None</td></tr>
+<tr><td>Band</td><td>22 UHF channels near 462 and 467 MHz, shared with GMRS</td><td>The same channels, plus repeater inputs</td><td>5 VHF channels near 151 and 154 MHz</td><td>Unlicensed 902-928 MHz</td></tr>
+<tr><td>Power</td><td>2 W, or 0.5 W on channels 8 to 14</td><td>Up to 50 W on mobiles, bases and repeaters</td><td>2 W</td><td>Up to 30 dBm, about 1 W</td></tr>
+<tr><td>Carries</td><td>Voice, some data</td><td>Voice, text and GPS since 2017</td><td>Voice or data</td><td>Text and location, encrypted</td></tr>
+<tr><td>Repeaters</td><td>No</td><td>Yes, but never linked over the internet</td><td>No</td><td>Every node is one</td></tr>
+<tr><td>Antenna</td><td>Fixed to the radio</td><td>Detachable</td><td>External allowed</td><td>External on most boards</td></tr>
+<tr><td>Reach</td><td>Under half a mile on 0.5 W, about two on 2 W</td><td>One to twenty-five miles with a repeater</td><td>A few miles, ten or more with a good antenna</td><td>Miles line of sight, farther through the mesh</td></tr>
+</table>
+<h3>They are voice; this is text. The blister-pack radio in your truck and a mesh node solve different halves of the same storm.</h3></div></section>
+<section><div class='label'>SLIDE 29 - How the mesh decides who repeats</div><div class='content'><h1>How the mesh decides who repeats</h1>
 <ul>
 <li>Every radio that hears a new packet <b>may</b> rebroadcast it, once</li>
 <li>The <b>farthest</b> listener goes first: weaker signal, shorter wait</li>
@@ -381,7 +394,7 @@ body.grid .notes{display:none}
 <li>The sender counts a message as delivered when it hears <b>anyone</b> repeat it, even a stranger&#x27;s node that cannot read it</li>
 </ul>
 <h3>Managed flooding: no map, no central brain, and it still finds the way.</h3></div></section>
-<section><div class='label'>SLIDE 29 - Radio roles, and why the wrong one hurts everybody</div><div class='content'><h1>Radio roles, and why the wrong one hurts everybody</h1>
+<section><div class='label'>SLIDE 30 - Radio roles, and why the wrong one hurts everybody</div><div class='content'><h1>Radio roles, and why the wrong one hurts everybody</h1>
 <table>
 <tr><th>Role</th><th>What it does</th><th>Use it when</th></tr>
 <tr><td><b>CLIENT</b></td><td>Repeats only when nobody else has. The default</td><td>Almost always. This is you</td></tr>
@@ -392,7 +405,7 @@ body.grid .notes{display:none}
 <tr><td><b>REPEATER</b></td><td>Router that hides from node lists</td><td>Infrastructure you do not want on the map</td></tr>
 </table>
 <h3>A ROUTER on a windowsill repeats everything, first, into a wall. Leave it on CLIENT unless you own the pole.</h3></div></section>
-<section><div class='label'>SLIDE 30 - Using an AI to help you set up</div><div class='content'><h1>Using an AI to help you set up</h1>
+<section><div class='label'>SLIDE 31 - Using an AI to help you set up</div><div class='content'><h1>Using an AI to help you set up</h1>
 <ul>
 <li><b>What works:</b> paste the exact screen or setting and ask why the radio finds nobody. Ask it to explain a setting before you change it</li>
 <li><b>Keep the official docs open beside it.</b> meshtastic.org/docs is the source; the AI is the reader</li>
@@ -400,7 +413,7 @@ body.grid .notes{display:none}
 <li>Change <b>one setting at a time</b>, and never paste your private channel key into anything</li>
 </ul>
 <h3>Ask it to explain. Make it show its source. You decide.</h3></div></section>
-<section><div class='label'>SLIDE 31 - Why now, and not during the emergency</div><div class='content'><h1>Why now, and not during the emergency</h1>
+<section><div class='label'>SLIDE 32 - Why now, and not during the emergency</div><div class='content'><h1>Why now, and not during the emergency</h1>
 <h3>Three is two. Two is one. One is none.</h3>
 <ul>
 <li>The radio you configure during the storm is a brick. <b>Configure it on a sunny afternoon</b></li>
