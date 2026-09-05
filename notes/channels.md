@@ -405,8 +405,25 @@ Our primary channel runs `positionPrecision: 13`, which is the default here.
 | Michael's actual house | 37.32970 | -92.89390 |
 | **What the mesh publishes** | **37.35552** | **-92.87762** |
 
-Masking `373297000` at 13 bits gives `373555200` **exactly**. The published point sits
-**3.22 km / 2.00 mi** from the real one, and a 13-bit cell is **2.45 km (1.52 mi)** tall.
+Masking `373297000` at 13 bits gives `373555200` **exactly**, and the published point sits on
+grid index 712 with no remainder.
+
+> **★ CORRECTED 2026-09-05. My first cell-size figure was wrong by 2.4x.** I wrote
+> `cell = 180 / 2**13 = 0.0220 deg`, which assumes the 13 bits span 180 degrees. **The mask
+> does not work that way.** It clears the low `32 - 13 = 19` bits of a *degrees x 1e7*
+> integer, so the grid spacing is `2**19` units:
+
+| | value |
+|---|---|
+| grid spacing | `2**19` = 524,288 units = **0.0524288 deg** |
+| cell height | **5.84 km / 3.63 mi** |
+| cell width at 37.33 N | **4.64 km / 2.88 mi** |
+| offset, his house to the published centre | 3.22 km / 2.00 mi |
+
+**The disproof was already in my own notes.** A 2.45 x 1.94 km cell has a maximum possible
+offset of 1.56 km from centre to corner. I measured 3.22 km and wrote both numbers in the
+same session without checking one against the other. The measurement refuted the
+derivation and I did not look.
 
 ### Why this fooled us, and why it will fool the room
 
@@ -422,18 +439,18 @@ across several nodes means quantization, not a location.
 ### For the talk - this is a good slide, not a footnote
 
 People assume a GPS tracker on a public channel broadcasts their address. **It does not,
-by default.** It broadcasts a ~1.5 mile square. That is a genuine privacy feature that
+by default.** It broadcasts a box roughly three miles across. That is a genuine privacy feature that
 nobody explains, and it answers a question this audience will actually have.
 
 And the flip side, which is the honest half: **on your own private channel you can raise
 the precision**, and then it really is your address. So the rule to say out loud:
 
-> "Your public position is a blurred square about a mile and a half across. Your private
+> "Your public position is a blurred box about three miles across. Your private
 > family channel can carry your exact position. Know which one you are sharing on."
 
 ### ⚠ Consequence for range testing
 
-**You cannot measure range from public-channel positions.** The quantization is 2.45 km,
+**You cannot measure range from public-channel positions.** The quantization is 5.84 km,
 which is larger than most of the range you are trying to measure. Every sample inside one
 cell reports the same coordinate.
 

@@ -72,7 +72,7 @@ every 60 s forever is airtime everyone in range pays for.
 ## ⚠ FIRST: raise the position precision, or the test is meaningless
 
 **The public channel publishes a quantized position**, not a real one. At the default
-`positionPrecision: 13` that is a **2.45 km (1.52 mi)** cell, and every node inside it
+`positionPrecision: 13` that is a **5.84 km (3.63 mi) x 4.64 km (2.88 mi)** cell, and every node inside it
 reports the identical coordinate. That is larger than most of the range being measured, so
 a range test built on public positions produces one repeated point.
 
@@ -90,7 +90,7 @@ old cell-center value, you are still reading quantized data.
 - **A dot means the base heard the mobile node.** It does not prove the reverse.
 - **Distance comes from the mobile node's own reported position.** If that is coarse or
   stale, the distance inherits the error. On 2026-09-04 a position went 27 minutes without
-  updating while we treated it as current, and separately was quantized to a 2.45 km cell
+  updating while we treated it as current, and separately was quantized to a 5.84 km cell
   while we treated it as a location. Both failures produced confident wrong numbers.
 - **SNR is the number that matters**, not distance. Two miles across a field and two miles
   through oak ridges are different experiments. Note the terrain.
