@@ -21,7 +21,7 @@ Ozarks Homesteading Expo · September 5, 2026
 
 No power. No bars. No landline.
 
-What's the plan - for the people on your own land?
+What's the plan for the people on your own land?
 
 ---
 
@@ -40,10 +40,10 @@ What's the plan - for the people on your own land?
 # LoRa: a whisper that carries.
 
 - Tiny messages, sent **slowly**, heard for **miles**
-- Unlicensed band - 902–928 MHz, same legal territory as your garage remote
+- Unlicensed band (902-928 MHz), the same legal territory as your garage remote
 - Sips battery: **about two days** in your pocket, **indefinitely** on solar
 
-You give up voice and pictures. You get range and battery life that feel like magic.
+You give up voice and pictures. You get miles of range from a radio in your shirt pocket.
 
 ---
 
@@ -57,7 +57,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 {{diagram:how-it-works}}
 
-**It is NOT** voice, internet, or Starlink. It's texting, off-grid, done right.
+**It is NOT** voice, internet, or Starlink. It's texting that works when nothing else does.
 
 ---
 
@@ -75,14 +75,14 @@ You give up voice and pictures. You get range and battery life that feel like ma
 # What it's good for out here
 
 - **Family texting** across the property and into town
-- **Hunting, hiking, trail rides** - GPS built in
+- **Hunting, hiking, trail rides**, with GPS built in
 - **Neighborhood resilience net** for storm days
 - Later: gate sensors, tank levels, weather stations
 - All of it keeps working **when the grid doesn't**
 
 ---
 
-# Easiest start: SenseCAP T1000-E - $50
+# Easiest start: SenseCAP T1000-E, $50
 
 <div class="img-row">
 
@@ -91,14 +91,14 @@ You give up voice and pictures. You get range and battery life that feel like ma
 </div>
 
 - Credit-card size, waterproof, GPS
-- **Meshtastic already installed** - charge it, pair it, done
+- **Meshtastic already installed**: charge it, pair it, done
 - **About two days** per charge, by Seeed's own math and my own use. Charge it with your phone
 
 **Buy:** [Amazon](https://www.amazon.com/dp/B0DJ6KGXKB) · [Seeed direct](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
 
 ---
 
-# The best value: Heltec V4 2-pack - $90
+# The best value: Heltec V4 2-pack, $90
 
 <div class="img-row">
 
@@ -115,7 +115,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# Set-and-forget: SenseCAP Solar Node <span style="white-space: nowrap">P1-Pro</span> - $140
+# Set-and-forget: SenseCAP Solar Node <span style="white-space: nowrap">P1-Pro</span>, $140
 
 <div class="img-row">
 
@@ -199,7 +199,7 @@ Different room: nothing helps. Get the radio settings right first.
 # Renaming your main channel<br>changes your frequency.
 
 - Meshtastic hashes your **primary** channel's name to pick the frequency slot
-- Rename it and you quietly move off the air your neighbours are on
+- Rename it and you quietly move off the air your neighbors are on
 - Not a different chat room. A different **frequency**. No key will fix it
 
 ## Want privacy? Add a SECOND channel. Never rename the first.
@@ -227,16 +227,16 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 # Same radios, different philosophy: MeshCore
 
-- Meshtastic: **everyone repeats** - simple, self-organizing
-- MeshCore: **planned repeaters**, learned routes - tighter at scale, more setup
+- Meshtastic: **everyone repeats**. Simple, and it organizes itself
+- MeshCore: **planned repeaters** and learned routes. Tighter at scale, more setup
 - Young and moving fast; worth watching
 
 ---
 
 # Not a chat app: Reticulum
 
-- Encrypted networking over **any** radio - LoRa, packet, WiFi, even the internet
-- *"Not one network - a tool for building thousands of networks"*
+- Encrypted networking over **any** radio: LoRa, packet, WiFi, even the internet
+- Their own words: *"Reticulum is not one network. It is a tool for building thousands of networks."*
 - The deep end, for when you outgrow everything else
 
 ---
@@ -245,7 +245,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 - Voice, real power, repeaters, decades of infrastructure
 - Technician license = a weekend of study, one exam
-- Study **FREE** at [hamstudy.org](https://hamstudy.org) - built by my friend Richard, KD7BBC
+- Study **FREE** at [hamstudy.org](https://hamstudy.org), built by my friend Richard, KD7BBC
 - Meshtastic is the on-ramp. Ham is the highway. **Run both.**
 
 ---
@@ -258,7 +258,7 @@ Router and Repeater are for pole nodes; a badly placed one makes the mesh worse.
 
 **Our local mesh: [LZMesh](https://lzmesh.com)**, four states around us. The channel QR and their beginner guide are in the [Discord](https://discord.lzarc.com).
 
-Grab a handout on your way out - every link is on it.
+Grab a handout on your way out: every link is on it.
 
 ---
 
@@ -266,4 +266,4 @@ Grab a handout on your way out - every link is on it.
 
 ![The base station on the shelf: 18 of 21 nodes online on 906.875 MHz](/images/presentations/meshtastic/base-station.webp)
 
-Find me after - I'll get your node on the mesh right here.
+Find me after. I'll get your node on the mesh right here.

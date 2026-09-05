@@ -31,7 +31,7 @@ blocks = [b.strip() for b in raw.split("\n---\n")]
 # the first block is the file's own preamble, not a slide
 blocks = [b for b in blocks if b.strip().startswith("## SLIDE")]
 
-IMG_RE = re.compile(r"^\(?(?:image|photo|4-up|diagram)\s*:\s*(.+?)\)?$", re.I)
+IMG_RE = re.compile(r"^\(?(?:image|photo|\d-up|diagram)\s*:\s*(.+?)\)?$", re.I)
 
 
 def inline(t):
@@ -39,6 +39,10 @@ def inline(t):
     t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
     t = re.sub(r"(?<!\*)\*([^*]+?)\*(?!\*)", r"<i>\1</i>", t)
     t = re.sub(r"`(.+?)`", r"<code>\1</code>", t)
+    # [text](url) links, and a literal <br> inside a headline
+    t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
+               r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+    t = t.replace("&lt;br&gt;", "<br>")
     return t
 
 
@@ -105,8 +109,15 @@ def render(block):
             if ul: body.append("</ul>"); ul = False
             files = re.findall(r"[\w\-.]+\.(?:webp|png|jpg|svg)", m.group(1))
             if files:
-                body.append('<div class="imgs">' + "".join(
-                    f'<img src="../assets/images/{f}" alt="">' for f in files) + "</div>")
+                def tag(f):
+                    # A diagram is inlined, not linked: its colours are CSS variables
+                    # (see the --sd-* palette below) and an <img> cannot see them.
+                    d = ROOT / "assets" / "diagrams" / f
+                    if d.is_file():
+                        return io.open(d, encoding="utf-8").read()
+                    return f'<img src="../assets/images/{f}" alt="">'
+                cls = "imgs grid" if len(files) > 4 else "imgs"
+                body.append(f'<div class="{cls}">' + "".join(tag(f) for f in files) + "</div>")
             else:
                 notes.append(inline(s))
             continue
@@ -135,12 +146,16 @@ def render(block):
     # to fit; side by side it uses the width a 16:9 screen actually has.
     # Multi-image slides (the 4-up) stay full width, and a slide that is only a
     # picture stays full width too.
-    imgs = [b for b in body if b.startswith('<div class="imgs">')]
-    others = [b for b in body if not b.startswith('<div class="imgs">')]
+    imgs = [b for b in body if b.startswith('<div class="imgs')]
+    others = [b for b in body if not b.startswith('<div class="imgs')]
     heads = [b for b in others if b.startswith("<h1>")]
     rest = [b for b in others if not b.startswith("<h1>")]
 
-    single = len(imgs) == 1 and imgs[0].count("<img") == 1
+    single = len(imgs) == 1 and (imgs[0].count("<img") + imgs[0].count("<svg")) == 1
+    if single and not rest:
+        # a picture-only slide (the diagrams) gets the whole stage
+        solo = imgs[0].replace('class="imgs"', 'class="imgs solo"', 1)
+        body = [solo if b == imgs[0] else b for b in body]
     if single and rest:
         inner = ("".join(heads)
                  + '<div class="split"><div class="col-text">' + "\n".join(rest)
@@ -156,6 +171,8 @@ slides = "\n".join(render(b) for b in blocks)
 
 CSS = """
 *{box-sizing:border-box}
+:root{--sd-bg:#111;--sd-text:#f5f5f0;--sd-head:#ff9900;--sd-sub:#ffd479;--sd-muted:rgba(245,245,240,.65);
+  --sd-line:rgba(245,245,240,.22);--sd-accent:#ff9c00;--sd-blue:#47a3ff;--sd-green:#3fb950;--sd-red:#e5534b}
 html,body{margin:0;height:100%;background:#111;color:#f5f5f0;
   font:400 1.5vw/1.4 "Segoe UI",system-ui,Helvetica,Arial,sans-serif;overflow:hidden}
 section{display:none;position:absolute;inset:0;padding:3vh 6vw 8vh;font-size:1.5vw;
@@ -174,6 +191,12 @@ th,td{border:1px solid #666;padding:.7vh 1.1vw;text-align:left}
 th{background:#222;font-size:1.10em;text-transform:uppercase;letter-spacing:.05em}
 .imgs{display:flex;gap:1.4vw;justify-content:center;align-items:center;margin:1.6vh 0;min-height:0}
 .imgs img{max-height:32vh;max-width:80vw;object-fit:contain;border-radius:6px}
+.imgs.solo img,.imgs.solo svg{max-height:62vh;max-width:88vw;width:auto;height:62vh}
+.imgs.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4vw;justify-items:center;max-width:88vw;margin-left:auto;margin-right:auto}
+.imgs.grid img{max-height:24vh;max-width:100%}
+.imgs svg{max-width:88vw;height:auto}
+.split .col-img svg{max-height:62vh;max-width:100%;height:62vh;width:auto}
+a{color:#99ccff}
 /* text left, one picture right - uses the width a 16:9 screen actually has */
 .split{display:flex;gap:3vw;align-items:center;min-height:0;flex:1}
 .split .col-text{flex:1 1 58%;min-width:0}

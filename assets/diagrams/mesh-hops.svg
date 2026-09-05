@@ -56,5 +56,5 @@
   <text x="740" y="170" text-anchor="middle" font-size="26" fill="var(--sd-green, #3FB950)" font-weight="bold">hop 2</text>
 
   <!-- caption -->
-  <text x="480" y="80" text-anchor="middle" font-size="27" fill="currentColor" opacity="0.85">You don't need to reach everyone &#8212; just somebody.</text>
+  <text x="480" y="80" text-anchor="middle" font-size="27" fill="currentColor" opacity="0.85">You don't need to reach everyone: just somebody.</text>
 </svg>
