@@ -113,7 +113,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 
 ---
 
-# Set-and-forget: SenseCAP Solar Node P1-Pro - $140
+# Set-and-forget: SenseCAP Solar Node <span style="white-space: nowrap">P1-Pro</span> - $140
 
 <div class="img-row">
 
@@ -125,7 +125,7 @@ You give up voice and pictures. You get range and battery life that feel like ma
 - Pole-mount it once, forget it
 - **This is the one on our 35-ft pole**
 
-**Buy:** [Amazon](https://www.amazon.com/dp/B0FMDHBWX8) · [Seeed direct](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)
+**Buy:** [Amazon](https://www.amazon.com/dp/B0FMDHBWX8) · [Seeed direct](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html) · antenna upgrade: [ALFA 5 dBi](https://www.amazon.com/dp/B08H8J6ZV6) $19, LZMesh's pick
 
 ---
 

@@ -183,3 +183,11 @@ hamstudy.org itself remains free — the $35 is the FCC's fee, not a study cost.
       (LongTurbo radio on the same table reaches nothing). All three arms run live today.
       Runbook with exact commands, the failure branch and a fallback:
       [demo-runbook.md](demo-runbook.md). Still needs one rehearsal pass.
+
+## Antenna upgrade for the solar node (LZMesh Discord pick, relayed 2026-09-04)
+
+- **ALFA Network AOA-915-5ACM**, 5 dBi omni outdoor, 902–928 MHz, 7 in tall, N-male
+  connector. **$18.97 in stock, sold by Rokland via Amazon**, verified on the product page
+  2026-09-04: https://www.amazon.com/dp/B08H8J6ZV6. Needs an N-female pigtail to the node's SMA cable; reviewers say seal
+  the joint. Michael's Amazon history shows two ordered 2026-09-04. On slide 11 and the
+  cpuchip.net take-home page.
